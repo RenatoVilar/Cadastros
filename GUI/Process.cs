@@ -31,6 +31,45 @@ namespace GUI
 
             txtCodClassFiscal.Text = txtCodNCM.Text;
             txtNomeClassFiscal.Text = txtNomeNCM.Text;
+            txtPisCstEntrada.Text = "70";
+            txtCofinsCstEntrada.Text = "70";
+
+            if (radForBrasileiro.Checked || radForZFM.Checked)
+            {
+                if (picAutopecasOK.Visible == true)
+                {
+                    txtAliquotaPisPerc.Text = "0,00";
+                    txtPisCstSaida.Text = "04";
+                    txtAliquotaCofinsPerc.Text = "0,00";
+                    txtCofinsCstSaida.Text = "04";
+                }
+
+                else
+                {
+                    txtAliquotaPisPerc.Text = "0,65";
+                    txtPisCstSaida.Text = "01";
+                    txtAliquotaCofinsPerc.Text = "3,00";
+                    txtCofinsCstSaida.Text = "01";
+                }
+            }
+
+            else if (radForEstrangeiro.Checked)
+            {
+                if (picAutopecasOK.Visible == true)
+                {
+                    txtAliquotaPisPerc.Text = "2,30";
+                    txtPisCstSaida.Text = "02";
+                    txtAliquotaCofinsPerc.Text = "10,80";
+                    txtCofinsCstSaida.Text = "02";
+                }
+                else
+                {
+                    txtAliquotaPisPerc.Text = "0,65";
+                    txtPisCstSaida.Text = "01";
+                    txtAliquotaCofinsPerc.Text = "3,00";
+                    txtCofinsCstSaida.Text = "01";
+                }
+            }
 
             if (radRevenda.Checked)
             {
@@ -44,7 +83,7 @@ namespace GUI
                 radFaturamento.Checked = true;
                 chkCompoBCdaCsll.Checked = true;
                 chkCalcCOFINS.Checked = true;
-                chkCalcCOFINS.Checked = true;
+                chkCalcPIS.Checked = true;
 
                 if (radForBrasileiro.Checked)
                 {
@@ -202,6 +241,8 @@ namespace GUI
                 chkRepasse.Checked = false;
                 radFaturamento.Checked = false;
                 radOrigem4.Checked = true;
+                txtCodCalcICMS.Text = codInsumos;
+                txtNomeCalcICMS.Text = calcInsumos;
             }
 
             else if (radInsumos.Checked)
@@ -211,6 +252,8 @@ namespace GUI
                 txtFormatoCod1.Text = formatoCodigo;
                 chkRepasse.Checked = false;
                 radFaturamento.Checked = false;
+                txtCodCalcICMS.Text = codInsumos;
+                txtNomeCalcICMS.Text = calcInsumos;
             }
         }
 
