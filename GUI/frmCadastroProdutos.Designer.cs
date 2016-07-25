@@ -80,7 +80,7 @@
             this.txtNomeCalcICMS = new System.Windows.Forms.TextBox();
             this.txtCodCalcICMS = new System.Windows.Forms.TextBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.chkCompoBCdaCSLL = new System.Windows.Forms.CheckBox();
+            this.chkCompoBCdaCsll = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -226,6 +226,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtCEST = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
+            this.txtObsCalcICMS = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
             this.tabPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl4.SuspendLayout();
@@ -741,6 +743,8 @@
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.label46);
+            this.tabPage8.Controls.Add(this.txtObsCalcICMS);
             this.tabPage8.Controls.Add(this.label38);
             this.tabPage8.Controls.Add(this.label39);
             this.tabPage8.Controls.Add(this.txtNomeClassFiscal);
@@ -779,6 +783,7 @@
             // 
             // txtNomeClassFiscal
             // 
+            this.txtNomeClassFiscal.Enabled = false;
             this.txtNomeClassFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeClassFiscal.Location = new System.Drawing.Point(114, 27);
             this.txtNomeClassFiscal.Name = "txtNomeClassFiscal";
@@ -787,6 +792,7 @@
             // 
             // txtCodClassFiscal
             // 
+            this.txtCodClassFiscal.Enabled = false;
             this.txtCodClassFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodClassFiscal.Location = new System.Drawing.Point(9, 27);
             this.txtCodClassFiscal.Name = "txtCodClassFiscal";
@@ -815,6 +821,7 @@
             // 
             // txtNomeCalcICMS
             // 
+            this.txtNomeCalcICMS.Enabled = false;
             this.txtNomeCalcICMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeCalcICMS.Location = new System.Drawing.Point(72, 73);
             this.txtNomeCalcICMS.Name = "txtNomeCalcICMS";
@@ -823,6 +830,7 @@
             // 
             // txtCodCalcICMS
             // 
+            this.txtCodCalcICMS.Enabled = false;
             this.txtCodCalcICMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodCalcICMS.Location = new System.Drawing.Point(9, 73);
             this.txtCodCalcICMS.Name = "txtCodCalcICMS";
@@ -831,7 +839,7 @@
             // 
             // tabPage7
             // 
-            this.tabPage7.Controls.Add(this.chkCompoBCdaCSLL);
+            this.tabPage7.Controls.Add(this.chkCompoBCdaCsll);
             this.tabPage7.Controls.Add(this.groupBox5);
             this.tabPage7.Controls.Add(this.groupBox4);
             this.tabPage7.Location = new System.Drawing.Point(4, 25);
@@ -842,16 +850,16 @@
             this.tabPage7.Text = "Tributos";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // chkCompoBCdaCSLL
+            // chkCompoBCdaCsll
             // 
-            this.chkCompoBCdaCSLL.AutoSize = true;
-            this.chkCompoBCdaCSLL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkCompoBCdaCSLL.Location = new System.Drawing.Point(6, 3);
-            this.chkCompoBCdaCSLL.Name = "chkCompoBCdaCSLL";
-            this.chkCompoBCdaCSLL.Size = new System.Drawing.Size(235, 20);
-            this.chkCompoBCdaCSLL.TabIndex = 0;
-            this.chkCompoBCdaCSLL.Text = "Compoe Base de Cálculo da CSLL";
-            this.chkCompoBCdaCSLL.UseVisualStyleBackColor = true;
+            this.chkCompoBCdaCsll.AutoSize = true;
+            this.chkCompoBCdaCsll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkCompoBCdaCsll.Location = new System.Drawing.Point(6, 3);
+            this.chkCompoBCdaCsll.Name = "chkCompoBCdaCsll";
+            this.chkCompoBCdaCsll.Size = new System.Drawing.Size(235, 20);
+            this.chkCompoBCdaCsll.TabIndex = 0;
+            this.chkCompoBCdaCsll.Text = "Compoe Base de Cálculo da CSLL";
+            this.chkCompoBCdaCsll.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -2283,6 +2291,25 @@
             this.label47.TabIndex = 26;
             this.label47.Text = "Cód CEST";
             // 
+            // txtObsCalcICMS
+            // 
+            this.txtObsCalcICMS.Enabled = false;
+            this.txtObsCalcICMS.Location = new System.Drawing.Point(9, 127);
+            this.txtObsCalcICMS.Multiline = true;
+            this.txtObsCalcICMS.Name = "txtObsCalcICMS";
+            this.txtObsCalcICMS.Size = new System.Drawing.Size(608, 71);
+            this.txtObsCalcICMS.TabIndex = 14;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(9, 108);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(157, 16);
+            this.label46.TabIndex = 15;
+            this.label46.Text = "Observações do Cálculo";
+            // 
             // frmCadastroProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2403,7 +2430,7 @@
         private System.Windows.Forms.RadioButton radComissao;
         private System.Windows.Forms.RadioButton radAmbos;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.CheckBox chkCompoBCdaCSLL;
+        private System.Windows.Forms.CheckBox chkCompoBCdaCsll;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -2570,5 +2597,7 @@
         private System.Windows.Forms.TextBox txtCodProd1;
         private System.Windows.Forms.TextBox txtFormatoCod2;
         private System.Windows.Forms.TextBox txtFormatoCod1;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.TextBox txtObsCalcICMS;
     }
 }

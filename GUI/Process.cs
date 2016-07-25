@@ -18,6 +18,19 @@ namespace GUI
             string formatoSufixoZFM = "Sufixo: ZFM - Para todos Fornecedores.";
             string formatoSufixoZFMMot = "Sufixo: ZFM - Para Motores.";
             string formatoSufixoNAC = "Sufixo: NAC - Para Motores.";
+            string codcalcRevProdNac = "00001";
+            string calcRevProdNac = "REVENDA PROD NACIONAL";
+            string codcalcRevProdImp = "00002";
+            string calcRevProdImp = "REVENDA PROD IMP ZFM";
+            string codRevProdSubTrib = "00003";
+            string calcRevProdSubTrib = "REVENDA PROD NAC/IMP/NACIONALIZADO COM ST";
+            string codRevProdImpNac = "00008";
+            string calcRevProdImpNac = "REVENDA DE PROD IMP NACIONALIZADO";
+            string codInsumos = "00010";
+            string calcInsumos = "INSUMOS";
+
+            txtCodClassFiscal.Text = txtCodNCM.Text;
+            txtNomeClassFiscal.Text = txtNomeNCM.Text;
 
             if (radRevenda.Checked)
             {
@@ -29,26 +42,54 @@ namespace GUI
                 txtFormatoCod2.Text = formatoCodigo;
                 chkRepasse.Checked = true;
                 radFaturamento.Checked = true;
+                chkCompoBCdaCsll.Checked = true;
+                chkCalcCOFINS.Checked = true;
+                chkCalcCOFINS.Checked = true;
 
                 if (radForBrasileiro.Checked)
                 {
                     if (radOrigemNac.Checked)
                     {
+                        txtCodCalcICMS.Text = codcalcRevProdNac;
+                        txtNomeCalcICMS.Text = calcRevProdNac;
+
+                        if (picSubTribOK.Visible == true)
+                        {
+                            txtCodCalcICMS.Text = codRevProdSubTrib;
+                            txtNomeCalcICMS.Text = calcRevProdSubTrib;
+                        }
+
                         if (radSim.Checked)
                         {
                             txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoPrefixo;
                             txtFormatoCod2.Text = formatoCodigo;
+                            txtCodCalcICMS.Text = codcalcRevProdNac;
+                            txtNomeCalcICMS.Text = calcRevProdNac;
+                            txtObsCalcICMS.Text = "Peças para Motores de Popa não seguem o regime de Subst Tributária.";
                         }
 
                         radOrigem0.Checked = true;
+                       
                     }
 
                     else if (radOrigemImp.Checked)
                     {
+                        txtCodCalcICMS.Text = codRevProdImpNac;
+                        txtNomeCalcICMS.Text = calcRevProdImpNac;
+
+                        if (picSubTribOK.Visible == true)
+                        {
+                            txtCodCalcICMS.Text = codRevProdSubTrib;
+                            txtNomeCalcICMS.Text = calcRevProdSubTrib;
+                        }
+
                         if (radSim.Checked)
                         {
                             txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoPrefixo;
                             txtFormatoCod2.Text = formatoCodigo;
+                            txtCodCalcICMS.Text = codRevProdImpNac;
+                            txtNomeCalcICMS.Text = calcRevProdImpNac;
+                            txtObsCalcICMS.Text = "Peças para Motores de Popa não seguem o regime de Autopeças.";
                         }
 
                         if (picSemSimilarOK.Visible == true)
@@ -64,10 +105,22 @@ namespace GUI
 
                 if (radForEstrangeiro.Checked) 
                 {
+                    txtCodCalcICMS.Text = codcalcRevProdImp;
+                    txtNomeCalcICMS.Text = calcRevProdImp;
+
+                    if (picSubTribOK.Visible == true)
+                    {
+                        txtCodCalcICMS.Text = codRevProdSubTrib;
+                        txtNomeCalcICMS.Text = calcRevProdSubTrib;
+                    }
+
                     if (radSim.Checked)
                     {
                         txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoSufixoZFM;
                         txtFormatoCod2.Text = formatoCodigo;
+                        txtCodCalcICMS.Text = codcalcRevProdImp;
+                        txtNomeCalcICMS.Text = calcRevProdImp;
+                        txtObsCalcICMS.Text = "Peças para Motores de Popa não seguem o regime de Autopeças.";
                     }
 
                     if (picSemSimilarOK.Visible == true)
@@ -84,13 +137,51 @@ namespace GUI
                 {
                     if (radOrigemNac.Checked)
                     {
+                        txtCodCalcICMS.Text = codcalcRevProdNac;
+                        txtNomeCalcICMS.Text = calcRevProdNac;
                         txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoSufixoNAC;
                         txtFormatoCod2.Text = formatoCodigo;
+
+                        if (picSubTribOK.Visible == true)
+                        {
+                            txtCodCalcICMS.Text = codRevProdSubTrib;
+                            txtNomeCalcICMS.Text = calcRevProdSubTrib;
+                        }
+
+                        if (radSim.Checked)
+                        {
+                            txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoSufixoYAL + Environment.NewLine + formatoSufixoMAL;
+                            txtFormatoCod2.Text = formatoCodigo;
+                            txtCodCalcICMS.Text = codcalcRevProdNac;
+                            txtNomeCalcICMS.Text = calcRevProdNac;
+                            txtObsCalcICMS.Text = "Peças para Motores de Popa não seguem o regime de Autopeças.";
+                        }
+
                         radOrigem0.Checked = true;
                     }
 
                     if (radOrigemImp.Checked)
                     {
+                        txtCodCalcICMS.Text = codRevProdImpNac;
+                        txtNomeCalcICMS.Text = calcRevProdImpNac;
+                        txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoSufixoZFMMot;
+                        txtFormatoCod2.Text = formatoCodigo;
+
+                        if (picSubTribOK.Visible == true)
+                        {
+                            txtCodCalcICMS.Text = codRevProdSubTrib;
+                            txtNomeCalcICMS.Text = calcRevProdSubTrib;
+                        }
+
+                        if (radSim.Checked)
+                        {
+                            txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoSufixoYAL + Environment.NewLine + formatoSufixoMAL;
+                            txtFormatoCod2.Text = formatoCodigo;
+                            txtCodCalcICMS.Text = codRevProdImpNac;
+                            txtNomeCalcICMS.Text = calcRevProdImpNac;
+                            txtObsCalcICMS.Text = "Peças para Motores de Popa não seguem o regime de Autopeças.";
+                        }
+
                         if (picSemSimilarOK.Visible == true)
                         {
                             radOrigem7.Checked = true;
@@ -98,18 +189,6 @@ namespace GUI
                         else
                         {
                             radOrigem2.Checked = true;
-                        }
-
-                        txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoSufixoZFMMot;
-                        txtFormatoCod2.Text = formatoCodigo;
-                    }
-
-                    if (radOrigemNac.Checked || radOrigemImp.Checked)
-                    {
-                        if (radSim.Checked)
-                        {
-                            txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoSufixoYAL + Environment.NewLine + formatoSufixoMAL;
-                            txtFormatoCod2.Text = formatoCodigo;
                         }
                     }
                 }
