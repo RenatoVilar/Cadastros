@@ -59,7 +59,7 @@
             this.gruposToolStripMenuItem,
             this.cálculoDeICMSToolStripMenuItem});
             this.tabelasToolStripMenuItem.Name = "tabelasToolStripMenuItem";
-            this.tabelasToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.tabelasToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.tabelasToolStripMenuItem.Text = "Tabelas";
             // 
             // nCMsToolStripMenuItem
@@ -118,6 +118,7 @@
             this.btnCadastrarClientes.TabIndex = 2;
             this.btnCadastrarClientes.Text = "Cadastrar Clientes";
             this.btnCadastrarClientes.UseVisualStyleBackColor = true;
+            this.btnCadastrarClientes.Click += new System.EventHandler(this.btnCadastrarClientes_Click);
             // 
             // frmPrincipal
             // 

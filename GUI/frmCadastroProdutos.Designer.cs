@@ -2494,9 +2494,10 @@
             // radInsumos
             // 
             this.radInsumos.AutoSize = true;
+            this.radInsumos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radInsumos.Location = new System.Drawing.Point(278, 23);
             this.radInsumos.Name = "radInsumos";
-            this.radInsumos.Size = new System.Drawing.Size(95, 24);
+            this.radInsumos.Size = new System.Drawing.Size(88, 24);
             this.radInsumos.TabIndex = 2;
             this.radInsumos.Text = "Insumos";
             this.radInsumos.UseVisualStyleBackColor = true;
@@ -2504,9 +2505,10 @@
             // radMatPrima
             // 
             this.radMatPrima.AutoSize = true;
+            this.radMatPrima.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radMatPrima.Location = new System.Drawing.Point(139, 23);
             this.radMatPrima.Name = "radMatPrima";
-            this.radMatPrima.Size = new System.Drawing.Size(112, 24);
+            this.radMatPrima.Size = new System.Drawing.Size(102, 24);
             this.radMatPrima.TabIndex = 1;
             this.radMatPrima.Text = "Mat. Prima";
             this.radMatPrima.UseVisualStyleBackColor = true;
@@ -2515,9 +2517,10 @@
             // 
             this.radRevenda.AutoSize = true;
             this.radRevenda.Checked = true;
+            this.radRevenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radRevenda.Location = new System.Drawing.Point(14, 23);
             this.radRevenda.Name = "radRevenda";
-            this.radRevenda.Size = new System.Drawing.Size(98, 24);
+            this.radRevenda.Size = new System.Drawing.Size(91, 24);
             this.radRevenda.TabIndex = 0;
             this.radRevenda.TabStop = true;
             this.radRevenda.Text = "Revenda";

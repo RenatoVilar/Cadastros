@@ -53,5 +53,12 @@ namespace GUI
             frm.ShowDialog();
             frm.Dispose();
         }
+
+        private void btnCadastrarClientes_Click(object sender, EventArgs e)
+        {
+            frmCadastroClientes frm = new frmCadastroClientes();
+            frm.ShowDialog();
+            frm.Dispose();
+        }
     }
 }
