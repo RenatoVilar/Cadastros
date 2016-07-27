@@ -23,6 +23,7 @@ namespace GUI
             string codcalcRevProdImp = "00002"; string calcRevProdImp = "REVENDA PROD IMP ZFM";
             string codRevProdSubTrib = "00003"; string calcRevProdSubTrib = "REVENDA PROD NAC/IMP/NACIONALIZADO COM ST";
             string codRevProdImpNac = "00008"; string calcRevProdImpNac = "REVENDA DE PROD IMP NACIONALIZADO";
+            string codRevendaProdPbb = "0000?"; string calcRevProdPbb = "REVENDA DE PRODUTO COM PPB";
             string codInsumos = "00010"; string calcInsumos = "INSUMOS";
 
 
@@ -42,7 +43,7 @@ namespace GUI
                     txtAliquotaPisPerc.Text = "0,00"; txtPisCstSaida.Text = "04";
                     txtAliquotaCofinsPerc.Text = "0,00"; txtCofinsCstSaida.Text = "04";
 
-                    txtCaracCod3.Text = "009"; txtCaracNome3.Text = "AUTOPEÇAS";
+                    txtCaracCod2.Text = "009"; txtCaracNome2.Text = "AUTOPEÇAS";
                 }
 
                 else
@@ -59,7 +60,7 @@ namespace GUI
                     txtAliquotaPisPerc.Text = "2,30"; txtPisCstSaida.Text = "02";
                     txtAliquotaCofinsPerc.Text = "10,80"; txtCofinsCstSaida.Text = "02";
 
-                    txtCaracCod3.Text = "023"; txtCaracNome3.Text = "AUTOPEÇAS IMPORTADAS ZFM";
+                    txtCaracCod2.Text = "023"; txtCaracNome2.Text = "AUTOPEÇAS IMPORTADAS ZFM";
 
                 }
                 else
@@ -75,20 +76,30 @@ namespace GUI
                 txtCodProd1.Text = "000001"; txtNomeCodProd1.Text = "LOJA"; txtFormatoCod1.Text = formatoCodigo;
                 txtCodProd2.Text = "000005"; txtNomeCodProd2.Text = "FORNECEDOR"; txtFormatoCod2.Text = formatoCodigo;
 
+                txtComCodSetor1.Text = "00001"; txtComSetor1.Text = "MOTORES";
+
+                if (chkMotores.Checked == false)
+                {
+                    if (chkPecasMot.Checked == false)
+                    {
+                        txtComCodEmpresa.Text = "00001"; txtComNomeEmpresa.Text = "ALEGRA IND E COM LTDA (MATRIZ)";
+                        txtComVenda.Text = "S";
+                        txtComCompra.Text = "S";
+                        txtIndCodEmpresa.Text = "00002"; txtIndNomeEmpresa.Text = "ALEGRA IND E COM LTDA (IND)";
+                        txtIndVenda.Text = "N";
+                        txtIndCompra.Text = "S";
+                    }
+
+                    txtComCodSetor1.Text = "00001"; txtComSetor1.Text = "LOJA";
+                    txtComCodSetor2.Text = "00002"; txtComSetor2.Text = "DEPÓSITO";
+                    txtComCodSetor3.Text = "00003"; txtComSetor3.Text = "MARINER";
+                    txtComCodSetor4.Text = "00004"; txtComSetor4.Text = "SERVIÇOS";
+                    txtComCodSetor5.Text = "00005"; txtComSetor5.Text = "OBRAS";
+                }
+               
                 txtComCodEmpresa.Text = "00001"; txtComNomeEmpresa.Text = "ALEGRA IND E COM LTDA (MATRIZ)";
                 txtComVenda.Text = "S";
                 txtComCompra.Text = "S";
-                txtIndCodEmpresa.Text = "00002"; txtIndNomeEmpresa.Text = "ALEGRA IND E COM LTDA (IND)";
-                txtIndVenda.Text = "N";
-                txtIndCompra.Text = "S";
-
-                txtComCodSetor1.Text = "00001"; txtComSetor1.Text = "LOJA";
-                txtComCodSetor2.Text = "00002"; txtComSetor2.Text = "DEPÓSITO";
-                txtComCodSetor3.Text = "00003"; txtComSetor3.Text = "MARINER";
-                txtComCodSetor4.Text = "00004"; txtComSetor4.Text = "MOTORES";
-                txtComCodSetor5.Text = "00005"; txtComSetor5.Text = "PEÇAS";
-                txtComCodSetor6.Text = "00006"; txtComSetor6.Text = "OBRAS";
-                txtIndCodSetor1.Text = "00001"; txtIndSetor1.Text = "INDUSTRIAL";
 
                 chkRepasse.Checked = true;
                 radFaturamento.Checked = true;
@@ -110,7 +121,7 @@ namespace GUI
                             txtNomeCalcICMS.Text = calcRevProdSubTrib;
                         }
 
-                        if (radSim.Checked)
+                        if (chkPecasMot.Checked)
                         {
                             txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoPrefixo;
                             txtFormatoCod2.Text = formatoCodigo;
@@ -133,13 +144,13 @@ namespace GUI
                         //    txtNomeCalcICMS.Text = calcRevProdSubTrib;
                         //}
 
-                        if (radSim.Checked)
+                        if (chkPecasMot.Checked)
                         {
                             txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoPrefixo;
                             txtFormatoCod2.Text = formatoCodigo;
                             txtCodCalcICMS.Text = codRevProdImpNac;
                             txtNomeCalcICMS.Text = calcRevProdImpNac;
-                            txtObsCalcICMS.Text = "Peças para Motores de Popa não seguem o regime de Autopeças.";
+                            txtObsCalcICMS.Text = "Peças para Motores de Popa não seguem o regime de Subs. Tributária";
                         }
 
                         if (picSemSimilarOK.Visible == true)
@@ -163,7 +174,7 @@ namespace GUI
                         txtNomeCalcICMS.Text = calcRevProdSubTrib;
                     }
 
-                    if (radSim.Checked)
+                    if (chkPecasMot.Checked)
                     {
                         txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoSufixoZFM;
                         txtFormatoCod2.Text = formatoCodigo;
@@ -187,8 +198,17 @@ namespace GUI
                     if (radOrigemNac.Checked)
                     {
                         txtCodCalcICMS.Text = codcalcRevProdNac; txtNomeCalcICMS.Text = calcRevProdNac;
-                        txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoSufixoNAC;
+                        txtFormatoCod1.Text = formatoCodigo;
                         txtFormatoCod2.Text = formatoCodigo;
+                        radOrigem0.Checked = true;
+
+                        if (chkMotores.Checked)
+                        {
+                            txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoSufixoNAC;
+                            radOrigem4.Checked = true;
+                            txtCodCalcICMS.Text = codRevendaProdPbb; txtNomeCalcICMS.Text = calcRevProdPbb;
+                        }
+                        
 
                         if (picSubTribOK.Visible == true)
                         {
@@ -196,7 +216,7 @@ namespace GUI
                             txtNomeCalcICMS.Text = calcRevProdSubTrib;
                         }
 
-                        if (radSim.Checked)
+                        if (chkPecasMot.Checked)
                         {
                             txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoSufixoYAL + Environment.NewLine + formatoSufixoMAL;
                             txtFormatoCod2.Text = formatoCodigo;
@@ -205,7 +225,7 @@ namespace GUI
                             txtObsCalcICMS.Text = "Peças para Motores de Popa não seguem o regime de Autopeças.";
                         }
 
-                        radOrigem0.Checked = true;
+                        
                     }
 
                     if (radOrigemImp.Checked)
@@ -220,7 +240,7 @@ namespace GUI
                             txtNomeCalcICMS.Text = calcRevProdSubTrib;
                         }
 
-                        if (radSim.Checked)
+                        if (chkPecasMot.Checked)
                         {
                             txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoSufixoYAL + Environment.NewLine + formatoSufixoMAL;
                             txtFormatoCod2.Text = formatoCodigo;
@@ -275,19 +295,40 @@ namespace GUI
             {
                 chkTribEspecifica.Checked = true;
                 txtCaracCod1.Text = "012"; txtCaracNome1.Text = "COM SUBST. TRiBUTARIA";
+                txtCodCalcICMS.Text = codRevProdSubTrib; txtNomeCalcICMS.Text = calcRevProdSubTrib;
 
-                if (radRevenda.Checked == true)
+                if (radRevenda.Checked)
                 {
-                    txtComCfop1.Text = "5.102"; txtComTpMov1.Text = "Venda"; txtComCfopEqui1.Text = "5.405"; 
-                    txtComCfop2.Text = "5.152"; txtComTpMov2.Text = "Tranferência"; txtComCfopEqui2.Text = "5.409";
-                    txtComCfop3.Text = "1.102"; txtComTpMov3.Text = "Compra"; txtComCfopEqui3.Text = "1.403";
-                    txtComCfop4.Text = "2.102"; txtComTpMov4.Text = "Compra"; txtComCfopEqui4.Text = "2.403";
-                    txtComCfop5.Text = "1.202"; txtComTpMov5.Text = "Devolução"; txtComCfopEqui5.Text = "1.411"; txtComTransDev5.Text = "Venda";
-                    txtComCfop6.Text = "2.202"; txtComTpMov6.Text = "Devolução"; txtComCfopEqui6.Text = "2.411"; txtComTransDev6.Text = "Venda";
-                   
-                    txtIndCfop1.Text = "1.151"; txtIndTpMov1.Text = "Entrada"; txtIndCfopEqui1.Text = "1.408"; txtIndTransDev1.Text = "Saída";
-                    txtIndCfop2.Text = "1.101"; txtIndTpMov2.Text = "Compra"; txtIndCfopEqui2.Text = "1.401";
-                    txtIndCfop3.Text = "2.101"; txtIndTpMov3.Text = "Compra"; txtIndCfopEqui3.Text = "2.401";
+                    if (chkPecasMot.Checked || chkMotores.Checked)
+                    {
+                        txtCodCalcICMS.Text = codRevProdImpNac; txtNomeCalcICMS.Text = calcRevProdImpNac;
+
+                        if (radForEstrangeiro.Checked)
+                        {
+                            txtCodCalcICMS.Text = codcalcRevProdImp; txtNomeCalcICMS.Text = calcRevProdImp;
+                        }
+
+                        txtCaracCod1.Text = "013"; txtCaracNome1.Text = "TRIBUTADO";
+                        txtComCfop1.Text = "5.102"; txtComTpMov1.Text = "Venda"; txtComCfopEqui1.Text = "5.405";
+                        txtComCfop2.Text = "5.152"; txtComTpMov2.Text = "Tranferência"; txtComCfopEqui2.Text = "5.409"; txtComTransDev2.Text = "Saida";
+                        txtComCfop3.Text = "1.102"; txtComTpMov3.Text = "Compra"; txtComCfopEqui3.Text = "1.403";
+                        txtComCfop4.Text = "2.102"; txtComTpMov4.Text = "Compra"; txtComCfopEqui4.Text = "2.403";
+                        txtComCfop5.Text = "1.202"; txtComTpMov5.Text = "Devolução"; txtComCfopEqui5.Text = "1.411"; ;
+                        txtComCfop6.Text = "2.202"; txtComTpMov6.Text = "Devolução"; txtComCfopEqui6.Text = "2.411"; txtComTransDev6.Text = "Venda";
+                    }
+                    else
+                    {
+                        txtComCfop1.Text = "5.102"; txtComTpMov1.Text = "Venda"; txtComCfopEqui1.Text = "5.405";
+                        txtComCfop2.Text = "5.152"; txtComTpMov2.Text = "Tranferência"; txtComCfopEqui2.Text = "5.409"; txtComTransDev2.Text = "Saida";
+                        txtComCfop3.Text = "1.102"; txtComTpMov3.Text = "Compra"; txtComCfopEqui3.Text = "1.403";
+                        txtComCfop4.Text = "2.102"; txtComTpMov4.Text = "Compra"; txtComCfopEqui4.Text = "2.403";
+                        txtComCfop5.Text = "1.202"; txtComTpMov5.Text = "Devolução"; txtComCfopEqui5.Text = "1.411"; ;
+                        txtComCfop6.Text = "2.202"; txtComTpMov6.Text = "Devolução"; txtComCfopEqui6.Text = "2.411"; txtComTransDev6.Text = "Venda";
+
+                        txtIndCfop1.Text = "1.151"; txtIndTpMov1.Text = "Entrada"; txtIndCfopEqui1.Text = "1.408";
+                        txtIndCfop2.Text = "1.101"; txtIndTpMov2.Text = "Compra"; txtIndCfopEqui2.Text = "1.401";
+                        txtIndCfop3.Text = "2.101"; txtIndTpMov3.Text = "Compra"; txtIndCfopEqui3.Text = "2.401";
+                    }
                 }
                 else
                 {

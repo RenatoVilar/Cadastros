@@ -149,6 +149,16 @@ namespace GUI
                 {
                     throw new Exception("O Grupo é Obrigatório!");
                 }
+
+                if (chkPecasMot.Checked && chkMotores.Checked)
+                {
+                    throw new Exception("Verifique o tipo do Produto");
+                   
+                }
+                if (chkMotores.Checked && picSubTribOK.Visible || chkMotores.Checked && picAutopecasOK.Visible)
+                {
+                    throw new Exception("Verifique a NCM do Produto e o Tipo!");
+                }
             }
             catch (Exception ex)
             {
