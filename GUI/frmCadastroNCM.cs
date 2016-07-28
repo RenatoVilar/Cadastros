@@ -16,9 +16,35 @@ namespace GUI
 {
     public partial class frmCadastroNCM : frmModFormCadastro
     {
+        ToolTip tooltip1 = new ToolTip();
+
         public frmCadastroNCM()
         {
             InitializeComponent();
+        }
+
+        private void frmCadastroNCM_Load(object sender, EventArgs e)
+        {
+            mtxtCest.Mask = "00,000,00";
+            mtxtCest.MaskInputRejected += new MaskInputRejectedEventHandler(mtxtCEST_MaskInputRejected);
+           
+        }
+
+        private void mtxtCEST_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            //MessageBox.Show("Somente números são aceitos!", "Aviso", MessageBoxButtons.OK);
+            if (mtxtCest.MaskFull) { }
+            else
+            {
+                tooltip1.ToolTipTitle = "Aviso";
+                tooltip1.Show("Somente números são aceitos!", mtxtCest, 0, -20, 5000);
+                mtxtCest.Text = String.Empty;
+            }
+        }
+
+        private void mtxtCest_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            tooltip1.Hide(mtxtCest);
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -41,6 +67,8 @@ namespace GUI
                 chkST.Checked = Convert.ToBoolean(modelo.SitST);
                 chkSemSimilar.Checked = Convert.ToBoolean(modelo.SitSemSimilar);
                 chkAutopecas.Checked = Convert.ToBoolean(modelo.SitAuto);
+                mtxtCest.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
+                mtxtCest.Text = modelo.Cest;
                 AlterarBotoes(3);
             }
             else
@@ -83,6 +111,8 @@ namespace GUI
                 modelo.SitST = chkST.Checked ? 1 : 0;
                 modelo.SitAuto = chkAutopecas.Checked ? 1 : 0;
                 modelo.SitSemSimilar = chkSemSimilar.Checked ? 1 : 0;
+                mtxtCest.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+                modelo.Cest = mtxtCest.Text;
                 DALConexao dalconexao = new DALConexao(DadosDeConexao.strConexao);
                 BLLNCM bll = new BLLNCM(dalconexao);
 
@@ -108,5 +138,5 @@ namespace GUI
                 MessageBox.Show(ex.Message);
             }
         }
-    }
+      }
 }

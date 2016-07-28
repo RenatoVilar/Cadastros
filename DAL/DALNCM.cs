@@ -22,13 +22,14 @@ namespace DAL
         {
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.Connection = dalConexao.SqlConexao;
-            sqlCmd.CommandText = "INSERT INTO NCMs(CodNCM, NomeNCM, SitST, SitAuto, SitSemSimilar) values (@CodNCM, @NomeNCM, @SitST, @SitAuto, @SitSemSimilar);" +
+            sqlCmd.CommandText = "INSERT INTO NCMs(CodNCM, NomeNCM, SitST, SitAuto, SitSemSimilar, Cest) values (@CodNCM, @NomeNCM, @SitST, @SitAuto, @SitSemSimilar, @Cest);" +
                                  "SELECT @@IDENTITY;";
             sqlCmd.Parameters.AddWithValue("@CodNCM", modelo.CodNCM);
             sqlCmd.Parameters.AddWithValue("@NomeNCM", modelo.NomeNCM);
             sqlCmd.Parameters.AddWithValue("@SitST", modelo.SitST);
             sqlCmd.Parameters.AddWithValue("@SitAuto", modelo.SitAuto);
             sqlCmd.Parameters.AddWithValue("@SitSemSimilar", modelo.SitSemSimilar);
+            sqlCmd.Parameters.AddWithValue("@Cest", modelo.Cest);
             dalConexao.Conectar();
             modelo.NCMID = Convert.ToInt32(sqlCmd.ExecuteScalar());
             dalConexao.Desconectar();
@@ -38,12 +39,13 @@ namespace DAL
         {
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.Connection = dalConexao.SqlConexao;
-            sqlCmd.CommandText = "UPDATE NCMs SET NomeNCM = @NomeNCM, SitST = @SitST, SitAuto = @SitAuto, SitSemSimilar = @SitSemSimilar WHERE CodNCM = @CodNCM";
+            sqlCmd.CommandText = "UPDATE NCMs SET NomeNCM = @NomeNCM, SitST = @SitST, SitAuto = @SitAuto, SitSemSimilar = @SitSemSimilar, Cest = @Cest WHERE CodNCM = @CodNCM";
             sqlCmd.Parameters.AddWithValue("@CodNCM", modelo.CodNCM);
             sqlCmd.Parameters.AddWithValue("@NomeNCM", modelo.NomeNCM);
             sqlCmd.Parameters.AddWithValue("@SitST", modelo.SitST);
             sqlCmd.Parameters.AddWithValue("@SitAuto", modelo.SitAuto);
             sqlCmd.Parameters.AddWithValue("@SitSemSimilar", modelo.SitSemSimilar);
+            sqlCmd.Parameters.AddWithValue("@Cest", modelo.Cest);
             dalConexao.Conectar();
             sqlCmd.ExecuteNonQuery();
             dalConexao.Desconectar();
@@ -100,6 +102,7 @@ namespace DAL
                 modelo.SitST = Convert.ToInt32(dr["SitST"]);
                 modelo.SitAuto = Convert.ToInt32(dr["SitAuto"]);
                 modelo.SitSemSimilar = Convert.ToInt32(dr["SitSemSimilar"]);
+                modelo.Cest = Convert.ToString(dr["Cest"]);
             }
 
             dalConexao.Desconectar();

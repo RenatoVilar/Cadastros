@@ -70,6 +70,10 @@ namespace GUI
                 {
                     ((ComboBox)ctrl).SelectedIndex = -1;
                 }
+                if (ctrl is MaskedTextBox)
+                {
+                    ((MaskedTextBox)ctrl).Text = String.Empty;
+                }
                 else if (ctrl.Controls.Count > 0)
                 {
                     LimparTela(ctrl);

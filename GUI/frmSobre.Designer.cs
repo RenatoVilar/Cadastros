@@ -1,7 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmLocalizarTpProduto
-
+    partial class frmSobre
     {
         /// <summary>
         /// Required designer variable.
@@ -29,24 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnLocalizar
+            // label1
             // 
-            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(238, 80);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cadastro de Produtos e Clientes\r\nVersão 1.00.00\r\n®2016 Renato Vilar\r\nTodos os Dir" +
+    "eitos Reservados\r\n";
             // 
-            // frmLocalizarTpProduto
+            // frmSobre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 341);
-            this.Name = "frmLocalizarTpProduto";
-            this.Text = "Localizar Tipo de Produto";
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.label1);
+            this.Name = "frmSobre";
+            this.Text = "Sobre";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -45,7 +45,6 @@
     <Compile Include="DALConexao.cs" />
     <Compile Include="DALGrupo.cs" />
     <Compile Include="DALNCM.cs" />
-    <Compile Include="DALTpProduto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

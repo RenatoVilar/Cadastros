@@ -43,7 +43,6 @@
     <Compile Include="ModeloCadCalcICMS.cs" />
     <Compile Include="ModeloGrupo.cs" />
     <Compile Include="ModeloNCM.cs" />
-    <Compile Include="ModeloTpProduto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -43,7 +43,6 @@
     <Compile Include="BLLCalcICMS.cs" />
     <Compile Include="BLLGrupo.cs" />
     <Compile Include="BLLNCM.cs" />
-    <Compile Include="BLLTpProduto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

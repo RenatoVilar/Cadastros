@@ -14,5 +14,6 @@ namespace Modelo
         public int SitST { get; set; }
         public int SitAuto { get; set; }
         public int SitSemSimilar { get; set; }
+        public string Cest { get; set; }
     }
 }

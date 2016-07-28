@@ -37,12 +37,16 @@
             this.chkST = new System.Windows.Forms.CheckBox();
             this.chkAutopecas = new System.Windows.Forms.CheckBox();
             this.chkSemSimilar = new System.Windows.Forms.CheckBox();
+            this.txtCest = new System.Windows.Forms.Label();
+            this.mtxtCest = new System.Windows.Forms.MaskedTextBox();
             this.pnDados.SuspendLayout();
             this.pnBotoes.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnDados
             // 
+            this.pnDados.Controls.Add(this.mtxtCest);
+            this.pnDados.Controls.Add(this.txtCest);
             this.pnDados.Controls.Add(this.chkSemSimilar);
             this.pnDados.Controls.Add(this.chkAutopecas);
             this.pnDados.Controls.Add(this.chkST);
@@ -103,7 +107,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(46, 100);
+            this.label2.Location = new System.Drawing.Point(46, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(190, 20);
             this.label2.TabIndex = 0;
@@ -113,7 +117,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(46, 139);
+            this.label3.Location = new System.Drawing.Point(46, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 0;
@@ -123,7 +127,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(46, 178);
+            this.label4.Location = new System.Drawing.Point(46, 238);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(178, 20);
             this.label4.TabIndex = 0;
@@ -133,7 +137,7 @@
             // 
             this.chkST.AutoSize = true;
             this.chkST.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkST.Location = new System.Drawing.Point(25, 103);
+            this.chkST.Location = new System.Drawing.Point(25, 163);
             this.chkST.Name = "chkST";
             this.chkST.Size = new System.Drawing.Size(15, 14);
             this.chkST.TabIndex = 6;
@@ -142,7 +146,7 @@
             // chkAutopecas
             // 
             this.chkAutopecas.AutoSize = true;
-            this.chkAutopecas.Location = new System.Drawing.Point(25, 142);
+            this.chkAutopecas.Location = new System.Drawing.Point(25, 202);
             this.chkAutopecas.Name = "chkAutopecas";
             this.chkAutopecas.Size = new System.Drawing.Size(15, 14);
             this.chkAutopecas.TabIndex = 7;
@@ -151,11 +155,31 @@
             // chkSemSimilar
             // 
             this.chkSemSimilar.AutoSize = true;
-            this.chkSemSimilar.Location = new System.Drawing.Point(25, 181);
+            this.chkSemSimilar.Location = new System.Drawing.Point(25, 241);
             this.chkSemSimilar.Name = "chkSemSimilar";
             this.chkSemSimilar.Size = new System.Drawing.Size(15, 14);
             this.chkSemSimilar.TabIndex = 8;
             this.chkSemSimilar.UseVisualStyleBackColor = true;
+            // 
+            // txtCest
+            // 
+            this.txtCest.AutoSize = true;
+            this.txtCest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCest.Location = new System.Drawing.Point(25, 83);
+            this.txtCest.Name = "txtCest";
+            this.txtCest.Size = new System.Drawing.Size(55, 20);
+            this.txtCest.TabIndex = 9;
+            this.txtCest.Text = "CEST";
+            // 
+            // mtxtCest
+            // 
+            this.mtxtCest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCest.Location = new System.Drawing.Point(25, 115);
+            this.mtxtCest.Name = "mtxtCest";
+            this.mtxtCest.Size = new System.Drawing.Size(100, 26);
+            this.mtxtCest.TabIndex = 11;
+            this.mtxtCest.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtxtCEST_MaskInputRejected);
+            this.mtxtCest.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtCest_KeyPress);
             // 
             // frmCadastroNCM
             // 
@@ -164,6 +188,7 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Name = "frmCadastroNCM";
             this.Text = "Cadastro de NCMs";
+            this.Load += new System.EventHandler(this.frmCadastroNCM_Load);
             this.pnDados.ResumeLayout(false);
             this.pnDados.PerformLayout();
             this.pnBotoes.ResumeLayout(false);
@@ -181,5 +206,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox chkSemSimilar;
+        private System.Windows.Forms.Label txtCest;
+        private System.Windows.Forms.MaskedTextBox mtxtCest;
     }
 }

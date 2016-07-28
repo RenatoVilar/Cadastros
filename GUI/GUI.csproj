@@ -76,12 +76,6 @@
     <Compile Include="frmCadastroProdutos.Designer.cs">
       <DependentUpon>frmCadastroProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroTpProduto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCadastroTpProduto.Designer.cs">
-      <DependentUpon>frmCadastroTpProduto.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmLocalizarCalcICMS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,12 +94,6 @@
     <Compile Include="frmLocalizarNCM.Designer.cs">
       <DependentUpon>frmLocalizarNCM.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLocalizarTpProduto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLocalizarTpProduto.Designer.cs">
-      <DependentUpon>frmLocalizarTpProduto.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmModLocalizar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +111,12 @@
     </Compile>
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSobre.Designer.cs">
+      <DependentUpon>frmSobre.cs</DependentUpon>
     </Compile>
     <Compile Include="Process.cs">
       <SubType>Form</SubType>
@@ -165,9 +159,6 @@
     <EmbeddedResource Include="frmCadastroProdutos.resx">
       <DependentUpon>frmCadastroProdutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroTpProduto.resx">
-      <DependentUpon>frmCadastroTpProduto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmLocalizarCalcICMS.resx">
       <DependentUpon>frmLocalizarCalcICMS.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,9 +168,6 @@
     <EmbeddedResource Include="frmLocalizarNCM.resx">
       <DependentUpon>frmLocalizarNCM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLocalizarTpProduto.resx">
-      <DependentUpon>frmLocalizarTpProduto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmModLocalizar.resx">
       <DependentUpon>frmModLocalizar.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSobre.resx">
+      <DependentUpon>frmSobre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

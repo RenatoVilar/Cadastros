@@ -31,7 +31,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tabelasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nCMsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cálculoDeICMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,38 +54,30 @@
             // 
             this.tabelasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nCMsToolStripMenuItem,
-            this.tipoToolStripMenuItem,
             this.gruposToolStripMenuItem,
             this.cálculoDeICMSToolStripMenuItem});
             this.tabelasToolStripMenuItem.Name = "tabelasToolStripMenuItem";
-            this.tabelasToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.tabelasToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.tabelasToolStripMenuItem.Text = "Tabelas";
             // 
             // nCMsToolStripMenuItem
             // 
             this.nCMsToolStripMenuItem.Name = "nCMsToolStripMenuItem";
-            this.nCMsToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.nCMsToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.nCMsToolStripMenuItem.Text = "NCMs";
             this.nCMsToolStripMenuItem.Click += new System.EventHandler(this.nCMsToolStripMenuItem_Click);
-            // 
-            // tipoToolStripMenuItem
-            // 
-            this.tipoToolStripMenuItem.Name = "tipoToolStripMenuItem";
-            this.tipoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.tipoToolStripMenuItem.Text = "Tipos de Produtos";
-            this.tipoToolStripMenuItem.Click += new System.EventHandler(this.tipoToolStripMenuItem_Click);
             // 
             // gruposToolStripMenuItem
             // 
             this.gruposToolStripMenuItem.Name = "gruposToolStripMenuItem";
-            this.gruposToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.gruposToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.gruposToolStripMenuItem.Text = "Grupos";
             this.gruposToolStripMenuItem.Click += new System.EventHandler(this.gruposToolStripMenuItem_Click);
             // 
             // cálculoDeICMSToolStripMenuItem
             // 
             this.cálculoDeICMSToolStripMenuItem.Name = "cálculoDeICMSToolStripMenuItem";
-            this.cálculoDeICMSToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.cálculoDeICMSToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.cálculoDeICMSToolStripMenuItem.Text = "Cálculo de ICMS";
             this.cálculoDeICMSToolStripMenuItem.Click += new System.EventHandler(this.cálculoDeICMSToolStripMenuItem_Click);
             // 
@@ -95,6 +86,7 @@
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
+            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // btnCadastraProdutos
             // 
@@ -144,7 +136,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tabelasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nCMsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tipoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gruposToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cálculoDeICMSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
