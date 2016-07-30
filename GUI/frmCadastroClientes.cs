@@ -17,48 +17,47 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void trePrincipal_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-
-           
-        }
-
-        TreeNode myNode;
-
         private void trePrincipal_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+            TreeNode myNode;
 
             myNode = e.Node;
-
-            //if (myNode.Index == 1)
-            //{
-            //    pnlAdicionais.Visible = true;
-            //    pnlEndereco.Visible = false;
-            //}
+          
             switch (myNode.Index)
             {
                 case 0:
                     pnlEndereco.Visible = true;
                     pnlAdicionais.Visible = false;
+                    pnlCadastros.Visible = false;
+                    pnlCaracteristicas.Visible = false;
                     break;
                 case 1:
                     pnlEndereco.Visible = false;
                     pnlAdicionais.Visible = true;
+                    pnlCadastros.Visible = false;
+                    pnlCaracteristicas.Visible = false;
                     break;
                 case 2:
                     pnlEndereco.Visible = false;
                     pnlAdicionais.Visible = false;
+                    pnlCadastros.Visible = true;
+                    pnlCaracteristicas.Visible = false;
                     break;
                 case 3:
                     pnlEndereco.Visible = false;
                     pnlAdicionais.Visible = false;
+                    pnlCadastros.Visible = false;
+                    pnlCaracteristicas.Visible = true;
                     break;
             }
-           
+        }
 
-
-
+        private void frmCadastroClientes_Load(object sender, EventArgs e)
+        {
+            TreeNode mnuEnderecos= trePrincipal.Nodes.Add("Endereços...");
+            TreeNode mnuAdicionais = trePrincipal.Nodes.Add("Adicionais...");
+            TreeNode mnuCadastros= trePrincipal.Nodes.Add("Cadastros...");
+            TreeNode mnuCaracteristicas = trePrincipal.Nodes.Add("Características...");
         }
     }
 }
