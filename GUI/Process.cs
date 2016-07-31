@@ -138,12 +138,6 @@ namespace GUI
                     {
                         txtCodCalcICMS.Text = codRevProdImpNac; txtNomeCalcICMS.Text = calcRevProdImpNac;
 
-                        //if (picSubTribOK.Visible == true)
-                        //{
-                        //    txtCodCalcICMS.Text = codRevProdSubTrib;
-                        //    txtNomeCalcICMS.Text = calcRevProdSubTrib;
-                        //}
-
                         if (chkPecasMot.Checked)
                         {
                             txtFormatoCod1.Text = formatoCodigo + Environment.NewLine + formatoPrefixo;
@@ -279,17 +273,6 @@ namespace GUI
 
 
             }
-
-            //else if (radInsumos.Checked)
-            //{
-            //    txtCodProd1.Text = "000005";
-            //    txtNomeCodProd1.Text = "FORNECEDOR";
-            //    txtFormatoCod1.Text = formatoCodigo;
-            //    chkRepasse.Checked = false;
-            //    radFaturamento.Checked = false;
-            //    txtCodCalcICMS.Text = codInsumos;
-            //    txtNomeCalcICMS.Text = calcInsumos;
-            //}
 
             if (picSubTribOK.Visible == true)
             {
