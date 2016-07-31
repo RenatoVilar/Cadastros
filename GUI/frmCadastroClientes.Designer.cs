@@ -52,25 +52,25 @@
             this.radConfigIsentoIE = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlAdicionais = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.chkConfigPrestadorServico = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chkEntidadeDaAdmFederal = new System.Windows.Forms.CheckBox();
             this.txtCodOp = new System.Windows.Forms.TextBox();
             this.txtNomeOp = new System.Windows.Forms.TextBox();
-            this.chkEntidadeDaAdmFederal = new System.Windows.Forms.CheckBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.chkConfigPrestadorServico = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.pnlCadastros = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.pnlCaracteristicas = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtCodCaracteristica = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtNomeCaracteristica = new System.Windows.Forms.TextBox();
             this.chkPrestadorServico = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
@@ -360,6 +360,105 @@
             this.pnlAdicionais.TabIndex = 40;
             this.pnlAdicionais.Visible = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(16, 21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(204, 16);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Preencher os seguintes campos:";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Controls.Add(this.textBox3);
+            this.groupBox4.Controls.Add(this.chkConfigPrestadorServico);
+            this.groupBox4.Controls.Add(this.checkBox2);
+            this.groupBox4.Controls.Add(this.checkBox1);
+            this.groupBox4.Enabled = false;
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(9, 114);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(581, 86);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(551, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(20, 16);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "%";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(321, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(165, 16);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Aliq. I.R. pessoas juridicas";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(495, 17);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(49, 22);
+            this.textBox3.TabIndex = 3;
+            // 
+            // chkConfigPrestadorServico
+            // 
+            this.chkConfigPrestadorServico.AutoSize = true;
+            this.chkConfigPrestadorServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkConfigPrestadorServico.Location = new System.Drawing.Point(319, 45);
+            this.chkConfigPrestadorServico.Name = "chkConfigPrestadorServico";
+            this.chkConfigPrestadorServico.Size = new System.Drawing.Size(255, 20);
+            this.chkConfigPrestadorServico.TabIndex = 2;
+            this.chkConfigPrestadorServico.Text = "Pessoa jurídica prestadora de serviço";
+            this.chkConfigPrestadorServico.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.Location = new System.Drawing.Point(20, 45);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(290, 20);
+            this.checkBox2.TabIndex = 1;
+            this.checkBox2.Text = "Retenção de documentos de qualquer valor";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(7, 20);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(248, 20);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Retenção de tributos e contribuições ";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // chkEntidadeDaAdmFederal
+            // 
+            this.chkEntidadeDaAdmFederal.AutoSize = true;
+            this.chkEntidadeDaAdmFederal.Enabled = false;
+            this.chkEntidadeDaAdmFederal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkEntidadeDaAdmFederal.Location = new System.Drawing.Point(9, 64);
+            this.chkEntidadeDaAdmFederal.Name = "chkEntidadeDaAdmFederal";
+            this.chkEntidadeDaAdmFederal.Size = new System.Drawing.Size(280, 20);
+            this.chkEntidadeDaAdmFederal.TabIndex = 0;
+            this.chkEntidadeDaAdmFederal.Text = "Entidade da administração pública federal";
+            this.chkEntidadeDaAdmFederal.UseVisualStyleBackColor = true;
+            // 
             // txtCodOp
             // 
             this.txtCodOp.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolTip;
@@ -379,105 +478,6 @@
             this.txtNomeOp.Size = new System.Drawing.Size(473, 26);
             this.txtNomeOp.TabIndex = 37;
             // 
-            // chkEntidadeDaAdmFederal
-            // 
-            this.chkEntidadeDaAdmFederal.AutoSize = true;
-            this.chkEntidadeDaAdmFederal.Enabled = false;
-            this.chkEntidadeDaAdmFederal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkEntidadeDaAdmFederal.Location = new System.Drawing.Point(9, 64);
-            this.chkEntidadeDaAdmFederal.Name = "chkEntidadeDaAdmFederal";
-            this.chkEntidadeDaAdmFederal.Size = new System.Drawing.Size(280, 20);
-            this.chkEntidadeDaAdmFederal.TabIndex = 0;
-            this.chkEntidadeDaAdmFederal.Text = "Entidade da administração pública federal";
-            this.chkEntidadeDaAdmFederal.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Controls.Add(this.label3);
-            this.groupBox4.Controls.Add(this.textBox3);
-            this.groupBox4.Controls.Add(this.chkConfigPrestadorServico);
-            this.groupBox4.Controls.Add(this.checkBox2);
-            this.groupBox4.Controls.Add(this.checkBox1);
-            this.groupBox4.Enabled = false;
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(9, 114);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(581, 86);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(7, 20);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(248, 20);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Retenção de tributos e contribuições ";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(20, 45);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(290, 20);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Retenção de documentos de qualquer valor";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // chkConfigPrestadorServico
-            // 
-            this.chkConfigPrestadorServico.AutoSize = true;
-            this.chkConfigPrestadorServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkConfigPrestadorServico.Location = new System.Drawing.Point(319, 45);
-            this.chkConfigPrestadorServico.Name = "chkConfigPrestadorServico";
-            this.chkConfigPrestadorServico.Size = new System.Drawing.Size(255, 20);
-            this.chkConfigPrestadorServico.TabIndex = 2;
-            this.chkConfigPrestadorServico.Text = "Pessoa jurídica prestadora de serviço";
-            this.chkConfigPrestadorServico.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(495, 17);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(49, 22);
-            this.textBox3.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(321, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Aliq. I.R. pessoas juridicas";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(551, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 16);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "%";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(204, 16);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Preencher os seguintes campos:";
-            // 
             // pnlCadastros
             // 
             this.pnlCadastros.Controls.Add(this.label8);
@@ -493,15 +493,15 @@
             this.pnlCadastros.TabIndex = 41;
             this.pnlCadastros.Visible = false;
             // 
-            // label6
+            // label8
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(26, 18);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(240, 20);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Preencher os seguintes campos:";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(26, 128);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 20);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "Preço";
             // 
             // label7
             // 
@@ -513,15 +513,15 @@
             this.label7.TabIndex = 38;
             this.label7.Text = "Operação para notas fiscals";
             // 
-            // label8
+            // label6
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(26, 128);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 20);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Preço";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(26, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(240, 20);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Preencher os seguintes campos:";
             // 
             // pnlCaracteristicas
             // 
@@ -534,16 +534,6 @@
             this.pnlCaracteristicas.Size = new System.Drawing.Size(598, 363);
             this.pnlCaracteristicas.TabIndex = 41;
             this.pnlCaracteristicas.Visible = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(16, 21);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(204, 16);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Preencher os seguintes campos:";
             // 
             // label10
             // 
@@ -563,6 +553,16 @@
             this.txtCodCaracteristica.Name = "txtCodCaracteristica";
             this.txtCodCaracteristica.Size = new System.Drawing.Size(75, 26);
             this.txtCodCaracteristica.TabIndex = 40;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(16, 21);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(204, 16);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Preencher os seguintes campos:";
             // 
             // txtNomeCaracteristica
             // 
