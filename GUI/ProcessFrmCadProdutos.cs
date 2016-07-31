@@ -8,7 +8,7 @@ namespace GUI
 {
     public partial class frmCadastroProdutos
     {
-        public void ProcessFinalidade()
+        public void AvaliarDadosProdutos()
         {
             //Verifica a Finalidade do Produto
             string formatoCodigo = "Código do Doc de Entrada.";
@@ -322,8 +322,6 @@ namespace GUI
                 }
             }
         }
-
-        
     }
 }
 

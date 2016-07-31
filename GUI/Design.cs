@@ -31,7 +31,32 @@ namespace GUI
 
             return dgv;
         }
+
+        public void LimparTela(Control tabPage)
+        {
+            foreach (Control ctrl in tabPage.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    ((TextBox)ctrl).Text = String.Empty;
+                }
+                if (ctrl is CheckBox)
+                {
+                    ((CheckBox)ctrl).Checked = false;
+                }
+                if (ctrl is RadioButton)
+                {
+                    ((RadioButton)ctrl).Checked = false;
+                }
+                else if (ctrl.HasChildren)
+                {
+                    LimparTela(ctrl);
+                }
+            }
+        }
     }
+
+
 
     public enum Finalidade
     {

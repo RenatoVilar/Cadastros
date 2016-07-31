@@ -118,7 +118,10 @@
     <Compile Include="frmSobre.Designer.cs">
       <DependentUpon>frmSobre.cs</DependentUpon>
     </Compile>
-    <Compile Include="Process.cs">
+    <Compile Include="ProcessFrmCadastroClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessFrmCadProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />

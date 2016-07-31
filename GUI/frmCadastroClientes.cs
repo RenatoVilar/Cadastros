@@ -17,12 +17,21 @@ namespace GUI
             InitializeComponent();
         }
 
+        private void frmCadastroClientes_Load(object sender, EventArgs e)
+        {
+            TreeNode mnuEnderecos= trePrincipal.Nodes.Add("Endereços...");
+            TreeNode mnuAdicionais = trePrincipal.Nodes.Add("Adicionais...");
+            TreeNode mnuCadastros= trePrincipal.Nodes.Add("Cadastros...");
+            TreeNode mnuCaracteristicas = trePrincipal.Nodes.Add("Características...");
+
+            pnlEndereco.Visible = true;
+        }
         private void trePrincipal_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             TreeNode myNode;
 
             myNode = e.Node;
-          
+
             switch (myNode.Index)
             {
                 case 0:
@@ -52,12 +61,19 @@ namespace GUI
             }
         }
 
-        private void frmCadastroClientes_Load(object sender, EventArgs e)
+        private void btnAvaliar_Click(object sender, EventArgs e)
         {
-            TreeNode mnuEnderecos= trePrincipal.Nodes.Add("Endereços...");
-            TreeNode mnuAdicionais = trePrincipal.Nodes.Add("Adicionais...");
-            TreeNode mnuCadastros= trePrincipal.Nodes.Add("Cadastros...");
-            TreeNode mnuCaracteristicas = trePrincipal.Nodes.Add("Características...");
+            Design modelo = new Design();
+            modelo.LimparTela(pnlAdicionais);
+            modelo.LimparTela(pnlCadastros);
+            modelo.LimparTela(pnlCaracteristicas);
+            modelo.LimparTela(pnlEndereco);
+            AvaliarDadosCliente();
+        }
+
+        private void radJuridica_Click(object sender, EventArgs e)
+        {
+            chkPrestadorServico.Visible = true;
         }
     }
 }

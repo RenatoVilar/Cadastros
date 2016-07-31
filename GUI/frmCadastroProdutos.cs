@@ -18,6 +18,8 @@ namespace GUI
 {
     public partial class frmCadastroProdutos : Form
     {
+        Design modelo = new Design();
+
         public frmCadastroProdutos()
         {
             InitializeComponent();
@@ -105,30 +107,7 @@ namespace GUI
         {
             GetRadChecked();
         }
-
-        public void LimparTela(Control tabPage)
-        {
-            foreach (Control ctrl in tabPage.Controls)
-            {
-                if (ctrl is TextBox)
-                {
-                    ((TextBox)ctrl).Text = String.Empty;
-                }
-                if (ctrl is CheckBox)
-                {
-                    ((CheckBox)ctrl).Checked = false;
-                }
-                if (ctrl is RadioButton)
-                {
-                    ((RadioButton)ctrl).Checked = false;
-                }
-                else if (ctrl.HasChildren)
-                {
-                    LimparTela(ctrl);
-                }
-            }
-        }
-
+ 
         private void ApagaPics()
         {
             picSubTribOK.Visible = false;
@@ -166,9 +145,9 @@ namespace GUI
                 return;
             }
            
-
-            LimparTela(tabPrincipal);
-            ProcessFinalidade();
+            modelo.LimparTela(tabPrincipal);
+            AvaliarDadosProdutos();
+      
         }
 
         private void radForEstrangeiro_Click(object sender, EventArgs e)
@@ -196,7 +175,7 @@ namespace GUI
                 txtNomeNCM.Text = "";
                 txtCodNCM.Text = "";
                 ApagaPics();
-                LimparTela(tabPrincipal);
+                modelo.LimparTela(tabPrincipal);
             }
         }
     }
