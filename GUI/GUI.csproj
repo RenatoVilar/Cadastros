@@ -46,12 +46,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Design.cs" />
-    <Compile Include="frmCadastroCalcICMS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCadastroCalcICMS.Designer.cs">
-      <DependentUpon>frmCadastroCalcICMS.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmCadastroClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,12 +69,6 @@
     </Compile>
     <Compile Include="frmCadastroProdutos.Designer.cs">
       <DependentUpon>frmCadastroProdutos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmLocalizarCalcICMS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLocalizarCalcICMS.Designer.cs">
-      <DependentUpon>frmLocalizarCalcICMS.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLocalizarGrupo.cs">
       <SubType>Form</SubType>
@@ -147,9 +135,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmCadastroCalcICMS.resx">
-      <DependentUpon>frmCadastroCalcICMS.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroClientes.resx">
       <DependentUpon>frmCadastroClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,9 +146,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroProdutos.resx">
       <DependentUpon>frmCadastroProdutos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLocalizarCalcICMS.resx">
-      <DependentUpon>frmLocalizarCalcICMS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLocalizarGrupo.resx">
       <DependentUpon>frmLocalizarGrupo.cs</DependentUpon>

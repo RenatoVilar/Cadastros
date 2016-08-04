@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLLCalcICMS.cs" />
     <Compile Include="BLLGrupo.cs" />
     <Compile Include="BLLNCM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

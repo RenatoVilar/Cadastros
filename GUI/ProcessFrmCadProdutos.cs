@@ -270,8 +270,6 @@ namespace GUI
                 radOrigem4.Checked = true;
 
                 txtIndCodSetor1.Text = "00001"; txtIndSetor1.Text = "INDUSTRIAL";
-
-
             }
 
             if (picSubTribOK.Visible == true)

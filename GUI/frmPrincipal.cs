@@ -24,14 +24,6 @@ namespace GUI
             frm.Dispose();
         }
 
-        private void cálculoDeICMSToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmCadastroCalcICMS frm = new frmCadastroCalcICMS();
-            frm.ShowDialog();
-            frm.Dispose();
-                
-        }
-
         private void gruposToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCadastroGrupo frm = new frmCadastroGrupo();

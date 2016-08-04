@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModeloCadCalcICMS.cs" />
     <Compile Include="ModeloGrupo.cs" />
     <Compile Include="ModeloNCM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -32,7 +32,6 @@
             this.tabelasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nCMsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cálculoDeICMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCadastraProdutos = new System.Windows.Forms.Button();
             this.btnCadastrarClientes = new System.Windows.Forms.Button();
@@ -54,8 +53,7 @@
             // 
             this.tabelasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nCMsToolStripMenuItem,
-            this.gruposToolStripMenuItem,
-            this.cálculoDeICMSToolStripMenuItem});
+            this.gruposToolStripMenuItem});
             this.tabelasToolStripMenuItem.Name = "tabelasToolStripMenuItem";
             this.tabelasToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.tabelasToolStripMenuItem.Text = "Tabelas";
@@ -63,23 +61,16 @@
             // nCMsToolStripMenuItem
             // 
             this.nCMsToolStripMenuItem.Name = "nCMsToolStripMenuItem";
-            this.nCMsToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.nCMsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.nCMsToolStripMenuItem.Text = "NCMs";
             this.nCMsToolStripMenuItem.Click += new System.EventHandler(this.nCMsToolStripMenuItem_Click);
             // 
             // gruposToolStripMenuItem
             // 
             this.gruposToolStripMenuItem.Name = "gruposToolStripMenuItem";
-            this.gruposToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.gruposToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.gruposToolStripMenuItem.Text = "Grupos";
             this.gruposToolStripMenuItem.Click += new System.EventHandler(this.gruposToolStripMenuItem_Click);
-            // 
-            // cálculoDeICMSToolStripMenuItem
-            // 
-            this.cálculoDeICMSToolStripMenuItem.Name = "cálculoDeICMSToolStripMenuItem";
-            this.cálculoDeICMSToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.cálculoDeICMSToolStripMenuItem.Text = "Cálculo de ICMS";
-            this.cálculoDeICMSToolStripMenuItem.Click += new System.EventHandler(this.cálculoDeICMSToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 
@@ -137,7 +128,6 @@
         private System.Windows.Forms.ToolStripMenuItem tabelasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nCMsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gruposToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cálculoDeICMSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.Button btnCadastraProdutos;
         private System.Windows.Forms.Button btnCadastrarClientes;
