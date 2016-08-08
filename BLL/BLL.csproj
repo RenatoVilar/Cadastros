@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BLLGrupo.cs" />
     <Compile Include="BLLNCM.cs" />
+    <Compile Include="BLLNCMLote.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

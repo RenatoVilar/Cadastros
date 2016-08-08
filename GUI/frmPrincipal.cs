@@ -51,5 +51,12 @@ namespace GUI
             frm.ShowDialog();
             frm.Dispose();
         }
+
+        private void atualizarNCMPorLoteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlterarNcmLote frm = new frmAlterarNcmLote();
+            frm.ShowDialog();
+            frm.Dispose();
+        }
     }
 }

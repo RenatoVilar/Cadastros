@@ -12,11 +12,11 @@ namespace BLL
 {
     public class BLLNCM
     {
-        private DALConexao dalconexao;
+        private DALConexao dalConexao;
 
-        public BLLNCM(DALConexao dalconexao)
+        public BLLNCM(DALConexao dalConexao)
         {
-            this.dalconexao = dalconexao;
+            this.dalConexao = dalConexao;
         }
 
         public void Incluir(ModeloNCM modelo)
@@ -36,7 +36,7 @@ namespace BLL
                 throw new Exception("O nome da NCM é obrigatório");
             }
 
-            dalconexao.Conectar();
+            dalConexao.Conectar();
 
             using (SqlCommand sqlCmd = new SqlCommand("SELECT (CodNCM) from NCMs WHERE CodNCM=@CodNCM", dalconexao.SqlConexao))
             {
@@ -50,10 +50,10 @@ namespace BLL
                 }
             }
 
-            dalconexao.Desconectar();
+            dalConexao.Desconectar();
 
             modelo.NomeNCM = modelo.NomeNCM.ToUpper();
-            DALNCM dalNCM = new DALNCM(dalconexao);
+            DALNCM dalNCM = new DALNCM(dalConexao);
             dalNCM.Inserir(modelo);
         }
 
@@ -75,25 +75,25 @@ namespace BLL
             }
 
             modelo.NomeNCM = modelo.NomeNCM.ToUpper();
-            DALNCM dalNCM = new DALNCM(dalconexao);
+            DALNCM dalNCM = new DALNCM(dalConexao);
             dalNCM.Alterar(modelo);
         }
 
         public void Excluir(int NCMID)
         {
-            DALNCM dalNCM = new DALNCM(dalconexao);
+            DALNCM dalNCM = new DALNCM(dalConexao);
             dalNCM.Excluir(NCMID);
         }
 
         public DataTable Localizar(string valor, int index)
         {
-            DALNCM dalNCM = new DALNCM(dalconexao);
+            DALNCM dalNCM = new DALNCM(dalConexao);
             return dalNCM.Localizar(valor, index);
         }
 
         public ModeloNCM CarregaModeloNCM(int NCMID)
         {
-            DALNCM dalNCM = new DALNCM(dalconexao);
+            DALNCM dalNCM = new DALNCM(dalConexao);
             return dalNCM.CarregaModeloNCM(NCMID);
            
         }
