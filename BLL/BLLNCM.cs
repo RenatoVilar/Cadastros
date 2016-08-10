@@ -38,7 +38,7 @@ namespace BLL
 
             dalConexao.Conectar();
 
-            using (SqlCommand sqlCmd = new SqlCommand("SELECT (CodNCM) from NCMs WHERE CodNCM=@CodNCM", dalconexao.SqlConexao))
+            using (SqlCommand sqlCmd = new SqlCommand("SELECT (CodNCM) from NCMs WHERE CodNCM=@CodNCM", dalConexao.SqlConexao))
             {
                 sqlCmd.Parameters.AddWithValue("@CodNCM", modelo.CodNCM);
 

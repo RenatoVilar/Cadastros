@@ -26,29 +26,57 @@ namespace GUI
             DALConexao dalconexao = new DALConexao(DadosDeConexao.strConexao);
             BLLNCMLote bll = new BLLNCMLote(dalconexao);
             string indexRadio = CheckRadio(grpBoxFiltro);
-            dgvDados.AutoGenerateColumns = false;
-            dgvDados.DataSource = bll.Localizar(txtPesquisar.Text, indexRadio);
+            //dgvDados.AutoGenerateColumns = false;
+            dgvDados.DataSource = bll.Localizar(txtPesquisarNCM.Text);
+            //DataGridViewCheckBoxColumn dgvcb = new DataGridViewCheckBoxColumn();
+            //dgvcb.TrueValue = 1;
+            //dgvcb.FalseValue = 0;
+            //dgvDados.Columns.Add(dgvcb);
+            //dgvDados.CellFormatting += new DataGridViewCellFormattingEventHandler(dataGridView1_CellFormating);
+
+
+            //dgvDados.Columns[0].HeaderText = "NCM";
+            //dgvDados.Columns[1].HeaderText = "Descrição";
+            //dgvDados.Columns[2].HeaderText = indexRadio;
+            //dgvDados.Columns[0].Width = 90;
+            //dgvDados.Columns[1].Width = 497;
+        }
+
+        private void dataGridView1_CellFormating(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 2)
+            {
+                if (e.Value != null)
+                {
+                    if (e.Value.ToString() == "1")
+                    {
+                        e.Value = true;
+                    }
+                    else if (e.Value.ToString() == "0")
+                    {
+                        e.Value = false;
+                    }
+                }
+            }
+        }
+
+        private string CheckRadio(GroupBox grp)
+        {
+            return grp.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
             
 
-            dgvDados.Columns[0].HeaderText = "NCM";
-            dgvDados.Columns[1].HeaderText = "Descrição";
-            dgvDados.Columns[2].HeaderText = indexRadio;
-            dgvDados.Columns[0].Width = 90;
-            dgvDados.Columns[1].Width = 497;
-        }
+            //RadioButton res = null;
 
-        private string CheckRadio(Control control)
-        {
-            string radName = "";
+            //foreach (Control crtl in controle.Controls)
+            //{
+            //    if (crtl is GroupBox)
+            //    {
+            //        res = Controls..OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+            //     }
+            //}
 
-            foreach (Control crtl in Controls)
-            {
-                if (crtl.GetType().ToString() == "System.Windows.Forms.RadioButton")
-                    if (((RadioButton)crtl).Checked == true)
-                        radName = crtl.Text;
-            }
+            //return res.Name;
 
-            return radName;
         }
     }
- }
+}

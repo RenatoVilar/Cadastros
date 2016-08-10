@@ -17,10 +17,10 @@ namespace BLL
             this.dalConexao = dalConexao;
         }
 
-        public DataTable Localizar(string valor, string index)
+        public DataTable Localizar(string valor)
         {
             DALNCMLote dalNCMLote = new DALNCMLote(dalConexao);
-            return dalNCMLote.Localizar(valor, index);
+            return dalNCMLote.Localizar(valor);
         }
     }
 }

@@ -42,14 +42,13 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.dgvDados = new System.Windows.Forms.DataGridView();
             this.btnLocalizar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPesquisarNCM = new System.Windows.Forms.TextBox();
             this.grpBoxFiltro = new System.Windows.Forms.GroupBox();
             this.radCest = new System.Windows.Forms.RadioButton();
             this.radSemSimilar = new System.Windows.Forms.RadioButton();
             this.radAutopecas = new System.Windows.Forms.RadioButton();
             this.radSubsTrib = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
@@ -78,9 +77,9 @@
             // txtPesquisar
             // 
             this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisar.Location = new System.Drawing.Point(136, 13);
+            this.txtPesquisar.Location = new System.Drawing.Point(155, 13);
             this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(560, 26);
+            this.txtPesquisar.Size = new System.Drawing.Size(10000, 26);
             this.txtPesquisar.TabIndex = 7;
             // 
             // label1
@@ -187,9 +186,9 @@
             // dgvDados
             // 
             this.dgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDados.Location = new System.Drawing.Point(13, 100);
+            this.dgvDados.Location = new System.Drawing.Point(13, 73);
             this.dgvDados.Name = "dgvDados";
-            this.dgvDados.Size = new System.Drawing.Size(759, 357);
+            this.dgvDados.Size = new System.Drawing.Size(759, 384);
             this.dgvDados.TabIndex = 3;
             // 
             // btnLocalizar
@@ -202,14 +201,15 @@
             this.btnLocalizar.Size = new System.Drawing.Size(24, 26);
             this.btnLocalizar.TabIndex = 8;
             this.btnLocalizar.UseVisualStyleBackColor = false;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
-            // textBox1
+            // txtPesquisarNCM
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(155, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(560, 26);
-            this.textBox1.TabIndex = 7;
+            this.txtPesquisarNCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisarNCM.Location = new System.Drawing.Point(155, 17);
+            this.txtPesquisarNCM.Name = "txtPesquisarNCM";
+            this.txtPesquisarNCM.Size = new System.Drawing.Size(560, 26);
+            this.txtPesquisarNCM.TabIndex = 7;
             // 
             // grpBoxFiltro
             // 
@@ -218,49 +218,47 @@
             this.grpBoxFiltro.Controls.Add(this.radAutopecas);
             this.grpBoxFiltro.Controls.Add(this.radSubsTrib);
             this.grpBoxFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpBoxFiltro.Location = new System.Drawing.Point(155, 40);
+            this.grpBoxFiltro.Location = new System.Drawing.Point(13, 485);
             this.grpBoxFiltro.Name = "grpBoxFiltro";
-            this.grpBoxFiltro.Size = new System.Drawing.Size(560, 54);
+            this.grpBoxFiltro.Size = new System.Drawing.Size(515, 54);
             this.grpBoxFiltro.TabIndex = 9;
             this.grpBoxFiltro.TabStop = false;
             // 
             // radCest
             // 
             this.radCest.AutoSize = true;
-            this.radCest.Location = new System.Drawing.Point(465, 15);
+            this.radCest.Location = new System.Drawing.Point(429, 17);
             this.radCest.Name = "radCest";
             this.radCest.Size = new System.Drawing.Size(69, 24);
             this.radCest.TabIndex = 0;
-            this.radCest.TabStop = true;
             this.radCest.Text = "CEST";
             this.radCest.UseVisualStyleBackColor = true;
             // 
             // radSemSimilar
             // 
             this.radSemSimilar.AutoSize = true;
-            this.radSemSimilar.Location = new System.Drawing.Point(304, 15);
+            this.radSemSimilar.Location = new System.Drawing.Point(280, 15);
             this.radSemSimilar.Name = "radSemSimilar";
             this.radSemSimilar.Size = new System.Drawing.Size(143, 24);
             this.radSemSimilar.TabIndex = 0;
-            this.radSemSimilar.TabStop = true;
             this.radSemSimilar.Text = "Sem Similar Nac";
             this.radSemSimilar.UseVisualStyleBackColor = true;
             // 
             // radAutopecas
             // 
             this.radAutopecas.AutoSize = true;
-            this.radAutopecas.Location = new System.Drawing.Point(182, 15);
+            this.radAutopecas.Location = new System.Drawing.Point(170, 15);
             this.radAutopecas.Name = "radAutopecas";
             this.radAutopecas.Size = new System.Drawing.Size(104, 24);
             this.radAutopecas.TabIndex = 0;
-            this.radAutopecas.TabStop = true;
             this.radAutopecas.Text = "Autopeças";
             this.radAutopecas.UseVisualStyleBackColor = true;
             // 
             // radSubsTrib
             // 
             this.radSubsTrib.AutoSize = true;
-            this.radSubsTrib.Location = new System.Drawing.Point(26, 15);
+            this.radSubsTrib.Checked = true;
+            this.radSubsTrib.Location = new System.Drawing.Point(20, 17);
             this.radSubsTrib.Name = "radSubsTrib";
             this.radSubsTrib.Size = new System.Drawing.Size(138, 24);
             this.radSubsTrib.TabIndex = 0;
@@ -272,33 +270,22 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(40, 21);
+            this.label3.Location = new System.Drawing.Point(40, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 10;
             this.label3.Text = "Pesquisar :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(40, 57);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 20);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Filtro : ";
             // 
             // frmAlterarNcmLote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 562);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dgvDados);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.grpBoxFiltro);
             this.Controls.Add(this.btnLocalizar);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dgvDados);
+            this.Controls.Add(this.txtPesquisarNCM);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Name = "frmAlterarNcmLote";
@@ -330,13 +317,12 @@
         protected System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.DataGridView dgvDados;
         protected System.Windows.Forms.Button btnLocalizar;
-        protected System.Windows.Forms.TextBox textBox1;
+        protected System.Windows.Forms.TextBox txtPesquisarNCM;
         private System.Windows.Forms.RadioButton radCest;
         private System.Windows.Forms.RadioButton radSemSimilar;
         private System.Windows.Forms.RadioButton radAutopecas;
         private System.Windows.Forms.RadioButton radSubsTrib;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox grpBoxFiltro;
     }
 }

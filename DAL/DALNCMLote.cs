@@ -19,29 +19,19 @@ namespace DAL
             this.dalConexao = dalConexao;
         }
 
-        public DataTable Localizar(string valor, string index)
+        public DataTable Localizar(string valor)
         {
             DataTable tabela = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter();
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.Connection = dalConexao.SqlConexao;
+            //sqlCmd.CommandText = "SELECT CodNCM, NomeNCM, SitST, SitAuto, SitSemSimilar, Cest FROM NCMs WHERE CodNCM LIKE '" + valor + "%'";
 
-            switch (index)
-            {
-                case "Subs. Tributária":
-                    sqlCmd.CommandText = "SELECT CodNCM, NomeNCM, SitST, FROM NCMs WHERE CodNCM LIKE " + valor + "%'";
-                    break;
-                case "Autopeças":
-                    sqlCmd.CommandText = "SELECT CodNCM, NomeNCM, SitAuto, FROM NCMs WHERE CodNCM LIKE " + valor + "%'";
-                    break;
-                case "Sem Similar Nac":
-                    sqlCmd.CommandText = "SELECT CodNCM, NomeNCM, SitSemSimilar, FROM NCMs WHERE CodNCM LIKE " + valor + "%'";
-                    break;
-                case "CEST":
-                    sqlCmd.CommandText = "SELECT CodNCM, NomeNCM, Cest, FROM NCMs WHERE CodNCM LIKE " + valor + "%'";
-                    break;
-            }
-
+            //1   MATÉRIA PRIMA   1
+            //2   OUTROS INSUMOS  2
+            //6   BARRACAS    3
+            //5   ELETRONICOS 3
+            //sqlCmd.CommandText = "SELECT CAST(IIF(SitST = 1, 1, 0) AS BIT) FROM NCMs WHERE CodNCM LIKE '" + valor + "%'";
             da.SelectCommand = sqlCmd;
             dalConexao.Conectar();
             da.Fill(tabela);
