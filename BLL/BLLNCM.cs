@@ -97,11 +97,5 @@ namespace BLL
             return dalNCM.CarregaModeloNCM(NCMID);
            
         }
-        
-
-
-
-            
-
     }
 }

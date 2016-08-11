@@ -44,11 +44,14 @@
             this.btnLocalizar = new System.Windows.Forms.Button();
             this.txtPesquisarNCM = new System.Windows.Forms.TextBox();
             this.grpBoxFiltro = new System.Windows.Forms.GroupBox();
+            this.mtxtCest = new System.Windows.Forms.MaskedTextBox();
             this.radCest = new System.Windows.Forms.RadioButton();
             this.radSemSimilar = new System.Windows.Forms.RadioButton();
             this.radAutopecas = new System.Windows.Forms.RadioButton();
             this.radSubsTrib = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblCriterioAtual = new System.Windows.Forms.Label();
+            this.lblCritérioText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
@@ -182,13 +185,14 @@
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // dgvDados
             // 
             this.dgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDados.Location = new System.Drawing.Point(13, 73);
+            this.dgvDados.Location = new System.Drawing.Point(13, 60);
             this.dgvDados.Name = "dgvDados";
-            this.dgvDados.Size = new System.Drawing.Size(759, 384);
+            this.dgvDados.Size = new System.Drawing.Size(759, 383);
             this.dgvDados.TabIndex = 3;
             // 
             // btnLocalizar
@@ -196,7 +200,7 @@
             this.btnLocalizar.BackColor = System.Drawing.SystemColors.Control;
             this.btnLocalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLocalizar.Image = global::GUI.Properties.Resources.find_new_users;
-            this.btnLocalizar.Location = new System.Drawing.Point(721, 18);
+            this.btnLocalizar.Location = new System.Drawing.Point(214, 17);
             this.btnLocalizar.Name = "btnLocalizar";
             this.btnLocalizar.Size = new System.Drawing.Size(24, 26);
             this.btnLocalizar.TabIndex = 8;
@@ -206,28 +210,38 @@
             // txtPesquisarNCM
             // 
             this.txtPesquisarNCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisarNCM.Location = new System.Drawing.Point(155, 17);
+            this.txtPesquisarNCM.Location = new System.Drawing.Point(108, 17);
             this.txtPesquisarNCM.Name = "txtPesquisarNCM";
-            this.txtPesquisarNCM.Size = new System.Drawing.Size(560, 26);
+            this.txtPesquisarNCM.Size = new System.Drawing.Size(100, 26);
             this.txtPesquisarNCM.TabIndex = 7;
             // 
             // grpBoxFiltro
             // 
+            this.grpBoxFiltro.Controls.Add(this.mtxtCest);
             this.grpBoxFiltro.Controls.Add(this.radCest);
             this.grpBoxFiltro.Controls.Add(this.radSemSimilar);
             this.grpBoxFiltro.Controls.Add(this.radAutopecas);
             this.grpBoxFiltro.Controls.Add(this.radSubsTrib);
             this.grpBoxFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpBoxFiltro.Location = new System.Drawing.Point(13, 485);
+            this.grpBoxFiltro.Location = new System.Drawing.Point(13, 457);
             this.grpBoxFiltro.Name = "grpBoxFiltro";
-            this.grpBoxFiltro.Size = new System.Drawing.Size(515, 54);
+            this.grpBoxFiltro.Size = new System.Drawing.Size(445, 93);
             this.grpBoxFiltro.TabIndex = 9;
             this.grpBoxFiltro.TabStop = false;
+            this.grpBoxFiltro.Text = "Tipo Alterar";
+            // 
+            // mtxtCest
+            // 
+            this.mtxtCest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCest.Location = new System.Drawing.Point(95, 50);
+            this.mtxtCest.Name = "mtxtCest";
+            this.mtxtCest.Size = new System.Drawing.Size(100, 26);
+            this.mtxtCest.TabIndex = 12;
             // 
             // radCest
             // 
             this.radCest.AutoSize = true;
-            this.radCest.Location = new System.Drawing.Point(429, 17);
+            this.radCest.Location = new System.Drawing.Point(20, 50);
             this.radCest.Name = "radCest";
             this.radCest.Size = new System.Drawing.Size(69, 24);
             this.radCest.TabIndex = 0;
@@ -270,17 +284,40 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(40, 24);
+            this.label3.Location = new System.Drawing.Point(12, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 10;
             this.label3.Text = "Pesquisar :";
+            // 
+            // lblCriterioAtual
+            // 
+            this.lblCriterioAtual.AutoSize = true;
+            this.lblCriterioAtual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCriterioAtual.Location = new System.Drawing.Point(264, 20);
+            this.lblCriterioAtual.Name = "lblCriterioAtual";
+            this.lblCriterioAtual.Size = new System.Drawing.Size(108, 20);
+            this.lblCriterioAtual.TabIndex = 11;
+            this.lblCriterioAtual.Text = "Critério Atual :";
+            this.lblCriterioAtual.Visible = false;
+            // 
+            // lblCritérioText
+            // 
+            this.lblCritérioText.AutoSize = true;
+            this.lblCritérioText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCritérioText.Location = new System.Drawing.Point(379, 20);
+            this.lblCritérioText.Name = "lblCritérioText";
+            this.lblCritérioText.Size = new System.Drawing.Size(0, 20);
+            this.lblCritérioText.TabIndex = 12;
+            this.lblCritérioText.Visible = false;
             // 
             // frmAlterarNcmLote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 562);
+            this.Controls.Add(this.lblCritérioText);
+            this.Controls.Add(this.lblCriterioAtual);
             this.Controls.Add(this.dgvDados);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.grpBoxFiltro);
@@ -289,6 +326,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Name = "frmAlterarNcmLote";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAlterarNcmLote";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -324,5 +362,8 @@
         private System.Windows.Forms.RadioButton radSubsTrib;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox grpBoxFiltro;
+        private System.Windows.Forms.MaskedTextBox mtxtCest;
+        private System.Windows.Forms.Label lblCriterioAtual;
+        private System.Windows.Forms.Label lblCritérioText;
     }
 }
