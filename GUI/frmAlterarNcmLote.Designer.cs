@@ -42,7 +42,6 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.dgvDados = new System.Windows.Forms.DataGridView();
             this.btnLocalizar = new System.Windows.Forms.Button();
-            this.txtPesquisarNCM = new System.Windows.Forms.TextBox();
             this.grpBoxFiltro = new System.Windows.Forms.GroupBox();
             this.mtxtCest = new System.Windows.Forms.MaskedTextBox();
             this.radCest = new System.Windows.Forms.RadioButton();
@@ -52,6 +51,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblCriterioAtual = new System.Windows.Forms.Label();
             this.lblCritérioText = new System.Windows.Forms.Label();
+            this.mtxtNcm = new System.Windows.Forms.MaskedTextBox();
+            this.chkApagar = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
@@ -207,16 +208,9 @@
             this.btnLocalizar.UseVisualStyleBackColor = false;
             this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
-            // txtPesquisarNCM
-            // 
-            this.txtPesquisarNCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisarNCM.Location = new System.Drawing.Point(108, 17);
-            this.txtPesquisarNCM.Name = "txtPesquisarNCM";
-            this.txtPesquisarNCM.Size = new System.Drawing.Size(100, 26);
-            this.txtPesquisarNCM.TabIndex = 7;
-            // 
             // grpBoxFiltro
             // 
+            this.grpBoxFiltro.Controls.Add(this.chkApagar);
             this.grpBoxFiltro.Controls.Add(this.mtxtCest);
             this.grpBoxFiltro.Controls.Add(this.radCest);
             this.grpBoxFiltro.Controls.Add(this.radSemSimilar);
@@ -233,7 +227,7 @@
             // mtxtCest
             // 
             this.mtxtCest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCest.Location = new System.Drawing.Point(95, 50);
+            this.mtxtCest.Location = new System.Drawing.Point(95, 49);
             this.mtxtCest.Name = "mtxtCest";
             this.mtxtCest.Size = new System.Drawing.Size(100, 26);
             this.mtxtCest.TabIndex = 12;
@@ -299,7 +293,6 @@
             this.lblCriterioAtual.Size = new System.Drawing.Size(108, 20);
             this.lblCriterioAtual.TabIndex = 11;
             this.lblCriterioAtual.Text = "Critério Atual :";
-            this.lblCriterioAtual.Visible = false;
             // 
             // lblCritérioText
             // 
@@ -310,6 +303,25 @@
             this.lblCritérioText.Size = new System.Drawing.Size(0, 20);
             this.lblCritérioText.TabIndex = 12;
             this.lblCritérioText.Visible = false;
+            // 
+            // mtxtNcm
+            // 
+            this.mtxtNcm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtNcm.Location = new System.Drawing.Point(105, 17);
+            this.mtxtNcm.Name = "mtxtNcm";
+            this.mtxtNcm.Size = new System.Drawing.Size(100, 26);
+            this.mtxtNcm.TabIndex = 13;
+            // 
+            // chkApagar
+            // 
+            this.chkApagar.AutoSize = true;
+            this.chkApagar.Location = new System.Drawing.Point(329, 50);
+            this.chkApagar.Name = "chkApagar";
+            this.chkApagar.Size = new System.Drawing.Size(80, 24);
+            this.chkApagar.TabIndex = 13;
+            this.chkApagar.Text = "Apagar";
+            this.chkApagar.UseVisualStyleBackColor = true;
+            this.chkApagar.CheckedChanged += new System.EventHandler(this.chkApagar_CheckedChanged);
             // 
             // frmAlterarNcmLote
             // 
@@ -322,12 +334,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.grpBoxFiltro);
             this.Controls.Add(this.btnLocalizar);
-            this.Controls.Add(this.txtPesquisarNCM);
+            this.Controls.Add(this.mtxtNcm);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Name = "frmAlterarNcmLote";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAlterarNcmLote";
+            this.Load += new System.EventHandler(this.frmAlterarNcmLote_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -355,7 +368,6 @@
         protected System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.DataGridView dgvDados;
         protected System.Windows.Forms.Button btnLocalizar;
-        protected System.Windows.Forms.TextBox txtPesquisarNCM;
         private System.Windows.Forms.RadioButton radCest;
         private System.Windows.Forms.RadioButton radSemSimilar;
         private System.Windows.Forms.RadioButton radAutopecas;
@@ -365,5 +377,7 @@
         private System.Windows.Forms.MaskedTextBox mtxtCest;
         private System.Windows.Forms.Label lblCriterioAtual;
         private System.Windows.Forms.Label lblCritérioText;
+        private System.Windows.Forms.MaskedTextBox mtxtNcm;
+        private System.Windows.Forms.CheckBox chkApagar;
     }
 }

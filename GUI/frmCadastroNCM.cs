@@ -16,7 +16,7 @@ namespace GUI
 {
     public partial class frmCadastroNCM : frmModFormCadastro
     {
-        ToolTip tooltip1 = new ToolTip();
+        
 
         public frmCadastroNCM()
         {
@@ -29,6 +29,8 @@ namespace GUI
             mtxtCest.MaskInputRejected += new MaskInputRejectedEventHandler(mtxtCEST_MaskInputRejected);
            
         }
+
+        ToolTip tooltip1 = new ToolTip();
 
         private void mtxtCEST_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {

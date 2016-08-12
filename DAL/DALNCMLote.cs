@@ -34,17 +34,40 @@ namespace DAL
             return tabela;
         }
 
-        public void Alterar(ModeloNCM modelo)
+        public void Alterar(ModeloNCM modelo, int apagar)
         {
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.Connection = dalConexao.SqlConexao;
-            //sqlCmd.CommandText = "UPDATE NCMs SET SitST = @SitST, SitAuto = @SitAuto, SitSemSimilar = @SitSemSimilar, Cest = @Cest WHERE CodNCM = @CodNCM";
-            sqlCmd.CommandText = "UPDATE NCMs SET SitST = @SitST WHERE CodNCM LIKE '" + "@CodNCM " + "'";
-            sqlCmd.Parameters.AddWithValue("@CodNCM", modelo.CodNCM);
+            string strCmd;
+            if (apagar == 1)
+            {
+                if (modelo.SitST == 1)
+                    { strCmd = "UPDATE NCMs SET SitST = 0 WHERE CodNCM LIKE @CodNCM"; }
+                else if (modelo.SitAuto == 1)
+                    { strCmd = "UPDATE NCMs SET SitAuto = 0 WHERE CodNCM LIKE @CodNCM"; }
+                else if (modelo.SitSemSimilar == 1)
+                    { strCmd = "UPDATE NCMs SET SitSemSimilar = 0 WHERE CodNCM LIKE @CodNCM"; }
+                else
+                    { strCmd = "UPDATE NCMs SET Cest = NULL WHERE CodNCM LIKE @CodNCM"; }
+            }
+            else
+            {
+                if (modelo.SitST == 1)
+                    { strCmd = "UPDATE NCMs SET SitST = @SitST WHERE CodNCM LIKE @CodNCM"; }
+                else if (modelo.SitAuto == 1)
+                    { strCmd = "UPDATE NCMs SET SitAuto = @SitAuto WHERE CodNCM LIKE @CodNCM"; }
+                else if (modelo.SitSemSimilar == 1)
+                    { strCmd = "UPDATE NCMs SET SitSemSimilar = @SitSemSimilar WHERE CodNCM LIKE @CodNCM"; }
+                else
+                    { strCmd = "UPDATE NCMs SET Cest = @Cest WHERE CodNCM LIKE @CodNCM"; }
+
+            }
+            sqlCmd.CommandText = strCmd;
+            sqlCmd.Parameters.AddWithValue("@CodNCM", modelo.CodNCM + "%");
             sqlCmd.Parameters.AddWithValue("@SitST", modelo.SitST);
-            //sqlCmd.Parameters.AddWithValue("@SitAuto", modelo.SitAuto);
-            //sqlCmd.Parameters.AddWithValue("@SitSemSimilar", modelo.SitSemSimilar);
-            //sqlCmd.Parameters.AddWithValue("@Cest", modelo.Cest);
+            sqlCmd.Parameters.AddWithValue("@SitAuto", modelo.SitAuto);
+            sqlCmd.Parameters.AddWithValue("@SitSemsimilar", modelo.SitSemSimilar);
+            sqlCmd.Parameters.AddWithValue("@Cest", modelo.Cest);
             dalConexao.Conectar();
             sqlCmd.ExecuteNonQuery();
             dalConexao.Desconectar();

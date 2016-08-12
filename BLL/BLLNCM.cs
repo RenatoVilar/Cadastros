@@ -21,19 +21,29 @@ namespace BLL
 
         public void Incluir(ModeloNCM modelo)
         {
-            if (modelo.CodNCM.Trim().Length == 0 || modelo.CodNCM.Trim().Length > 8)
+            if (modelo.CodNCM.Trim().Length == 0 || modelo.CodNCM.Trim().Length < 8)
             {
                 throw new Exception("O código da NCM deve conter 8 números");
             }
 
             if (modelo.CodNCM.Where(c => char.IsLetter(c)).Count() > 0)
             {
-                throw new Exception("A NCM deve conter apenas números");
+                throw new Exception("O Código da NCM deve conter apenas números");
             }
 
             if (modelo.NomeNCM.Trim().Length == 0)
             {
                 throw new Exception("O nome da NCM é obrigatório");
+            }
+
+            if (modelo.Cest != "" && modelo.Cest.Trim().Length < 7)
+            {
+                throw new Exception("O código da CEST se informado deve conter 7 números");
+            }
+
+            if (modelo.Cest.Where(c => char.IsLetter(c)).Count() > 0)
+            {
+                throw new Exception("O Código da CEST deve conter apenas números");
             }
 
             dalConexao.Conectar();
