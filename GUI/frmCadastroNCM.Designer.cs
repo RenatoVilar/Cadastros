@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtNomeNCM = new System.Windows.Forms.TextBox();
-            this.txtCodNCM = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,6 +38,7 @@
             this.chkSemSimilar = new System.Windows.Forms.CheckBox();
             this.txtCest = new System.Windows.Forms.Label();
             this.mtxtCest = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtNcm = new System.Windows.Forms.MaskedTextBox();
             this.pnDados.SuspendLayout();
             this.pnBotoes.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             this.pnDados.Controls.Add(this.chkAutopecas);
             this.pnDados.Controls.Add(this.chkST);
             this.pnDados.Controls.Add(this.txtNomeNCM);
-            this.pnDados.Controls.Add(this.txtCodNCM);
+            this.pnDados.Controls.Add(this.mtxtNcm);
             this.pnDados.Controls.Add(this.label4);
             this.pnDados.Controls.Add(this.label3);
             this.pnDados.Controls.Add(this.label2);
@@ -94,14 +94,6 @@
             this.txtNomeNCM.Name = "txtNomeNCM";
             this.txtNomeNCM.Size = new System.Drawing.Size(604, 26);
             this.txtNomeNCM.TabIndex = 5;
-            // 
-            // txtCodNCM
-            // 
-            this.txtCodNCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodNCM.Location = new System.Drawing.Point(25, 44);
-            this.txtCodNCM.Name = "txtCodNCM";
-            this.txtCodNCM.Size = new System.Drawing.Size(100, 26);
-            this.txtCodNCM.TabIndex = 4;
             // 
             // label2
             // 
@@ -178,8 +170,14 @@
             this.mtxtCest.Name = "mtxtCest";
             this.mtxtCest.Size = new System.Drawing.Size(100, 26);
             this.mtxtCest.TabIndex = 11;
-            this.mtxtCest.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtxtCEST_MaskInputRejected);
-            this.mtxtCest.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtCest_KeyPress);
+            // 
+            // mtxtNcm
+            // 
+            this.mtxtNcm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtNcm.Location = new System.Drawing.Point(25, 44);
+            this.mtxtNcm.Name = "mtxtNcm";
+            this.mtxtNcm.Size = new System.Drawing.Size(100, 26);
+            this.mtxtNcm.TabIndex = 12;
             // 
             // frmCadastroNCM
             // 
@@ -199,7 +197,6 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNomeNCM;
-        private System.Windows.Forms.TextBox txtCodNCM;
         private System.Windows.Forms.CheckBox chkAutopecas;
         private System.Windows.Forms.CheckBox chkST;
         private System.Windows.Forms.Label label4;
@@ -208,5 +205,6 @@
         private System.Windows.Forms.CheckBox chkSemSimilar;
         private System.Windows.Forms.Label txtCest;
         private System.Windows.Forms.MaskedTextBox mtxtCest;
+        private System.Windows.Forms.MaskedTextBox mtxtNcm;
     }
 }

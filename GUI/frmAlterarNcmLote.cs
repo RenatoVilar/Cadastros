@@ -47,14 +47,13 @@ namespace GUI
 
             dgvDados.EnableHeadersVisualStyles = false;
 
-            dgvDados.RowsDefaultCellStyle.Format = "00,000,00";
-            dgvDados.Columns[5].DefaultCellStyle.Format = "00,000,00"; 
+
             dgvDados.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold);
             dgvDados.ColumnHeadersDefaultCellStyle.BackColor = Color.Blue;
             dgvDados.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvDados.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.TopCenter;
+            dgvDados.CellFormatting += new DataGridViewCellFormattingEventHandler(DgvDados_CellFormatting);
 
-           
             dgvDados.RowsDefaultCellStyle.BackColor = Color.LightCyan;
             dgvDados.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue;
 
@@ -74,6 +73,21 @@ namespace GUI
             lblCritérioText.Visible = true;
             lblCritérioText.Text = mtxtNcm.Text;
 
+        }
+
+        private void DgvDados_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            Double d;
+            if (e.ColumnIndex == 5 && e.Value != null)
+            {
+                Double.TryParse(e.Value.ToString(), out d);
+                e.Value = d.ToString(@"##\.###\.##");
+            }
+            if (e.ColumnIndex == 0 && e.Value != null)
+            {
+                Double.TryParse(e.Value.ToString(), out d);
+                e.Value = d.ToString(@"##\.####\.##");
+            }
         }
 
         public int apagar;
@@ -113,6 +127,17 @@ namespace GUI
         private void chkApagar_CheckedChanged(object sender, EventArgs e)
         {
             mtxtCest.Text = "";
+            mtxtCest.Enabled = false;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            dgvDados.DataSource = null;
+        }
+
+        private void radCest_CheckedChanged(object sender, EventArgs e)
+        {
+            mtxtCest.Enabled = true;
         }
     }
 }

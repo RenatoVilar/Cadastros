@@ -26,27 +26,9 @@ namespace GUI
         private void frmCadastroNCM_Load(object sender, EventArgs e)
         {
             mtxtCest.Mask = "00,000,00";
-            mtxtCest.MaskInputRejected += new MaskInputRejectedEventHandler(mtxtCEST_MaskInputRejected);
+            mtxtNcm.Mask = "00,0000,00";
+            //mtxtCest.MaskInputRejected += new MaskInputRejectedEventHandler(mtxtCEST_MaskInputRejected);
            
-        }
-
-        ToolTip tooltip1 = new ToolTip();
-
-        private void mtxtCEST_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-            //MessageBox.Show("Somente números são aceitos!", "Aviso", MessageBoxButtons.OK);
-            if (mtxtCest.MaskFull) { }
-            else
-            {
-                tooltip1.ToolTipTitle = "Aviso";
-                tooltip1.Show("Somente números são aceitos!", mtxtCest, 0, -20, 5000);
-                mtxtCest.Text = String.Empty;
-            }
-        }
-
-        private void mtxtCest_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            tooltip1.Hide(mtxtCest);
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -64,7 +46,7 @@ namespace GUI
                 DALConexao dalconexao = new DALConexao(DadosDeConexao.strConexao);
                 BLLNCM bll = new BLLNCM(dalconexao);
                 ModeloNCM modelo = bll.CarregaModeloNCM(frm.codigo);
-                txtCodNCM.Text = modelo.CodNCM;
+                mtxtNcm.Text = modelo.CodNCM;
                 txtNomeNCM.Text = modelo.NomeNCM;
                 chkST.Checked = Convert.ToBoolean(modelo.SitST);
                 chkSemSimilar.Checked = Convert.ToBoolean(modelo.SitSemSimilar);
@@ -86,7 +68,7 @@ namespace GUI
         {
             this.operacao = "Alterar";
             AlterarBotoes(2);
-            txtCodNCM.Enabled = false;
+            mtxtNcm.Enabled = false;
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -96,7 +78,7 @@ namespace GUI
             {
                 DALConexao dalconexao = new DALConexao(DadosDeConexao.strConexao);
                 BLLNCM bll = new BLLNCM(dalconexao);
-                bll.Excluir(Convert.ToInt32(txtCodNCM.Text));
+                bll.Excluir(Convert.ToInt32(mtxtNcm.Text));
                 LimparTela(this);
                 AlterarBotoes(1);
             }
@@ -105,11 +87,13 @@ namespace GUI
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            mtxtNcm.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+
             try
             {
                 ModeloNCM modelo = new ModeloNCM();
                 modelo.NomeNCM = txtNomeNCM.Text;
-                modelo.CodNCM = txtCodNCM.Text;
+                modelo.CodNCM = mtxtNcm.Text;
                 modelo.SitST = chkST.Checked ? 1 : 0;
                 modelo.SitAuto = chkAutopecas.Checked ? 1 : 0;
                 modelo.SitSemSimilar = chkSemSimilar.Checked ? 1 : 0;
@@ -122,14 +106,14 @@ namespace GUI
                 {
                     bll.Incluir(modelo);
                     MessageBox.Show(String.Format("Cadastro efetuado com sucesso !\nA NCM {0} - {1}\n foi cadastrada com o código: {2}",
-                                    txtCodNCM.Text, txtNomeNCM.Text.ToUpper(), modelo.NCMID.ToString()));
+                                    mtxtNcm.Text, txtNomeNCM.Text.ToUpper(), modelo.NCMID.ToString()));
                 }
                 else
                 {
-                    modelo.CodNCM = txtCodNCM.Text;
+                    modelo.CodNCM = mtxtNcm.Text;
                     bll.Alterar(modelo);
                     MessageBox.Show(String.Format("Cadastro alterado com sucesso !\nA NCM {0} - {1} foi alterada!",
-                                    txtCodNCM.Text, txtNomeNCM.Text.ToUpper()));
+                                    mtxtNcm.Text, txtNomeNCM.Text.ToUpper()));
                 }
 
                 LimparTela(this);

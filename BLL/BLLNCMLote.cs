@@ -33,19 +33,9 @@ namespace BLL
                 throw new Exception("O código da NCM não pode ficar em branco");
             }
 
-            if (modelo.CodNCM.Where(c => char.IsLetter(c)).Count() > 0)
-            {
-                throw new Exception("O código da NCM deve conter apenas números");
-            }
-
             if (modelo.Cest != "" && modelo.Cest.Trim().Length < 7)
             {
                 throw new Exception("O código da CEST se informado deve conter 7 números");
-            }
-
-            if (modelo.Cest.Where(c => char.IsLetter(c)).Count() > 0)
-            {
-                throw new Exception("O Código da CEST deve conter apenas números");
             }
 
             DALNCMLote dalNcmLote = new DALNCMLote(dalConexao);

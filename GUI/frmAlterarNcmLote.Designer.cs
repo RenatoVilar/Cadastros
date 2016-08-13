@@ -43,6 +43,7 @@
             this.dgvDados = new System.Windows.Forms.DataGridView();
             this.btnLocalizar = new System.Windows.Forms.Button();
             this.grpBoxFiltro = new System.Windows.Forms.GroupBox();
+            this.chkApagar = new System.Windows.Forms.CheckBox();
             this.mtxtCest = new System.Windows.Forms.MaskedTextBox();
             this.radCest = new System.Windows.Forms.RadioButton();
             this.radSemSimilar = new System.Windows.Forms.RadioButton();
@@ -52,7 +53,6 @@
             this.lblCriterioAtual = new System.Windows.Forms.Label();
             this.lblCritérioText = new System.Windows.Forms.Label();
             this.mtxtNcm = new System.Windows.Forms.MaskedTextBox();
-            this.chkApagar = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
@@ -173,6 +173,7 @@
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -224,6 +225,17 @@
             this.grpBoxFiltro.TabStop = false;
             this.grpBoxFiltro.Text = "Tipo Alterar";
             // 
+            // chkApagar
+            // 
+            this.chkApagar.AutoSize = true;
+            this.chkApagar.Location = new System.Drawing.Point(329, 50);
+            this.chkApagar.Name = "chkApagar";
+            this.chkApagar.Size = new System.Drawing.Size(80, 24);
+            this.chkApagar.TabIndex = 13;
+            this.chkApagar.Text = "Apagar";
+            this.chkApagar.UseVisualStyleBackColor = true;
+            this.chkApagar.CheckedChanged += new System.EventHandler(this.chkApagar_CheckedChanged);
+            // 
             // mtxtCest
             // 
             this.mtxtCest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -241,6 +253,7 @@
             this.radCest.TabIndex = 0;
             this.radCest.Text = "CEST";
             this.radCest.UseVisualStyleBackColor = true;
+            this.radCest.CheckedChanged += new System.EventHandler(this.radCest_CheckedChanged);
             // 
             // radSemSimilar
             // 
@@ -311,17 +324,6 @@
             this.mtxtNcm.Name = "mtxtNcm";
             this.mtxtNcm.Size = new System.Drawing.Size(100, 26);
             this.mtxtNcm.TabIndex = 13;
-            // 
-            // chkApagar
-            // 
-            this.chkApagar.AutoSize = true;
-            this.chkApagar.Location = new System.Drawing.Point(329, 50);
-            this.chkApagar.Name = "chkApagar";
-            this.chkApagar.Size = new System.Drawing.Size(80, 24);
-            this.chkApagar.TabIndex = 13;
-            this.chkApagar.Text = "Apagar";
-            this.chkApagar.UseVisualStyleBackColor = true;
-            this.chkApagar.CheckedChanged += new System.EventHandler(this.chkApagar_CheckedChanged);
             // 
             // frmAlterarNcmLote
             // 
