@@ -1,27 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlServerCe;
 
 namespace DAL
 {
     public class DALConexao
     {
         public String StrConexao { get; set; }
-        public SqlConnection SqlConexao { get; set; }
+        public SqlCeConnection SqlConexao { get; set; }
+        
 
         public DALConexao(String dadosConexao)
         {
-            this.SqlConexao = new SqlConnection();
+            this.SqlConexao = new SqlCeConnection();
             this.StrConexao = dadosConexao;
             this.SqlConexao.ConnectionString = StrConexao;
         }
 
         public void Conectar()
         {
-            this.SqlConexao.Open();
+            try
+            {
+                this.SqlConexao.Open();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message.ToString());
+            }
+            
         }
 
         public void Desconectar()

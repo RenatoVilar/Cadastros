@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Modelo;
-using System.Data.SqlClient;
+using System.Data.SqlServerCe;
 using System.Data;
 
 namespace DAL
@@ -20,19 +16,22 @@ namespace DAL
         
         public void Inserir(ModeloGrupo modelo)
         {
-            SqlCommand sqlCmd = new SqlCommand();
+            SqlCeCommand sqlCmd = new SqlCeCommand();
             sqlCmd.Connection = dalConexao.SqlConexao;
-            sqlCmd.CommandText = "INSERT INTO Grupos (NomeGrupo, TipoID) values (@nome, @TipoID); SELECT @@IDENTITY;";
+      
+            sqlCmd.CommandText = "INSERT INTO Grupos (NomeGrupo, TipoID) values (@nome, @TipoID);";
             sqlCmd.Parameters.AddWithValue("@nome", modelo.NomeGrupo);
             sqlCmd.Parameters.AddWithValue("TipoID", modelo.TipoID);
             dalConexao.Conectar();
+            sqlCmd.ExecuteNonQuery();
+            sqlCmd.CommandText = "SELECT @@IDENTITY;";
             modelo.GrupoID = Convert.ToInt32(sqlCmd.ExecuteScalar());
             dalConexao.Desconectar();
         }
 
         public void Alterar(ModeloGrupo modelo)
         {
-            SqlCommand sqlCmd = new SqlCommand();
+            SqlCeCommand sqlCmd = new SqlCeCommand();
             sqlCmd.Connection = dalConexao.SqlConexao;
             sqlCmd.CommandText = "UPDATE Grupos SET NomeGrupo = @nome, TipoID = @TipoID WHERE GrupoID = @codigo";
             sqlCmd.Parameters.AddWithValue("@nome", modelo.NomeGrupo);
@@ -46,7 +45,7 @@ namespace DAL
 
         public void Excluir(int GrupoID)
         {
-            SqlCommand sqlCmd = new SqlCommand();
+            SqlCeCommand sqlCmd = new SqlCeCommand();
             sqlCmd.Connection = dalConexao.SqlConexao;
             sqlCmd.CommandText = "DELETE FROM Grupos WHERE GrupoID = @codigo";
             sqlCmd.Parameters.AddWithValue("@codigo", GrupoID);
@@ -59,7 +58,7 @@ namespace DAL
         public DataTable Localizar(string valor)
         {
             DataTable tabela = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Grupos WHERE NomeGrupo LIKE '%" + valor + "%'", dalConexao.SqlConexao);
+            SqlCeDataAdapter da = new SqlCeDataAdapter("SELECT * FROM Grupos WHERE NomeGrupo LIKE '%" + valor + "%'", dalConexao.SqlConexao);
             da.Fill(tabela);
             return tabela;
         }
@@ -67,12 +66,12 @@ namespace DAL
         public ModeloGrupo CarregaModeloGrupo(int GrupoID)
         {
             ModeloGrupo modelo = new ModeloGrupo();
-            SqlCommand sqlCmd = new SqlCommand();
+            SqlCeCommand sqlCmd = new SqlCeCommand();
             sqlCmd.Connection = dalConexao.SqlConexao;
             sqlCmd.CommandText = "SELECT * FROM Grupos WHERE GrupoID = @codigo";
             sqlCmd.Parameters.AddWithValue("@codigo", GrupoID);
             dalConexao.Conectar();
-            SqlDataReader dr = sqlCmd.ExecuteReader();
+            SqlCeDataReader dr = sqlCmd.ExecuteResultSet(ResultSetOptions.Scrollable);
             if (dr.HasRows)
             {
                 dr.Read();

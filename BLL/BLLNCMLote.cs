@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DAL;
 using System.Data;
 using Modelo;
-using System.Data.SqlClient;
+using DAL;
 
 
 namespace BLL

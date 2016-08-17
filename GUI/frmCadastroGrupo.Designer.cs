@@ -49,6 +49,10 @@
             this.pnDados.Controls.Add(this.label2);
             this.pnDados.Controls.Add(this.label1);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // btnSalvar
             // 
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);

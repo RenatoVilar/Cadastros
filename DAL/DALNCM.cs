@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
-using System.Data.SqlClient;
+using System.Data.SqlServerCe;
 using Modelo;
 
 namespace DAL
@@ -20,24 +16,37 @@ namespace DAL
 
         public void Inserir(ModeloNCM modelo)
         {
-            SqlCommand sqlCmd = new SqlCommand();
+            SqlCeCommand sqlCmd = new SqlCeCommand();
             sqlCmd.Connection = dalConexao.SqlConexao;
-            sqlCmd.CommandText = "INSERT INTO NCMs(CodNCM, NomeNCM, SitST, SitAuto, SitSemSimilar, Cest) values (@CodNCM, @NomeNCM, @SitST, @SitAuto, @SitSemSimilar, @Cest);" +
-                                 "SELECT @@IDENTITY;";
+            dalConexao.Conectar();
+            sqlCmd.CommandText = "SELECT (CodNCM) from NCMs WHERE CodNCM=@CodNCM";
             sqlCmd.Parameters.AddWithValue("@CodNCM", modelo.CodNCM);
+            SqlCeDataReader result = sqlCmd.ExecuteResultSet(ResultSetOptions.Scrollable);
+            if(result.HasRows)
+            {
+                throw new Exception("A NCM já existe !");
+            }
+            else
+            {
+                sqlCmd.CommandText = "INSERT INTO NCMs(CodNCM, NomeNCM, SitST, SitAuto, SitSemSimilar, Cest) values (@CodNCM, @NomeNCM, @SitST, @SitAuto, @SitSemSimilar, @Cest);";
+                
+            }
+         
+            //sqlCmd.Parameters.AddWithValue("@CodNCM", modelo.CodNCM);
             sqlCmd.Parameters.AddWithValue("@NomeNCM", modelo.NomeNCM);
             sqlCmd.Parameters.AddWithValue("@SitST", modelo.SitST);
             sqlCmd.Parameters.AddWithValue("@SitAuto", modelo.SitAuto);
             sqlCmd.Parameters.AddWithValue("@SitSemSimilar", modelo.SitSemSimilar);
             sqlCmd.Parameters.AddWithValue("@Cest", modelo.Cest);
-            dalConexao.Conectar();
+            sqlCmd.ExecuteNonQuery();
+            sqlCmd.CommandText = "SELECT @@IDENTITY;";
             modelo.NCMID = Convert.ToInt32(sqlCmd.ExecuteScalar());
             dalConexao.Desconectar();
         }
 
         public void Alterar(ModeloNCM modelo)
         {
-            SqlCommand sqlCmd = new SqlCommand();
+            SqlCeCommand sqlCmd = new SqlCeCommand();
             sqlCmd.Connection = dalConexao.SqlConexao;
             sqlCmd.CommandText = "UPDATE NCMs SET NomeNCM = @NomeNCM, SitST = @SitST, SitAuto = @SitAuto, SitSemSimilar = @SitSemSimilar, Cest = @Cest WHERE CodNCM = @CodNCM";
             sqlCmd.Parameters.AddWithValue("@CodNCM", modelo.CodNCM);
@@ -53,7 +62,7 @@ namespace DAL
 
         public void Excluir(int CodNCM)
         {
-            SqlCommand sqlCmd = new SqlCommand();
+            SqlCeCommand sqlCmd = new SqlCeCommand();
             sqlCmd.Connection = dalConexao.SqlConexao;
             sqlCmd.CommandText = "DELETE FROM NCMs WHERE CodNCM = @codigo";
             sqlCmd.Parameters.AddWithValue("@codigo", CodNCM);
@@ -65,8 +74,8 @@ namespace DAL
         public DataTable Localizar(string valor, int index)
         {
             DataTable tabela = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter();
-            SqlCommand sqlCmd = new SqlCommand();
+            SqlCeDataAdapter da = new SqlCeDataAdapter();
+            SqlCeCommand sqlCmd = new SqlCeCommand();
             sqlCmd.Connection = dalConexao.SqlConexao;
             
             if (index == 0)
@@ -87,12 +96,12 @@ namespace DAL
         public ModeloNCM CarregaModeloNCM(int CodNCM)
         {
             ModeloNCM modelo = new ModeloNCM();
-            SqlCommand sqlCmd = new SqlCommand();
+            SqlCeCommand sqlCmd = new SqlCeCommand();
             sqlCmd.Connection = dalConexao.SqlConexao;
             sqlCmd.CommandText = "SELECT * FROM NCMs WHERE CodNCM = @codigo";
             sqlCmd.Parameters.AddWithValue("@codigo", CodNCM);
             dalConexao.Conectar();
-            SqlDataReader dr = sqlCmd.ExecuteReader();
+            SqlCeDataReader dr = sqlCmd.ExecuteResultSet(ResultSetOptions.Scrollable);
             if (dr.HasRows)
             {
                 dr.Read();

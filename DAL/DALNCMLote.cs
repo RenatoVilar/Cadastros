@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
+﻿using System.Data;
+using System.Data.SqlServerCe;
 using Modelo;
 
 namespace DAL
@@ -23,8 +18,8 @@ namespace DAL
         public DataTable Localizar(string valor)
         {
             DataTable tabela = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter();
-            SqlCommand sqlCmd = new SqlCommand();
+            SqlCeDataAdapter da = new SqlCeDataAdapter();
+            SqlCeCommand sqlCmd = new SqlCeCommand();
             sqlCmd.Connection = dalConexao.SqlConexao;
             sqlCmd.CommandText = "SELECT CodNCM, NomeNCM, CAST(SitST AS BIT), CAST(SitAuto AS BIT), CAST(SitSemSimilar AS BIT), Cest FROM NCMs WHERE CodNCM LIKE '" + valor + "%'";
             da.SelectCommand = sqlCmd;
@@ -36,7 +31,7 @@ namespace DAL
 
         public void Alterar(ModeloNCM modelo, int apagar)
         {
-            SqlCommand sqlCmd = new SqlCommand();
+            SqlCeCommand sqlCmd = new SqlCeCommand();
             sqlCmd.Connection = dalConexao.SqlConexao;
             string strCmd;
             if (apagar == 1)

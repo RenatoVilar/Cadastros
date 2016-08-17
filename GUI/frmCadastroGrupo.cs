@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
 using Modelo;
 using BLL;
-using System.Data.SqlClient;
 
 namespace GUI
 {
@@ -79,6 +71,7 @@ namespace GUI
                         MessageBox.Show("Esse Grupo não pode ser excluido!", "Aviso");
                         LimparTela(this);
                         AlterarBotoes(1);
+                        radRevenda.Checked = true;
                     }
                     else if (d.ToString() == "Yes")
                     {
@@ -94,6 +87,8 @@ namespace GUI
                 MessageBox.Show("Não foi possível excluir o registro!" + ex);
                 AlterarBotoes(3);
             }
+
+
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -119,6 +114,7 @@ namespace GUI
                     MessageBox.Show("Esse Grupo não pode ser alterado!", "Aviso");
                     LimparTela(this);
                     AlterarBotoes(1);
+                    radRevenda.Checked = true;
                 }
                 else
                 { 
@@ -152,6 +148,13 @@ namespace GUI
         {
             radInsumos.Enabled = false;
             radMatPrima.Enabled = false;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimparTela(this);
+            AlterarBotoes(1);
+            radRevenda.Checked = true;
         }
     }
 }

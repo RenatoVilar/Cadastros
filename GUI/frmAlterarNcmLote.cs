@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
 using BLL;
@@ -99,7 +93,11 @@ namespace GUI
                 DialogResult result;
                 result = MessageBox.Show("Ao selecionar \"Apagar\" todas as informações do Tipo Selecionado seráo apagadas!", "ATENÇÃO", MessageBoxButtons.OKCancel);
                 if (result == DialogResult.OK) { apagar = 1; }
-                else { apagar = 0; }
+                else
+                {
+                    apagar = 0;
+                    return;
+                }
             }
                 
             try

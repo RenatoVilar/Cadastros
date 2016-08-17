@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using DAL;
 using Modelo;
-using System.Data.SqlClient;
-using System.Data;
 
 namespace BLL
 {
@@ -36,22 +31,6 @@ namespace BLL
                 throw new Exception("O código da CEST se informado deve conter 7 números");
             }
 
-            dalConexao.Conectar();
-
-            using (SqlCommand sqlCmd = new SqlCommand("SELECT (CodNCM) from NCMs WHERE CodNCM=@CodNCM", dalConexao.SqlConexao))
-            {
-                sqlCmd.Parameters.AddWithValue("@CodNCM", modelo.CodNCM);
-
-                SqlDataReader read = sqlCmd.ExecuteReader();
-
-                if (read.Read())
-                {
-                    throw new Exception("A NCM já existe !");
-                }
-            }
-
-            dalConexao.Desconectar();
-
             modelo.NomeNCM = modelo.NomeNCM.ToUpper();
             DALNCM dalNCM = new DALNCM(dalConexao);
             dalNCM.Inserir(modelo);
@@ -73,7 +52,6 @@ namespace BLL
             {
                 throw new Exception("O código da CEST se informado deve conter 7 números");
             }
-
 
             modelo.NomeNCM = modelo.NomeNCM.ToUpper();
             DALNCM dalNCM = new DALNCM(dalConexao);
