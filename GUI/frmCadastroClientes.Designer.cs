@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroClientes));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radOrgaoPubFed = new System.Windows.Forms.RadioButton();
@@ -615,6 +616,7 @@
             this.Controls.Add(this.pnlCaracteristicas);
             this.Controls.Add(this.pnlCadastros);
             this.Controls.Add(this.pnlAdicionais);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadastroClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadastroClientes";

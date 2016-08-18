@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroProdutos));
             this.label1 = new System.Windows.Forms.Label();
             this.cboGrupo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -235,7 +236,6 @@
             this.grpTipo = new System.Windows.Forms.GroupBox();
             this.chkPecasMot = new System.Windows.Forms.CheckBox();
             this.chkMotores = new System.Windows.Forms.CheckBox();
-            this.radNao = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -255,8 +255,8 @@
             this.label45 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.txtCEST = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
+            this.mtxtCest = new System.Windows.Forms.MaskedTextBox();
             this.tabPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl4.SuspendLayout();
@@ -310,7 +310,7 @@
             this.cboGrupo.Location = new System.Drawing.Point(482, 58);
             this.cboGrupo.Name = "cboGrupo";
             this.cboGrupo.Size = new System.Drawing.Size(274, 28);
-            this.cboGrupo.TabIndex = 2;
+            this.cboGrupo.TabIndex = 1;
             // 
             // label3
             // 
@@ -349,7 +349,7 @@
             this.radForBrasileiro.Location = new System.Drawing.Point(10, 18);
             this.radForBrasileiro.Name = "radForBrasileiro";
             this.radForBrasileiro.Size = new System.Drawing.Size(92, 24);
-            this.radForBrasileiro.TabIndex = 15;
+            this.radForBrasileiro.TabIndex = 0;
             this.radForBrasileiro.TabStop = true;
             this.radForBrasileiro.Text = "Brasileiro";
             this.radForBrasileiro.UseVisualStyleBackColor = true;
@@ -362,7 +362,7 @@
             this.radForEstrangeiro.Location = new System.Drawing.Point(108, 18);
             this.radForEstrangeiro.Name = "radForEstrangeiro";
             this.radForEstrangeiro.Size = new System.Drawing.Size(109, 24);
-            this.radForEstrangeiro.TabIndex = 16;
+            this.radForEstrangeiro.TabIndex = 1;
             this.radForEstrangeiro.Text = "Estrangeiro";
             this.radForEstrangeiro.UseVisualStyleBackColor = true;
             this.radForEstrangeiro.CheckedChanged += new System.EventHandler(this.radForEstrangeiro_Click);
@@ -374,7 +374,7 @@
             this.radOrigemImp.Location = new System.Drawing.Point(106, 19);
             this.radOrigemImp.Name = "radOrigemImp";
             this.radOrigemImp.Size = new System.Drawing.Size(100, 24);
-            this.radOrigemImp.TabIndex = 18;
+            this.radOrigemImp.TabIndex = 1;
             this.radOrigemImp.Text = "Importado";
             this.radOrigemImp.UseVisualStyleBackColor = true;
             // 
@@ -386,7 +386,7 @@
             this.radOrigemNac.Location = new System.Drawing.Point(10, 19);
             this.radOrigemNac.Name = "radOrigemNac";
             this.radOrigemNac.Size = new System.Drawing.Size(88, 24);
-            this.radOrigemNac.TabIndex = 17;
+            this.radOrigemNac.TabIndex = 0;
             this.radOrigemNac.TabStop = true;
             this.radOrigemNac.Text = "Nacional";
             this.radOrigemNac.UseVisualStyleBackColor = true;
@@ -2306,7 +2306,7 @@
             this.grpFornecedor.Location = new System.Drawing.Point(12, 110);
             this.grpFornecedor.Name = "grpFornecedor";
             this.grpFornecedor.Size = new System.Drawing.Size(291, 50);
-            this.grpFornecedor.TabIndex = 21;
+            this.grpFornecedor.TabIndex = 2;
             this.grpFornecedor.TabStop = false;
             this.grpFornecedor.Text = "Fornecedor";
             // 
@@ -2317,7 +2317,7 @@
             this.radForZFM.Location = new System.Drawing.Point(223, 18);
             this.radForZFM.Name = "radForZFM";
             this.radForZFM.Size = new System.Drawing.Size(60, 24);
-            this.radForZFM.TabIndex = 17;
+            this.radForZFM.TabIndex = 2;
             this.radForZFM.Text = "ZFM";
             this.radForZFM.UseVisualStyleBackColor = true;
             this.radForZFM.Click += new System.EventHandler(this.radForZFM_Click);
@@ -2330,7 +2330,7 @@
             this.grpOrigem.Location = new System.Drawing.Point(309, 110);
             this.grpOrigem.Name = "grpOrigem";
             this.grpOrigem.Size = new System.Drawing.Size(219, 50);
-            this.grpOrigem.TabIndex = 22;
+            this.grpOrigem.TabIndex = 3;
             this.grpOrigem.TabStop = false;
             this.grpOrigem.Text = "Origem";
             // 
@@ -2342,7 +2342,7 @@
             this.grpTipo.Location = new System.Drawing.Point(542, 113);
             this.grpTipo.Name = "grpTipo";
             this.grpTipo.Size = new System.Drawing.Size(214, 50);
-            this.grpTipo.TabIndex = 23;
+            this.grpTipo.TabIndex = 4;
             this.grpTipo.TabStop = false;
             this.grpTipo.Text = "Tipo";
             // 
@@ -2353,7 +2353,7 @@
             this.chkPecasMot.Location = new System.Drawing.Point(22, 20);
             this.chkPecasMot.Name = "chkPecasMot";
             this.chkPecasMot.Size = new System.Drawing.Size(72, 24);
-            this.chkPecasMot.TabIndex = 2;
+            this.chkPecasMot.TabIndex = 0;
             this.chkPecasMot.Text = "Peças";
             this.chkPecasMot.UseVisualStyleBackColor = true;
             // 
@@ -2367,19 +2367,6 @@
             this.chkMotores.TabIndex = 1;
             this.chkMotores.Text = "Motores";
             this.chkMotores.UseVisualStyleBackColor = true;
-            // 
-            // radNao
-            // 
-            this.radNao.AutoSize = true;
-            this.radNao.Checked = true;
-            this.radNao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radNao.Location = new System.Drawing.Point(504, 92);
-            this.radNao.Name = "radNao";
-            this.radNao.Size = new System.Drawing.Size(56, 24);
-            this.radNao.TabIndex = 18;
-            this.radNao.TabStop = true;
-            this.radNao.Text = "Não";
-            this.radNao.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -2472,7 +2459,7 @@
             this.btnAvaliar.Location = new System.Drawing.Point(628, 210);
             this.btnAvaliar.Name = "btnAvaliar";
             this.btnAvaliar.Size = new System.Drawing.Size(128, 50);
-            this.btnAvaliar.TabIndex = 31;
+            this.btnAvaliar.TabIndex = 6;
             this.btnAvaliar.Text = "Avaliar";
             this.btnAvaliar.UseVisualStyleBackColor = true;
             this.btnAvaliar.Click += new System.EventHandler(this.btnAvaliar_Click);
@@ -2486,10 +2473,9 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 40);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(388, 64);
-            this.groupBox1.TabIndex = 32;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Finalidade";
-            this.groupBox1.Leave += new System.EventHandler(this.groupBox1_Leave);
             // 
             // radInsumos
             // 
@@ -2587,21 +2573,13 @@
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.txtCEST);
             this.panel5.Controls.Add(this.label47);
+            this.panel5.Controls.Add(this.mtxtCest);
             this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel5.Location = new System.Drawing.Point(430, 204);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(138, 60);
-            this.panel5.TabIndex = 35;
-            // 
-            // txtCEST
-            // 
-            this.txtCEST.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCEST.Location = new System.Drawing.Point(18, 26);
-            this.txtCEST.Name = "txtCEST";
-            this.txtCEST.Size = new System.Drawing.Size(100, 22);
-            this.txtCEST.TabIndex = 27;
+            this.panel5.TabIndex = 5;
             // 
             // label47
             // 
@@ -2613,12 +2591,19 @@
             this.label47.TabIndex = 26;
             this.label47.Text = "Cód CEST";
             // 
+            // mtxtCest
+            // 
+            this.mtxtCest.Location = new System.Drawing.Point(20, 24);
+            this.mtxtCest.Name = "mtxtCest";
+            this.mtxtCest.Size = new System.Drawing.Size(100, 26);
+            this.mtxtCest.TabIndex = 27;
+            this.mtxtCest.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // frmCadastroProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.radNao);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -2636,6 +2621,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cboGrupo);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadastroProdutos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Produtos";
@@ -2876,7 +2862,6 @@
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox txtCEST;
         private System.Windows.Forms.Label label47;
         protected System.Windows.Forms.RadioButton radRevenda;
         protected System.Windows.Forms.TabControl tabPrincipal;
@@ -2890,7 +2875,6 @@
         private System.Windows.Forms.RadioButton radOrigemImp;
         private System.Windows.Forms.RadioButton radOrigemNac;
         private System.Windows.Forms.TextBox txtNomeNCM;
-        private System.Windows.Forms.RadioButton radNao;
         private System.Windows.Forms.RadioButton radForZFM;
         private System.Windows.Forms.RadioButton radInsumos;
         private System.Windows.Forms.RadioButton radMatPrima;
@@ -2932,5 +2916,6 @@
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.CheckBox chkPecasMot;
         private System.Windows.Forms.CheckBox chkMotores;
+        private System.Windows.Forms.MaskedTextBox mtxtCest;
     }
 }

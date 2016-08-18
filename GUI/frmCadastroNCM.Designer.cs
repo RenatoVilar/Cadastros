@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroNCM));
             this.label1 = new System.Windows.Forms.Label();
             this.txtNomeNCM = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,20 +58,28 @@
             this.pnDados.Controls.Add(this.label2);
             this.pnDados.Controls.Add(this.label1);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.TabIndex = 5;
+            // 
             // btnSalvar
             // 
+            this.btnSalvar.TabIndex = 4;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnExcluir
             // 
+            this.btnExcluir.TabIndex = 3;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
+            this.btnAlterar.TabIndex = 2;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnLocalizar
             // 
+            this.btnLocalizar.TabIndex = 1;
             this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // btnNovo
@@ -84,7 +93,7 @@
             this.label1.Location = new System.Drawing.Point(25, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 20);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 6;
             this.label1.Text = "NCM";
             // 
             // txtNomeNCM
@@ -93,7 +102,7 @@
             this.txtNomeNCM.Location = new System.Drawing.Point(131, 44);
             this.txtNomeNCM.Name = "txtNomeNCM";
             this.txtNomeNCM.Size = new System.Drawing.Size(604, 26);
-            this.txtNomeNCM.TabIndex = 5;
+            this.txtNomeNCM.TabIndex = 1;
             // 
             // label2
             // 
@@ -102,7 +111,7 @@
             this.label2.Location = new System.Drawing.Point(46, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(190, 20);
-            this.label2.TabIndex = 0;
+            this.label2.TabIndex = 8;
             this.label2.Text = "Substituição Tributária";
             // 
             // label3
@@ -112,7 +121,7 @@
             this.label3.Location = new System.Drawing.Point(46, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 20);
-            this.label3.TabIndex = 0;
+            this.label3.TabIndex = 9;
             this.label3.Text = "Autopeças";
             // 
             // label4
@@ -122,7 +131,7 @@
             this.label4.Location = new System.Drawing.Point(46, 238);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(178, 20);
-            this.label4.TabIndex = 0;
+            this.label4.TabIndex = 10;
             this.label4.Text = "Sem Similar Nacional";
             // 
             // chkST
@@ -132,7 +141,7 @@
             this.chkST.Location = new System.Drawing.Point(25, 163);
             this.chkST.Name = "chkST";
             this.chkST.Size = new System.Drawing.Size(15, 14);
-            this.chkST.TabIndex = 6;
+            this.chkST.TabIndex = 3;
             this.chkST.UseVisualStyleBackColor = true;
             // 
             // chkAutopecas
@@ -141,7 +150,7 @@
             this.chkAutopecas.Location = new System.Drawing.Point(25, 202);
             this.chkAutopecas.Name = "chkAutopecas";
             this.chkAutopecas.Size = new System.Drawing.Size(15, 14);
-            this.chkAutopecas.TabIndex = 7;
+            this.chkAutopecas.TabIndex = 4;
             this.chkAutopecas.UseVisualStyleBackColor = true;
             // 
             // chkSemSimilar
@@ -150,7 +159,7 @@
             this.chkSemSimilar.Location = new System.Drawing.Point(25, 241);
             this.chkSemSimilar.Name = "chkSemSimilar";
             this.chkSemSimilar.Size = new System.Drawing.Size(15, 14);
-            this.chkSemSimilar.TabIndex = 8;
+            this.chkSemSimilar.TabIndex = 5;
             this.chkSemSimilar.UseVisualStyleBackColor = true;
             // 
             // txtCest
@@ -160,7 +169,7 @@
             this.txtCest.Location = new System.Drawing.Point(25, 83);
             this.txtCest.Name = "txtCest";
             this.txtCest.Size = new System.Drawing.Size(55, 20);
-            this.txtCest.TabIndex = 9;
+            this.txtCest.TabIndex = 7;
             this.txtCest.Text = "CEST";
             // 
             // mtxtCest
@@ -169,7 +178,7 @@
             this.mtxtCest.Location = new System.Drawing.Point(25, 115);
             this.mtxtCest.Name = "mtxtCest";
             this.mtxtCest.Size = new System.Drawing.Size(100, 26);
-            this.mtxtCest.TabIndex = 11;
+            this.mtxtCest.TabIndex = 2;
             // 
             // mtxtNcm
             // 
@@ -177,13 +186,14 @@
             this.mtxtNcm.Location = new System.Drawing.Point(25, 44);
             this.mtxtNcm.Name = "mtxtNcm";
             this.mtxtNcm.Size = new System.Drawing.Size(100, 26);
-            this.mtxtNcm.TabIndex = 12;
+            this.mtxtNcm.TabIndex = 0;
             // 
             // frmCadastroNCM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadastroNCM";
             this.Text = "Cadastro de NCMs";
             this.Load += new System.EventHandler(this.frmCadastroNCM_Load);

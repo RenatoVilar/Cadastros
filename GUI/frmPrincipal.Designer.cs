@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tabelasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nCMsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ferramentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.atualizarNCMPorLoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCadastraProdutos = new System.Windows.Forms.Button();
             this.btnCadastrarClientes = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
@@ -64,23 +65,16 @@
             // nCMsToolStripMenuItem
             // 
             this.nCMsToolStripMenuItem.Name = "nCMsToolStripMenuItem";
-            this.nCMsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nCMsToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.nCMsToolStripMenuItem.Text = "NCMs";
             this.nCMsToolStripMenuItem.Click += new System.EventHandler(this.nCMsToolStripMenuItem_Click);
             // 
             // gruposToolStripMenuItem
             // 
             this.gruposToolStripMenuItem.Name = "gruposToolStripMenuItem";
-            this.gruposToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gruposToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.gruposToolStripMenuItem.Text = "Grupos";
             this.gruposToolStripMenuItem.Click += new System.EventHandler(this.gruposToolStripMenuItem_Click);
-            // 
-            // sobreToolStripMenuItem
-            // 
-            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.sobreToolStripMenuItem.Text = "Sobre";
-            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // ferramentasToolStripMenuItem
             // 
@@ -96,6 +90,13 @@
             this.atualizarNCMPorLoteToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.atualizarNCMPorLoteToolStripMenuItem.Text = "Atualizar NCM por Lote";
             this.atualizarNCMPorLoteToolStripMenuItem.Click += new System.EventHandler(this.atualizarNCMPorLoteToolStripMenuItem_Click);
+            // 
+            // sobreToolStripMenuItem
+            // 
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sobreToolStripMenuItem.Text = "Sobre";
+            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // btnCadastraProdutos
             // 
@@ -129,6 +130,7 @@
             this.Controls.Add(this.btnCadastrarClientes);
             this.Controls.Add(this.btnCadastraProdutos);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

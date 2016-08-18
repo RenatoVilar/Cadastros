@@ -1,7 +1,7 @@
 ﻿using System;
 using DAL;
 using BLL;
-
+using System.Windows.Forms;
 
 namespace GUI
 {
@@ -18,6 +18,12 @@ namespace GUI
             BLLNCM bll = new BLLNCM(dalconexao);
             int indexCboBox = cboLocalizarNCM.SelectedIndex;
             dgvDados.DataSource = bll.Localizar(txtPesquisar.Text, indexCboBox);
+            if (dgvDados.RowCount == 0)
+            {
+                MessageBox.Show("Nenhum registro encontrado! ", "Atenção !", MessageBoxButtons.OK);
+            }
+
+            dgvDados.CellFormatting += new DataGridViewCellFormattingEventHandler(DgvDados_CellFormatting);
 
             dgvDados.Columns[0].HeaderText = "NCM";
             dgvDados.Columns[1].HeaderText = "Descrição";
@@ -31,5 +37,16 @@ namespace GUI
             cboLocalizarNCM.Items.Add("Descrição");
             cboLocalizarNCM.SelectedIndex = 0;
         }
+
+        private void DgvDados_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            Double d;
+            if (e.ColumnIndex == 0 && e.Value != null)
+            {
+                Double.TryParse(e.Value.ToString(), out d);
+                e.Value = d.ToString(@"##\.####\.##");
+            }
+        }
+
     }
 }

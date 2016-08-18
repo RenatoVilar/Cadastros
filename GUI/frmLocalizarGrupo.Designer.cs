@@ -30,8 +30,13 @@
         {
             this.SuspendLayout();
             // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.TabIndex = 0;
+            // 
             // btnLocalizar
             // 
+            this.btnLocalizar.TabIndex = 1;
             this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // frmLocalizarGrupo

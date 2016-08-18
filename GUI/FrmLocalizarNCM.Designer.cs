@@ -35,9 +35,11 @@
             // 
             this.txtPesquisar.Location = new System.Drawing.Point(142, 32);
             this.txtPesquisar.Size = new System.Drawing.Size(430, 26);
+            this.txtPesquisar.TabIndex = 1;
             // 
             // btnLocalizar
             // 
+            this.btnLocalizar.TabIndex = 2;
             this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // cboLocalizarNCM
@@ -47,7 +49,7 @@
             this.cboLocalizarNCM.Location = new System.Drawing.Point(12, 32);
             this.cboLocalizarNCM.Name = "cboLocalizarNCM";
             this.cboLocalizarNCM.Size = new System.Drawing.Size(121, 26);
-            this.cboLocalizarNCM.TabIndex = 8;
+            this.cboLocalizarNCM.TabIndex = 0;
             // 
             // frmLocalizarNCM
             // 

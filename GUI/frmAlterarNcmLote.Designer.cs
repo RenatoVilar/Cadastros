@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlterarNcmLote));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
@@ -168,7 +169,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(668, 463);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(85, 85);
-            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -182,7 +183,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(535, 463);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(85, 85);
-            this.btnSalvar.TabIndex = 2;
+            this.btnSalvar.TabIndex = 4;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -195,7 +196,7 @@
             this.dgvDados.Location = new System.Drawing.Point(13, 60);
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.Size = new System.Drawing.Size(759, 383);
-            this.dgvDados.TabIndex = 3;
+            this.dgvDados.TabIndex = 2;
             // 
             // btnLocalizar
             // 
@@ -205,7 +206,7 @@
             this.btnLocalizar.Location = new System.Drawing.Point(214, 17);
             this.btnLocalizar.Name = "btnLocalizar";
             this.btnLocalizar.Size = new System.Drawing.Size(24, 26);
-            this.btnLocalizar.TabIndex = 8;
+            this.btnLocalizar.TabIndex = 1;
             this.btnLocalizar.UseVisualStyleBackColor = false;
             this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
@@ -221,7 +222,7 @@
             this.grpBoxFiltro.Location = new System.Drawing.Point(13, 457);
             this.grpBoxFiltro.Name = "grpBoxFiltro";
             this.grpBoxFiltro.Size = new System.Drawing.Size(445, 93);
-            this.grpBoxFiltro.TabIndex = 9;
+            this.grpBoxFiltro.TabIndex = 3;
             this.grpBoxFiltro.TabStop = false;
             this.grpBoxFiltro.Text = "Tipo Alterar";
             // 
@@ -231,7 +232,7 @@
             this.chkApagar.Location = new System.Drawing.Point(329, 50);
             this.chkApagar.Name = "chkApagar";
             this.chkApagar.Size = new System.Drawing.Size(80, 24);
-            this.chkApagar.TabIndex = 13;
+            this.chkApagar.TabIndex = 5;
             this.chkApagar.Text = "Apagar";
             this.chkApagar.UseVisualStyleBackColor = true;
             this.chkApagar.CheckedChanged += new System.EventHandler(this.chkApagar_CheckedChanged);
@@ -242,7 +243,7 @@
             this.mtxtCest.Location = new System.Drawing.Point(95, 49);
             this.mtxtCest.Name = "mtxtCest";
             this.mtxtCest.Size = new System.Drawing.Size(100, 26);
-            this.mtxtCest.TabIndex = 12;
+            this.mtxtCest.TabIndex = 4;
             // 
             // radCest
             // 
@@ -250,7 +251,7 @@
             this.radCest.Location = new System.Drawing.Point(20, 50);
             this.radCest.Name = "radCest";
             this.radCest.Size = new System.Drawing.Size(69, 24);
-            this.radCest.TabIndex = 0;
+            this.radCest.TabIndex = 3;
             this.radCest.Text = "CEST";
             this.radCest.UseVisualStyleBackColor = true;
             this.radCest.CheckedChanged += new System.EventHandler(this.radCest_CheckedChanged);
@@ -261,7 +262,7 @@
             this.radSemSimilar.Location = new System.Drawing.Point(280, 15);
             this.radSemSimilar.Name = "radSemSimilar";
             this.radSemSimilar.Size = new System.Drawing.Size(143, 24);
-            this.radSemSimilar.TabIndex = 0;
+            this.radSemSimilar.TabIndex = 2;
             this.radSemSimilar.Text = "Sem Similar Nac";
             this.radSemSimilar.UseVisualStyleBackColor = true;
             // 
@@ -271,7 +272,7 @@
             this.radAutopecas.Location = new System.Drawing.Point(170, 15);
             this.radAutopecas.Name = "radAutopecas";
             this.radAutopecas.Size = new System.Drawing.Size(104, 24);
-            this.radAutopecas.TabIndex = 0;
+            this.radAutopecas.TabIndex = 1;
             this.radAutopecas.Text = "Autopeças";
             this.radAutopecas.UseVisualStyleBackColor = true;
             // 
@@ -294,7 +295,7 @@
             this.label3.Location = new System.Drawing.Point(12, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 20);
-            this.label3.TabIndex = 10;
+            this.label3.TabIndex = 6;
             this.label3.Text = "Pesquisar :";
             // 
             // lblCriterioAtual
@@ -304,7 +305,7 @@
             this.lblCriterioAtual.Location = new System.Drawing.Point(264, 20);
             this.lblCriterioAtual.Name = "lblCriterioAtual";
             this.lblCriterioAtual.Size = new System.Drawing.Size(108, 20);
-            this.lblCriterioAtual.TabIndex = 11;
+            this.lblCriterioAtual.TabIndex = 7;
             this.lblCriterioAtual.Text = "Critério Atual :";
             // 
             // lblCritérioText
@@ -314,7 +315,7 @@
             this.lblCritérioText.Location = new System.Drawing.Point(379, 20);
             this.lblCritérioText.Name = "lblCritérioText";
             this.lblCritérioText.Size = new System.Drawing.Size(0, 20);
-            this.lblCritérioText.TabIndex = 12;
+            this.lblCritérioText.TabIndex = 8;
             this.lblCritérioText.Visible = false;
             // 
             // mtxtNcm
@@ -323,7 +324,7 @@
             this.mtxtNcm.Location = new System.Drawing.Point(105, 17);
             this.mtxtNcm.Name = "mtxtNcm";
             this.mtxtNcm.Size = new System.Drawing.Size(100, 26);
-            this.mtxtNcm.TabIndex = 13;
+            this.mtxtNcm.TabIndex = 0;
             // 
             // frmAlterarNcmLote
             // 
@@ -339,6 +340,7 @@
             this.Controls.Add(this.mtxtNcm);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAlterarNcmLote";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAlterarNcmLote";

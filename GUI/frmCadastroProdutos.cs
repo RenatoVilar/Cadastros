@@ -19,13 +19,26 @@ namespace GUI
         public frmCadastroProdutos()
         {
             InitializeComponent();
+
+            for (int i = 0; i < groupBox1.Controls.Count; i++)
+            {
+                RadioButton rdb = (RadioButton)groupBox1.Controls[i];
+                rdb.CheckedChanged += new EventHandler(groupBox1_CheckedChanged);
+            }
+        }
+
+        private void groupBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            FillCbo();
         }
 
         private void frmCadastroProdutos_Load(object sender, EventArgs e)
         {
             FillCbo();
             ApagaPics();
-           
+            mtxtCest.Mask = "00,000,00";
+
+
         }
 
         private int GetTipo()
@@ -77,31 +90,9 @@ namespace GUI
                 picSubTribOK.Visible = Convert.ToBoolean(modelo.SitST);
                 picAutopecasOK.Visible = Convert.ToBoolean(modelo.SitAuto);
                 picSemSimilarOK.Visible = Convert.ToBoolean(modelo.SitSemSimilar);
+                mtxtCest.Text = modelo.Cest;
             }
             frm.Dispose();
-        }
-
-        private void GetRadChecked()
-        {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is GroupBox)
-                {
-                    foreach (Control radio in ctrl.Controls)
-                    {
-                        if (((RadioButton)radio).Checked)
-                        {
-                            FillCbo();
-                        }
-
-                    }
-                }
-            }
-        }
-
-        private void groupBox1_Leave(object sender, EventArgs e)
-        {
-            GetRadChecked();
         }
  
         private void ApagaPics()

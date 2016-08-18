@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroGrupo));
             this.txtNomeGrupo = new System.Windows.Forms.TextBox();
             this.txtGrupoID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,22 +52,27 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
+            this.btnSalvar.TabIndex = 4;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnExcluir
             // 
+            this.btnExcluir.TabIndex = 3;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
+            this.btnAlterar.TabIndex = 2;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnLocalizar
             // 
+            this.btnLocalizar.TabIndex = 1;
             this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // btnNovo
@@ -79,7 +85,7 @@
             this.txtNomeGrupo.Location = new System.Drawing.Point(43, 135);
             this.txtNomeGrupo.Name = "txtNomeGrupo";
             this.txtNomeGrupo.Size = new System.Drawing.Size(512, 26);
-            this.txtNomeGrupo.TabIndex = 7;
+            this.txtNomeGrupo.TabIndex = 1;
             // 
             // txtGrupoID
             // 
@@ -88,7 +94,7 @@
             this.txtGrupoID.Location = new System.Drawing.Point(43, 70);
             this.txtGrupoID.Name = "txtGrupoID";
             this.txtGrupoID.Size = new System.Drawing.Size(100, 26);
-            this.txtGrupoID.TabIndex = 6;
+            this.txtGrupoID.TabIndex = 0;
             // 
             // label2
             // 
@@ -119,7 +125,7 @@
             this.groupBox1.Location = new System.Drawing.Point(43, 181);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(388, 77);
-            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Finalidade";
             // 
@@ -160,6 +166,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadastroGrupo";
             this.Text = "frmCadastroGrupo";
             this.Load += new System.EventHandler(this.frmCadastroGrupo_Load);
