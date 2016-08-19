@@ -400,6 +400,7 @@
             this.tabPrincipal.Controls.Add(this.tabPage4);
             this.tabPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPrincipal.Location = new System.Drawing.Point(12, 270);
+            this.tabPrincipal.Multiline = true;
             this.tabPrincipal.Name = "tabPrincipal";
             this.tabPrincipal.SelectedIndex = 0;
             this.tabPrincipal.Size = new System.Drawing.Size(760, 290);
@@ -421,8 +422,10 @@
             // 
             this.tabControl4.Controls.Add(this.tabPage13);
             this.tabControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl4.Enabled = false;
             this.tabControl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl4.Location = new System.Drawing.Point(3, 3);
+            this.tabControl4.Multiline = true;
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
             this.tabControl4.Size = new System.Drawing.Size(746, 255);
@@ -548,6 +551,7 @@
             // 
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.chkRepasse);
+            this.groupBox2.Enabled = false;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(21, 18);
             this.groupBox2.Name = "groupBox2";
@@ -624,11 +628,12 @@
             // tabControl2
             // 
             this.tabControl2.Controls.Add(this.tabPage6);
-            this.tabControl2.Controls.Add(this.tabPage8);
             this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Controls.Add(this.tabPage9);
+            this.tabControl2.Controls.Add(this.tabPage8);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
+            this.tabControl2.Multiline = true;
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(752, 261);
@@ -657,6 +662,7 @@
             this.groupBox6.Controls.Add(this.radOrigem2);
             this.groupBox6.Controls.Add(this.radOrigem0);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox6.Enabled = false;
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(3, 3);
             this.groupBox6.Name = "groupBox6";
@@ -901,6 +907,7 @@
             // chkCompoBCdaCsll
             // 
             this.chkCompoBCdaCsll.AutoSize = true;
+            this.chkCompoBCdaCsll.Enabled = false;
             this.chkCompoBCdaCsll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkCompoBCdaCsll.Location = new System.Drawing.Point(6, 3);
             this.chkCompoBCdaCsll.Name = "chkCompoBCdaCsll";
@@ -921,6 +928,7 @@
             this.groupBox5.Controls.Add(this.txtAliquotaCofinsReais);
             this.groupBox5.Controls.Add(this.txtAliquotaCofinsPerc);
             this.groupBox5.Controls.Add(this.chkCalcCOFINS);
+            this.groupBox5.Enabled = false;
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(6, 105);
             this.groupBox5.Name = "groupBox5";
@@ -1028,6 +1036,7 @@
             this.groupBox4.Controls.Add(this.txtAliquotaPisReais);
             this.groupBox4.Controls.Add(this.txtAliquotaPisPerc);
             this.groupBox4.Controls.Add(this.chkCalcPIS);
+            this.groupBox4.Enabled = false;
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(6, 25);
             this.groupBox4.Name = "groupBox4";
@@ -1148,6 +1157,7 @@
             // chkTribEspecifica
             // 
             this.chkTribEspecifica.AutoSize = true;
+            this.chkTribEspecifica.Enabled = false;
             this.chkTribEspecifica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkTribEspecifica.Location = new System.Drawing.Point(27, 24);
             this.chkTribEspecifica.Name = "chkTribEspecifica";
@@ -1242,6 +1252,7 @@
             // 
             // txtComCodSetor4
             // 
+            this.txtComCodSetor4.Enabled = false;
             this.txtComCodSetor4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCodSetor4.Location = new System.Drawing.Point(520, 152);
             this.txtComCodSetor4.Name = "txtComCodSetor4";
@@ -1250,6 +1261,7 @@
             // 
             // txtComCodSetor6
             // 
+            this.txtComCodSetor6.Enabled = false;
             this.txtComCodSetor6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCodSetor6.Location = new System.Drawing.Point(520, 202);
             this.txtComCodSetor6.Name = "txtComCodSetor6";
@@ -1258,6 +1270,7 @@
             // 
             // txtComCodSetor3
             // 
+            this.txtComCodSetor3.Enabled = false;
             this.txtComCodSetor3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCodSetor3.Location = new System.Drawing.Point(520, 127);
             this.txtComCodSetor3.Name = "txtComCodSetor3";
@@ -1266,6 +1279,7 @@
             // 
             // txtComCodSetor5
             // 
+            this.txtComCodSetor5.Enabled = false;
             this.txtComCodSetor5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCodSetor5.Location = new System.Drawing.Point(520, 177);
             this.txtComCodSetor5.Name = "txtComCodSetor5";
@@ -1274,6 +1288,7 @@
             // 
             // txtComCodSetor2
             // 
+            this.txtComCodSetor2.Enabled = false;
             this.txtComCodSetor2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCodSetor2.Location = new System.Drawing.Point(520, 103);
             this.txtComCodSetor2.Name = "txtComCodSetor2";
@@ -1282,6 +1297,7 @@
             // 
             // txtComCodSetor1
             // 
+            this.txtComCodSetor1.Enabled = false;
             this.txtComCodSetor1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCodSetor1.Location = new System.Drawing.Point(520, 79);
             this.txtComCodSetor1.Name = "txtComCodSetor1";
@@ -1300,6 +1316,7 @@
             // 
             // txtComSetor4
             // 
+            this.txtComSetor4.Enabled = false;
             this.txtComSetor4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComSetor4.Location = new System.Drawing.Point(574, 152);
             this.txtComSetor4.Name = "txtComSetor4";
@@ -1308,6 +1325,7 @@
             // 
             // txtComSetor6
             // 
+            this.txtComSetor6.Enabled = false;
             this.txtComSetor6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComSetor6.Location = new System.Drawing.Point(574, 202);
             this.txtComSetor6.Name = "txtComSetor6";
@@ -1316,6 +1334,7 @@
             // 
             // txtComSetor3
             // 
+            this.txtComSetor3.Enabled = false;
             this.txtComSetor3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComSetor3.Location = new System.Drawing.Point(574, 127);
             this.txtComSetor3.Name = "txtComSetor3";
@@ -1324,6 +1343,7 @@
             // 
             // txtComSetor5
             // 
+            this.txtComSetor5.Enabled = false;
             this.txtComSetor5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComSetor5.Location = new System.Drawing.Point(574, 177);
             this.txtComSetor5.Name = "txtComSetor5";
@@ -1332,6 +1352,7 @@
             // 
             // txtComSetor2
             // 
+            this.txtComSetor2.Enabled = false;
             this.txtComSetor2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComSetor2.Location = new System.Drawing.Point(574, 103);
             this.txtComSetor2.Name = "txtComSetor2";
@@ -1340,6 +1361,7 @@
             // 
             // txtComSetor1
             // 
+            this.txtComSetor1.Enabled = false;
             this.txtComSetor1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComSetor1.Location = new System.Drawing.Point(574, 79);
             this.txtComSetor1.Name = "txtComSetor1";
@@ -1358,6 +1380,7 @@
             // 
             // txtComCfop4
             // 
+            this.txtComCfop4.Enabled = false;
             this.txtComCfop4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCfop4.Location = new System.Drawing.Point(9, 152);
             this.txtComCfop4.Name = "txtComCfop4";
@@ -1366,6 +1389,7 @@
             // 
             // txtComCfop6
             // 
+            this.txtComCfop6.Enabled = false;
             this.txtComCfop6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCfop6.Location = new System.Drawing.Point(9, 202);
             this.txtComCfop6.Name = "txtComCfop6";
@@ -1374,6 +1398,7 @@
             // 
             // txtComCfop3
             // 
+            this.txtComCfop3.Enabled = false;
             this.txtComCfop3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCfop3.Location = new System.Drawing.Point(9, 127);
             this.txtComCfop3.Name = "txtComCfop3";
@@ -1382,6 +1407,7 @@
             // 
             // txtComCfop5
             // 
+            this.txtComCfop5.Enabled = false;
             this.txtComCfop5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCfop5.Location = new System.Drawing.Point(9, 177);
             this.txtComCfop5.Name = "txtComCfop5";
@@ -1390,6 +1416,7 @@
             // 
             // txtComCfop2
             // 
+            this.txtComCfop2.Enabled = false;
             this.txtComCfop2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCfop2.Location = new System.Drawing.Point(9, 103);
             this.txtComCfop2.Name = "txtComCfop2";
@@ -1398,6 +1425,7 @@
             // 
             // txtComCfop1
             // 
+            this.txtComCfop1.Enabled = false;
             this.txtComCfop1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCfop1.Location = new System.Drawing.Point(9, 79);
             this.txtComCfop1.Name = "txtComCfop1";
@@ -1416,6 +1444,7 @@
             // 
             // txtComTpMov4
             // 
+            this.txtComTpMov4.Enabled = false;
             this.txtComTpMov4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComTpMov4.Location = new System.Drawing.Point(63, 152);
             this.txtComTpMov4.Name = "txtComTpMov4";
@@ -1424,6 +1453,7 @@
             // 
             // txtComTpMov6
             // 
+            this.txtComTpMov6.Enabled = false;
             this.txtComTpMov6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComTpMov6.Location = new System.Drawing.Point(63, 202);
             this.txtComTpMov6.Name = "txtComTpMov6";
@@ -1432,6 +1462,7 @@
             // 
             // txtComTpMov3
             // 
+            this.txtComTpMov3.Enabled = false;
             this.txtComTpMov3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComTpMov3.Location = new System.Drawing.Point(63, 127);
             this.txtComTpMov3.Name = "txtComTpMov3";
@@ -1440,6 +1471,7 @@
             // 
             // txtComTpMov5
             // 
+            this.txtComTpMov5.Enabled = false;
             this.txtComTpMov5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComTpMov5.Location = new System.Drawing.Point(63, 177);
             this.txtComTpMov5.Name = "txtComTpMov5";
@@ -1448,6 +1480,7 @@
             // 
             // txtComTpMov2
             // 
+            this.txtComTpMov2.Enabled = false;
             this.txtComTpMov2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComTpMov2.Location = new System.Drawing.Point(63, 103);
             this.txtComTpMov2.Name = "txtComTpMov2";
@@ -1456,6 +1489,7 @@
             // 
             // txtComTpMov1
             // 
+            this.txtComTpMov1.Enabled = false;
             this.txtComTpMov1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComTpMov1.Location = new System.Drawing.Point(63, 79);
             this.txtComTpMov1.Name = "txtComTpMov1";
@@ -1474,6 +1508,7 @@
             // 
             // txtComTransDev4
             // 
+            this.txtComTransDev4.Enabled = false;
             this.txtComTransDev4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComTransDev4.Location = new System.Drawing.Point(162, 152);
             this.txtComTransDev4.Name = "txtComTransDev4";
@@ -1482,6 +1517,7 @@
             // 
             // txtComTransDev6
             // 
+            this.txtComTransDev6.Enabled = false;
             this.txtComTransDev6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComTransDev6.Location = new System.Drawing.Point(162, 202);
             this.txtComTransDev6.Name = "txtComTransDev6";
@@ -1490,6 +1526,7 @@
             // 
             // txtComTransDev3
             // 
+            this.txtComTransDev3.Enabled = false;
             this.txtComTransDev3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComTransDev3.Location = new System.Drawing.Point(162, 127);
             this.txtComTransDev3.Name = "txtComTransDev3";
@@ -1498,6 +1535,7 @@
             // 
             // txtComTransDev5
             // 
+            this.txtComTransDev5.Enabled = false;
             this.txtComTransDev5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComTransDev5.Location = new System.Drawing.Point(162, 177);
             this.txtComTransDev5.Name = "txtComTransDev5";
@@ -1506,6 +1544,7 @@
             // 
             // txtComTransDev2
             // 
+            this.txtComTransDev2.Enabled = false;
             this.txtComTransDev2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComTransDev2.Location = new System.Drawing.Point(162, 103);
             this.txtComTransDev2.Name = "txtComTransDev2";
@@ -1514,6 +1553,7 @@
             // 
             // txtComTransDev1
             // 
+            this.txtComTransDev1.Enabled = false;
             this.txtComTransDev1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComTransDev1.Location = new System.Drawing.Point(162, 79);
             this.txtComTransDev1.Name = "txtComTransDev1";
@@ -1532,6 +1572,7 @@
             // 
             // txtComCfopEqui4
             // 
+            this.txtComCfopEqui4.Enabled = false;
             this.txtComCfopEqui4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCfopEqui4.Location = new System.Drawing.Point(261, 152);
             this.txtComCfopEqui4.Name = "txtComCfopEqui4";
@@ -1560,6 +1601,7 @@
             // 
             // txtComCfopEqui6
             // 
+            this.txtComCfopEqui6.Enabled = false;
             this.txtComCfopEqui6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCfopEqui6.Location = new System.Drawing.Point(261, 202);
             this.txtComCfopEqui6.Name = "txtComCfopEqui6";
@@ -1568,6 +1610,7 @@
             // 
             // txtComCfopEqui3
             // 
+            this.txtComCfopEqui3.Enabled = false;
             this.txtComCfopEqui3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCfopEqui3.Location = new System.Drawing.Point(261, 127);
             this.txtComCfopEqui3.Name = "txtComCfopEqui3";
@@ -1596,6 +1639,7 @@
             // 
             // txtComCfopEqui5
             // 
+            this.txtComCfopEqui5.Enabled = false;
             this.txtComCfopEqui5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCfopEqui5.Location = new System.Drawing.Point(261, 177);
             this.txtComCfopEqui5.Name = "txtComCfopEqui5";
@@ -1612,6 +1656,7 @@
             // 
             // txtComCfopEqui2
             // 
+            this.txtComCfopEqui2.Enabled = false;
             this.txtComCfopEqui2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCfopEqui2.Location = new System.Drawing.Point(261, 103);
             this.txtComCfopEqui2.Name = "txtComCfopEqui2";
@@ -1628,6 +1673,7 @@
             // 
             // txtComCfopEqui1
             // 
+            this.txtComCfopEqui1.Enabled = false;
             this.txtComCfopEqui1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCfopEqui1.Location = new System.Drawing.Point(261, 79);
             this.txtComCfopEqui1.Name = "txtComCfopEqui1";
@@ -1636,6 +1682,7 @@
             // 
             // txtComNomeEmpresa
             // 
+            this.txtComNomeEmpresa.Enabled = false;
             this.txtComNomeEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComNomeEmpresa.Location = new System.Drawing.Point(76, 30);
             this.txtComNomeEmpresa.Name = "txtComNomeEmpresa";
@@ -1644,6 +1691,7 @@
             // 
             // txtComCodEmpresa
             // 
+            this.txtComCodEmpresa.Enabled = false;
             this.txtComCodEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComCodEmpresa.Location = new System.Drawing.Point(11, 30);
             this.txtComCodEmpresa.Name = "txtComCodEmpresa";
@@ -1722,6 +1770,7 @@
             // 
             // txtIndCodSetor4
             // 
+            this.txtIndCodSetor4.Enabled = false;
             this.txtIndCodSetor4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCodSetor4.Location = new System.Drawing.Point(520, 152);
             this.txtIndCodSetor4.Name = "txtIndCodSetor4";
@@ -1730,6 +1779,7 @@
             // 
             // txtIndCodSetor6
             // 
+            this.txtIndCodSetor6.Enabled = false;
             this.txtIndCodSetor6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCodSetor6.Location = new System.Drawing.Point(520, 202);
             this.txtIndCodSetor6.Name = "txtIndCodSetor6";
@@ -1738,6 +1788,7 @@
             // 
             // txtIndCodSetor3
             // 
+            this.txtIndCodSetor3.Enabled = false;
             this.txtIndCodSetor3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCodSetor3.Location = new System.Drawing.Point(520, 127);
             this.txtIndCodSetor3.Name = "txtIndCodSetor3";
@@ -1746,6 +1797,7 @@
             // 
             // txtIndCodSetor5
             // 
+            this.txtIndCodSetor5.Enabled = false;
             this.txtIndCodSetor5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCodSetor5.Location = new System.Drawing.Point(520, 177);
             this.txtIndCodSetor5.Name = "txtIndCodSetor5";
@@ -1754,6 +1806,7 @@
             // 
             // txtIndCodSetor2
             // 
+            this.txtIndCodSetor2.Enabled = false;
             this.txtIndCodSetor2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCodSetor2.Location = new System.Drawing.Point(520, 103);
             this.txtIndCodSetor2.Name = "txtIndCodSetor2";
@@ -1762,6 +1815,7 @@
             // 
             // txtIndCodSetor1
             // 
+            this.txtIndCodSetor1.Enabled = false;
             this.txtIndCodSetor1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCodSetor1.Location = new System.Drawing.Point(520, 79);
             this.txtIndCodSetor1.Name = "txtIndCodSetor1";
@@ -1780,6 +1834,7 @@
             // 
             // txtIndSetor4
             // 
+            this.txtIndSetor4.Enabled = false;
             this.txtIndSetor4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndSetor4.Location = new System.Drawing.Point(574, 152);
             this.txtIndSetor4.Name = "txtIndSetor4";
@@ -1788,6 +1843,7 @@
             // 
             // txtIndSetor6
             // 
+            this.txtIndSetor6.Enabled = false;
             this.txtIndSetor6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndSetor6.Location = new System.Drawing.Point(574, 202);
             this.txtIndSetor6.Name = "txtIndSetor6";
@@ -1796,6 +1852,7 @@
             // 
             // txtIndSetor3
             // 
+            this.txtIndSetor3.Enabled = false;
             this.txtIndSetor3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndSetor3.Location = new System.Drawing.Point(574, 127);
             this.txtIndSetor3.Name = "txtIndSetor3";
@@ -1804,6 +1861,7 @@
             // 
             // txtIndSetor5
             // 
+            this.txtIndSetor5.Enabled = false;
             this.txtIndSetor5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndSetor5.Location = new System.Drawing.Point(574, 177);
             this.txtIndSetor5.Name = "txtIndSetor5";
@@ -1812,6 +1870,7 @@
             // 
             // txtIndSetor2
             // 
+            this.txtIndSetor2.Enabled = false;
             this.txtIndSetor2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndSetor2.Location = new System.Drawing.Point(574, 103);
             this.txtIndSetor2.Name = "txtIndSetor2";
@@ -1820,6 +1879,7 @@
             // 
             // txtIndSetor1
             // 
+            this.txtIndSetor1.Enabled = false;
             this.txtIndSetor1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndSetor1.Location = new System.Drawing.Point(574, 79);
             this.txtIndSetor1.Name = "txtIndSetor1";
@@ -1838,6 +1898,7 @@
             // 
             // txtIndCfop4
             // 
+            this.txtIndCfop4.Enabled = false;
             this.txtIndCfop4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCfop4.Location = new System.Drawing.Point(9, 152);
             this.txtIndCfop4.Name = "txtIndCfop4";
@@ -1846,6 +1907,7 @@
             // 
             // txtIndCfop6
             // 
+            this.txtIndCfop6.Enabled = false;
             this.txtIndCfop6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCfop6.Location = new System.Drawing.Point(9, 202);
             this.txtIndCfop6.Name = "txtIndCfop6";
@@ -1854,6 +1916,7 @@
             // 
             // txtIndCfop3
             // 
+            this.txtIndCfop3.Enabled = false;
             this.txtIndCfop3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCfop3.Location = new System.Drawing.Point(9, 127);
             this.txtIndCfop3.Name = "txtIndCfop3";
@@ -1862,6 +1925,7 @@
             // 
             // txtIndCfop5
             // 
+            this.txtIndCfop5.Enabled = false;
             this.txtIndCfop5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCfop5.Location = new System.Drawing.Point(9, 177);
             this.txtIndCfop5.Name = "txtIndCfop5";
@@ -1870,6 +1934,7 @@
             // 
             // txtIndCfop2
             // 
+            this.txtIndCfop2.Enabled = false;
             this.txtIndCfop2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCfop2.Location = new System.Drawing.Point(9, 103);
             this.txtIndCfop2.Name = "txtIndCfop2";
@@ -1878,6 +1943,7 @@
             // 
             // txtIndCfop1
             // 
+            this.txtIndCfop1.Enabled = false;
             this.txtIndCfop1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCfop1.Location = new System.Drawing.Point(9, 79);
             this.txtIndCfop1.Name = "txtIndCfop1";
@@ -1896,6 +1962,7 @@
             // 
             // txtIndTpMov4
             // 
+            this.txtIndTpMov4.Enabled = false;
             this.txtIndTpMov4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndTpMov4.Location = new System.Drawing.Point(63, 152);
             this.txtIndTpMov4.Name = "txtIndTpMov4";
@@ -1904,6 +1971,7 @@
             // 
             // txtIndTpMov6
             // 
+            this.txtIndTpMov6.Enabled = false;
             this.txtIndTpMov6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndTpMov6.Location = new System.Drawing.Point(63, 202);
             this.txtIndTpMov6.Name = "txtIndTpMov6";
@@ -1912,6 +1980,7 @@
             // 
             // txtIndTpMov3
             // 
+            this.txtIndTpMov3.Enabled = false;
             this.txtIndTpMov3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndTpMov3.Location = new System.Drawing.Point(63, 127);
             this.txtIndTpMov3.Name = "txtIndTpMov3";
@@ -1920,6 +1989,7 @@
             // 
             // txtIndTpMov5
             // 
+            this.txtIndTpMov5.Enabled = false;
             this.txtIndTpMov5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndTpMov5.Location = new System.Drawing.Point(63, 177);
             this.txtIndTpMov5.Name = "txtIndTpMov5";
@@ -1928,6 +1998,7 @@
             // 
             // txtIndTpMov2
             // 
+            this.txtIndTpMov2.Enabled = false;
             this.txtIndTpMov2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndTpMov2.Location = new System.Drawing.Point(63, 103);
             this.txtIndTpMov2.Name = "txtIndTpMov2";
@@ -1936,6 +2007,7 @@
             // 
             // txtIndTpMov1
             // 
+            this.txtIndTpMov1.Enabled = false;
             this.txtIndTpMov1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndTpMov1.Location = new System.Drawing.Point(63, 79);
             this.txtIndTpMov1.Name = "txtIndTpMov1";
@@ -1954,6 +2026,7 @@
             // 
             // txtIndTransDev4
             // 
+            this.txtIndTransDev4.Enabled = false;
             this.txtIndTransDev4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndTransDev4.Location = new System.Drawing.Point(162, 152);
             this.txtIndTransDev4.Name = "txtIndTransDev4";
@@ -1962,6 +2035,7 @@
             // 
             // txtIndTransDev6
             // 
+            this.txtIndTransDev6.Enabled = false;
             this.txtIndTransDev6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndTransDev6.Location = new System.Drawing.Point(162, 202);
             this.txtIndTransDev6.Name = "txtIndTransDev6";
@@ -1970,6 +2044,7 @@
             // 
             // txtIndTransDev3
             // 
+            this.txtIndTransDev3.Enabled = false;
             this.txtIndTransDev3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndTransDev3.Location = new System.Drawing.Point(162, 127);
             this.txtIndTransDev3.Name = "txtIndTransDev3";
@@ -1978,6 +2053,7 @@
             // 
             // txtIndTransDev5
             // 
+            this.txtIndTransDev5.Enabled = false;
             this.txtIndTransDev5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndTransDev5.Location = new System.Drawing.Point(162, 177);
             this.txtIndTransDev5.Name = "txtIndTransDev5";
@@ -1986,6 +2062,7 @@
             // 
             // txtIndTransDev2
             // 
+            this.txtIndTransDev2.Enabled = false;
             this.txtIndTransDev2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndTransDev2.Location = new System.Drawing.Point(162, 103);
             this.txtIndTransDev2.Name = "txtIndTransDev2";
@@ -1994,6 +2071,7 @@
             // 
             // txtIndTransDev1
             // 
+            this.txtIndTransDev1.Enabled = false;
             this.txtIndTransDev1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndTransDev1.Location = new System.Drawing.Point(162, 79);
             this.txtIndTransDev1.Name = "txtIndTransDev1";
@@ -2012,6 +2090,7 @@
             // 
             // txtIndCfopEqui4
             // 
+            this.txtIndCfopEqui4.Enabled = false;
             this.txtIndCfopEqui4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCfopEqui4.Location = new System.Drawing.Point(261, 152);
             this.txtIndCfopEqui4.Name = "txtIndCfopEqui4";
@@ -2040,6 +2119,7 @@
             // 
             // txtIndCfopEqui6
             // 
+            this.txtIndCfopEqui6.Enabled = false;
             this.txtIndCfopEqui6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCfopEqui6.Location = new System.Drawing.Point(261, 202);
             this.txtIndCfopEqui6.Name = "txtIndCfopEqui6";
@@ -2048,6 +2128,7 @@
             // 
             // txtIndCfopEqui3
             // 
+            this.txtIndCfopEqui3.Enabled = false;
             this.txtIndCfopEqui3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCfopEqui3.Location = new System.Drawing.Point(261, 127);
             this.txtIndCfopEqui3.Name = "txtIndCfopEqui3";
@@ -2076,6 +2157,7 @@
             // 
             // txtIndCfopEqui5
             // 
+            this.txtIndCfopEqui5.Enabled = false;
             this.txtIndCfopEqui5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCfopEqui5.Location = new System.Drawing.Point(261, 177);
             this.txtIndCfopEqui5.Name = "txtIndCfopEqui5";
@@ -2084,6 +2166,7 @@
             // 
             // txtIndVenda
             // 
+            this.txtIndVenda.Enabled = false;
             this.txtIndVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndVenda.Location = new System.Drawing.Point(625, 30);
             this.txtIndVenda.Name = "txtIndVenda";
@@ -2092,6 +2175,7 @@
             // 
             // txtIndCfopEqui2
             // 
+            this.txtIndCfopEqui2.Enabled = false;
             this.txtIndCfopEqui2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCfopEqui2.Location = new System.Drawing.Point(261, 103);
             this.txtIndCfopEqui2.Name = "txtIndCfopEqui2";
@@ -2100,6 +2184,7 @@
             // 
             // txtIndCompra
             // 
+            this.txtIndCompra.Enabled = false;
             this.txtIndCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCompra.Location = new System.Drawing.Point(681, 30);
             this.txtIndCompra.Name = "txtIndCompra";
@@ -2108,6 +2193,7 @@
             // 
             // txtIndCfopEqui1
             // 
+            this.txtIndCfopEqui1.Enabled = false;
             this.txtIndCfopEqui1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCfopEqui1.Location = new System.Drawing.Point(261, 79);
             this.txtIndCfopEqui1.Name = "txtIndCfopEqui1";
@@ -2116,6 +2202,7 @@
             // 
             // txtIndNomeEmpresa
             // 
+            this.txtIndNomeEmpresa.Enabled = false;
             this.txtIndNomeEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndNomeEmpresa.Location = new System.Drawing.Point(76, 30);
             this.txtIndNomeEmpresa.Name = "txtIndNomeEmpresa";
@@ -2124,6 +2211,7 @@
             // 
             // txtIndCodEmpresa
             // 
+            this.txtIndCodEmpresa.Enabled = false;
             this.txtIndCodEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndCodEmpresa.Location = new System.Drawing.Point(11, 30);
             this.txtIndCodEmpresa.Name = "txtIndCodEmpresa";
@@ -2227,6 +2315,7 @@
             // 
             // txtCaracNome4
             // 
+            this.txtCaracNome4.Enabled = false;
             this.txtCaracNome4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCaracNome4.Location = new System.Drawing.Point(86, 166);
             this.txtCaracNome4.Name = "txtCaracNome4";
@@ -2235,6 +2324,7 @@
             // 
             // txtCaracCod4
             // 
+            this.txtCaracCod4.Enabled = false;
             this.txtCaracCod4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCaracCod4.Location = new System.Drawing.Point(20, 166);
             this.txtCaracCod4.Name = "txtCaracCod4";
@@ -2243,6 +2333,7 @@
             // 
             // txtCaracNome3
             // 
+            this.txtCaracNome3.Enabled = false;
             this.txtCaracNome3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCaracNome3.Location = new System.Drawing.Point(86, 124);
             this.txtCaracNome3.Name = "txtCaracNome3";
@@ -2251,6 +2342,7 @@
             // 
             // txtCaracCod3
             // 
+            this.txtCaracCod3.Enabled = false;
             this.txtCaracCod3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCaracCod3.Location = new System.Drawing.Point(20, 124);
             this.txtCaracCod3.Name = "txtCaracCod3";
@@ -2259,6 +2351,7 @@
             // 
             // txtCaracNome2
             // 
+            this.txtCaracNome2.Enabled = false;
             this.txtCaracNome2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCaracNome2.Location = new System.Drawing.Point(86, 82);
             this.txtCaracNome2.Name = "txtCaracNome2";
@@ -2267,6 +2360,7 @@
             // 
             // txtCaracCod2
             // 
+            this.txtCaracCod2.Enabled = false;
             this.txtCaracCod2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCaracCod2.Location = new System.Drawing.Point(20, 82);
             this.txtCaracCod2.Name = "txtCaracCod2";
@@ -2275,6 +2369,7 @@
             // 
             // txtCaracNome1
             // 
+            this.txtCaracNome1.Enabled = false;
             this.txtCaracNome1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCaracNome1.Location = new System.Drawing.Point(86, 40);
             this.txtCaracNome1.Name = "txtCaracNome1";
@@ -2283,6 +2378,7 @@
             // 
             // txtCaracCod1
             // 
+            this.txtCaracCod1.Enabled = false;
             this.txtCaracCod1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCaracCod1.Location = new System.Drawing.Point(20, 40);
             this.txtCaracCod1.Name = "txtCaracCod1";

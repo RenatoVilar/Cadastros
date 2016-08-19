@@ -14,17 +14,17 @@
 
                 if (radUFAm.Checked)
                 {
-                    txtCodOp.Text = "00001";
-                    txtNomeOp.Text = "VENDA PARA AM";
+                    txtCodOp.Text = "000001";
+                    txtNomeOp.Text = "COM - VENDA PARA NÃO CONTRIBUINTE NO AM";
                     txtCodPreco.Text = "0001";
-                    txtNomePreco.Text = "PREÇO ZFM";
+                    txtNomePreco.Text = "PREÇO VAREJO ZFM";
                 }
                 else if (radOutrasUF.Checked)
                 {
-                    txtCodOp.Text = "00002";
-                    txtNomeOp.Text = "VENDA PARA FORA AM";
+                    txtCodOp.Text = "000094";
+                    txtNomeOp.Text = "COM - VENDA PARA NÃO CONTRIBUINTE FORA AM";
                     txtCodPreco.Text = "0001";
-                    txtNomePreco.Text = "PREÇO FORA ZFM";
+                    txtNomePreco.Text = "PREÇO VAREJO ZFM";
                 }
             }
             else if (radJuridica.Checked)
@@ -47,17 +47,17 @@
 
                 if (radUFAm.Checked)
                 {
-                    txtCodOp.Text = "00001";
-                    txtNomeOp.Text = "VENDA PARA AM";
+                    txtCodOp.Text = "000013";
+                    txtNomeOp.Text = "COM - VENDA PARA CONTRIBUINTE";
                     txtCodPreco.Text = "0001";
-                    txtNomePreco.Text = "PREÇO ZFM";
+                    txtNomePreco.Text = "PREÇO VAREJO ZFM";
                 }
                 else if (radOutrasUF.Checked)
                 {
-                    txtCodOp.Text = "00002";
-                    txtNomeOp.Text = "VENDA PARA FORA AM";
+                    txtCodOp.Text = "000013";
+                    txtNomeOp.Text = "COM - VENDA PARA CONTRIBUINTE";
                     txtCodPreco.Text = "0001";
-                    txtNomePreco.Text = "PREÇO FORA ZFM";
+                    txtNomePreco.Text = "PREÇO VAREJO FORA ZFM";
                 }
             }
             else if (radEstrangeiro.Checked)
@@ -66,10 +66,10 @@
                 lblMsgEstrangeiro.Visible = true;
                 lblMsgPessoaJuridica.Visible = false;
                 chkPrestadorServico.Visible = false;
-                txtCodOp.Text = "00003";
-                txtNomeOp.Text = "VENDA PARA ESTRANGEIRO NO BRASIL";
+                txtCodOp.Text = "000098";
+                txtNomeOp.Text = "COM - VENDA PARA ESTRANGEIROS NO BRASIL";
                 txtCodPreco.Text = "0001";
-                txtNomePreco.Text = "PREÇO ZFM";
+                txtNomePreco.Text = "PREÇO VAREJO ZFM";
 
             }
             else if (radOrgaoPubFed.Checked)
@@ -82,10 +82,10 @@
                 lblMsgPessoaJuridica.Visible = false;
                 txtCodCaracteristica.Text = "00001";
                 txtNomeCaracteristica.Text = "NÃO COBRAR JUROS";
-                txtCodOp.Text = "00004";
-                txtNomeOp.Text = "VENDA PARA ÓRGÃO PUBLICO FEDERAL";
+                txtCodOp.Text = "0000132";
+                txtNomeOp.Text = "COM - VENDA PARA ÓRGÃO PUBLICO POR EMPENHO";
                 txtCodPreco.Text = "0001";
-                txtNomePreco.Text = "PREÇO ZFM";
+                txtNomePreco.Text = "PREÇO VAREJO ZFM";
             }
 
             if (chkPrestadorServico.Checked)

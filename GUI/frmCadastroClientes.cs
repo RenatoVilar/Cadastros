@@ -8,6 +8,25 @@ namespace GUI
         public frmCadastroClientes()
         {
             InitializeComponent();
+            chkPrestadorServico.Visible = false;
+
+            for (int i = 0; i < grpTipo.Controls.Count; i++)
+            {
+                RadioButton rdb = (RadioButton)grpTipo.Controls[i];
+                rdb.CheckedChanged += new EventHandler(Rdb_CheckedChanged);
+            }
+        }
+
+        private void Rdb_CheckedChanged(object sender, EventArgs e)
+        {
+            foreach (RadioButton rdb in grpTipo.Controls)
+            {
+                if (rdb.Name == "radJuridica")
+                {
+                    chkPrestadorServico.Visible = true;
+                }
+                else chkPrestadorServico.Visible = false;
+            }
         }
 
         private void frmCadastroClientes_Load(object sender, EventArgs e)
@@ -67,6 +86,11 @@ namespace GUI
         private void radJuridica_Click(object sender, EventArgs e)
         {
             chkPrestadorServico.Visible = true;
+        }
+
+        private void radFisica_CheckedChanged(object sender, EventArgs e)
+        {
+            chkPrestadorServico.Visible = false;
         }
     }
 }

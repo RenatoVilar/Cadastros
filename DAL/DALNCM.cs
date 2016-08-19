@@ -78,9 +78,9 @@ namespace DAL
             SqlCeCommand sqlCmd = new SqlCeCommand();
             sqlCmd.Connection = dalConexao.SqlConexao;
             
-            if (index == 0)
+            if (index == 0) // NCM = 0 Descrição = 1
             {
-                sqlCmd.CommandText = "SELECT CodNCM, NomeNCM FROM NCMs WHERE CodNCM LIKE '%" + valor + "%'";
+                sqlCmd.CommandText = "SELECT CodNCM, NomeNCM FROM NCMs WHERE CodNCM LIKE '"  + valor + "%'";
             }
             else
             {

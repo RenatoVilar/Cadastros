@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroClientes));
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpTipo = new System.Windows.Forms.GroupBox();
             this.radOrgaoPubFed = new System.Windows.Forms.RadioButton();
             this.radEstrangeiro = new System.Windows.Forms.RadioButton();
             this.radJuridica = new System.Windows.Forms.RadioButton();
@@ -75,7 +75,7 @@
             this.txtNomeCaracteristica = new System.Windows.Forms.TextBox();
             this.chkPrestadorServico = new System.Windows.Forms.CheckBox();
             this.btnAvaliar = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.grpTipo.SuspendLayout();
             this.grpFornecedor.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.pnlEndereco.SuspendLayout();
@@ -96,19 +96,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Cadastro de Clientes";
             // 
-            // groupBox1
+            // grpTipo
             // 
-            this.groupBox1.Controls.Add(this.radOrgaoPubFed);
-            this.groupBox1.Controls.Add(this.radEstrangeiro);
-            this.groupBox1.Controls.Add(this.radJuridica);
-            this.groupBox1.Controls.Add(this.radFisica);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 58);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(525, 56);
-            this.groupBox1.TabIndex = 33;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tipo";
+            this.grpTipo.Controls.Add(this.radOrgaoPubFed);
+            this.grpTipo.Controls.Add(this.radEstrangeiro);
+            this.grpTipo.Controls.Add(this.radJuridica);
+            this.grpTipo.Controls.Add(this.radFisica);
+            this.grpTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpTipo.Location = new System.Drawing.Point(12, 58);
+            this.grpTipo.Name = "grpTipo";
+            this.grpTipo.Size = new System.Drawing.Size(525, 56);
+            this.grpTipo.TabIndex = 33;
+            this.grpTipo.TabStop = false;
+            this.grpTipo.Text = "Tipo";
             // 
             // radOrgaoPubFed
             // 
@@ -156,6 +156,7 @@
             this.radFisica.TabStop = true;
             this.radFisica.Text = "Física";
             this.radFisica.UseVisualStyleBackColor = true;
+            this.radFisica.CheckedChanged += new System.EventHandler(this.radFisica_CheckedChanged);
             // 
             // grpFornecedor
             // 
@@ -610,7 +611,7 @@
             this.Controls.Add(this.trePrincipal);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grpFornecedor);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpTipo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlEndereco);
             this.Controls.Add(this.pnlCaracteristicas);
@@ -621,8 +622,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadastroClientes";
             this.Load += new System.EventHandler(this.frmCadastroClientes_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpTipo.ResumeLayout(false);
+            this.grpTipo.PerformLayout();
             this.grpFornecedor.ResumeLayout(false);
             this.grpFornecedor.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -647,7 +648,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpTipo;
         private System.Windows.Forms.RadioButton radOrgaoPubFed;
         private System.Windows.Forms.RadioButton radEstrangeiro;
         private System.Windows.Forms.RadioButton radJuridica;
