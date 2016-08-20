@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 14 for Windows Desktop
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{5C3E9E54-63DE-416B-865B-BFB7C54B5B42}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{C2AE531D-8FE9-4D2C-BCE9-0392E93D6DFA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{2C4ADCAB-C6D6-4426-9A33-B2EF391A95E4}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Cadastros.Setup", "Cadastros.Setup\Cadastros.Setup.vdproj", "{F1B947FE-B7A8-443C-A182-12D2EC1FCA41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,8 @@ Global
 		{2C4ADCAB-C6D6-4426-9A33-B2EF391A95E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C4ADCAB-C6D6-4426-9A33-B2EF391A95E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C4ADCAB-C6D6-4426-9A33-B2EF391A95E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B947FE-B7A8-443C-A182-12D2EC1FCA41}.Debug|Any CPU.ActiveCfg = Debug
+		{F1B947FE-B7A8-443C-A182-12D2EC1FCA41}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
