@@ -343,7 +343,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAlterarNcmLote";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAlterarNcmLote";
+            this.Text = "Alterar NCM por Lote";
             this.Load += new System.EventHandler(this.frmAlterarNcmLote_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

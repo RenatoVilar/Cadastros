@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:Cadastros.Setup"
+"ProjectName" = "8:Cadastros"
 "LanguageId" = "3:1046"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1046"
@@ -88,12 +88,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1053C29CBF0DD42D59524C15FA008D8B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_004C2D338F9549A5ACF00917150020F2"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -121,6 +115,12 @@
         "OwnerKey" = "8:_F22D7F2054FB2C1592E6B533A3692CB1"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_1053C29CBF0DD42D59524C15FA008D8B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -129,7 +129,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\Cadastros.Setup.msi"
+        "OutputFilename" = "8:Debug\\Cadastros.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -139,6 +139,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -155,6 +171,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -240,7 +264,7 @@
             "SourcePath" = "8:..\\DAL\\CadastrosDB.sdf"
             "TargetName" = "8:CadastrosDB.sdf"
             "Tag" = "8:"
-            "Folder" = "8:_2319B10526E4451797B8667F2AAA57C1"
+            "Folder" = "8:_3717190A02234A01867D198AFC51B7CA"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -578,7 +602,7 @@
             "Target" = "8:_004C2D338F9549A5ACF00917150020F2"
             "Folder" = "8:_E83B0DA9203849469F84D425FC65BE6B"
             "WorkingFolder" = "8:_3717190A02234A01867D198AFC51B7CA"
-            "Icon" = "8:"
+            "Icon" = "8:_40F39D11E5554DD3BAC776D5353875B7"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_BA9BBD7CFB704A52A10A534FA1BC9D06"
