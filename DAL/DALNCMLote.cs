@@ -8,6 +8,8 @@ namespace DAL
     {
         private DALConexao dalConexao;
 
+        
+
         public DALNCMLote(DALConexao dalConexao)
         {
             this.dalConexao = dalConexao;
