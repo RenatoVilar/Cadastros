@@ -236,6 +236,7 @@
             this.txtCodPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodPreco.Location = new System.Drawing.Point(10, 132);
             this.txtCodPreco.Name = "txtCodPreco";
+            this.txtCodPreco.ReadOnly = true;
             this.txtCodPreco.Size = new System.Drawing.Size(75, 22);
             this.txtCodPreco.TabIndex = 36;
             // 
@@ -245,6 +246,7 @@
             this.txtNomePreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomePreco.Location = new System.Drawing.Point(93, 132);
             this.txtNomePreco.Name = "txtNomePreco";
+            this.txtNomePreco.ReadOnly = true;
             this.txtNomePreco.Size = new System.Drawing.Size(316, 22);
             this.txtNomePreco.TabIndex = 37;
             // 
@@ -298,7 +300,6 @@
             this.groupBox3.Controls.Add(this.radConfigNaoContribuinte);
             this.groupBox3.Controls.Add(this.radConfigContribuinte);
             this.groupBox3.Controls.Add(this.radConfigIsentoIE);
-            this.groupBox3.Enabled = false;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(10, 72);
             this.groupBox3.Name = "groupBox3";
@@ -309,6 +310,8 @@
             // 
             // radConfigNaoContribuinte
             // 
+            this.radConfigNaoContribuinte.AutoCheck = false;
+            this.radConfigNaoContribuinte.AutoEllipsis = true;
             this.radConfigNaoContribuinte.AutoSize = true;
             this.radConfigNaoContribuinte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radConfigNaoContribuinte.Location = new System.Drawing.Point(334, 18);
@@ -320,6 +323,7 @@
             // 
             // radConfigContribuinte
             // 
+            this.radConfigContribuinte.AutoCheck = false;
             this.radConfigContribuinte.AutoSize = true;
             this.radConfigContribuinte.Checked = true;
             this.radConfigContribuinte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -333,6 +337,7 @@
             // 
             // radConfigIsentoIE
             // 
+            this.radConfigIsentoIE.AutoCheck = false;
             this.radConfigIsentoIE.AutoSize = true;
             this.radConfigIsentoIE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radConfigIsentoIE.Location = new System.Drawing.Point(151, 18);
@@ -382,7 +387,6 @@
             this.groupBox4.Controls.Add(this.chkConfigPrestadorServico);
             this.groupBox4.Controls.Add(this.checkBox2);
             this.groupBox4.Controls.Add(this.checkBox1);
-            this.groupBox4.Enabled = false;
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(10, 85);
             this.groupBox4.Name = "groupBox4";
@@ -415,11 +419,13 @@
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(495, 17);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(49, 22);
             this.textBox3.TabIndex = 3;
             // 
             // chkConfigPrestadorServico
             // 
+            this.chkConfigPrestadorServico.AutoCheck = false;
             this.chkConfigPrestadorServico.AutoSize = true;
             this.chkConfigPrestadorServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConfigPrestadorServico.Location = new System.Drawing.Point(319, 45);
@@ -431,6 +437,7 @@
             // 
             // checkBox2
             // 
+            this.checkBox2.AutoCheck = false;
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.Location = new System.Drawing.Point(20, 45);
@@ -442,6 +449,7 @@
             // 
             // checkBox1
             // 
+            this.checkBox1.AutoCheck = false;
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(7, 20);
@@ -453,8 +461,8 @@
             // 
             // chkEntidadeDaAdmFederal
             // 
+            this.chkEntidadeDaAdmFederal.AutoCheck = false;
             this.chkEntidadeDaAdmFederal.AutoSize = true;
-            this.chkEntidadeDaAdmFederal.Enabled = false;
             this.chkEntidadeDaAdmFederal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkEntidadeDaAdmFederal.Location = new System.Drawing.Point(10, 65);
             this.chkEntidadeDaAdmFederal.Name = "chkEntidadeDaAdmFederal";
@@ -470,6 +478,7 @@
             this.txtCodOp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodOp.Location = new System.Drawing.Point(10, 72);
             this.txtCodOp.Name = "txtCodOp";
+            this.txtCodOp.ReadOnly = true;
             this.txtCodOp.Size = new System.Drawing.Size(75, 22);
             this.txtCodOp.TabIndex = 36;
             // 
@@ -479,6 +488,7 @@
             this.txtNomeOp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeOp.Location = new System.Drawing.Point(93, 72);
             this.txtNomeOp.Name = "txtNomeOp";
+            this.txtNomeOp.ReadOnly = true;
             this.txtNomeOp.Size = new System.Drawing.Size(473, 22);
             this.txtNomeOp.TabIndex = 37;
             // 
@@ -555,6 +565,7 @@
             this.txtCodCaracteristica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodCaracteristica.Location = new System.Drawing.Point(10, 70);
             this.txtCodCaracteristica.Name = "txtCodCaracteristica";
+            this.txtCodCaracteristica.ReadOnly = true;
             this.txtCodCaracteristica.Size = new System.Drawing.Size(75, 22);
             this.txtCodCaracteristica.TabIndex = 40;
             // 
@@ -574,6 +585,7 @@
             this.txtNomeCaracteristica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeCaracteristica.Location = new System.Drawing.Point(94, 70);
             this.txtNomeCaracteristica.Name = "txtNomeCaracteristica";
+            this.txtNomeCaracteristica.ReadOnly = true;
             this.txtNomeCaracteristica.Size = new System.Drawing.Size(473, 22);
             this.txtNomeCaracteristica.TabIndex = 41;
             // 
@@ -649,49 +661,49 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grpTipo;
-        private System.Windows.Forms.RadioButton radOrgaoPubFed;
-        private System.Windows.Forms.RadioButton radEstrangeiro;
-        private System.Windows.Forms.RadioButton radJuridica;
         protected System.Windows.Forms.RadioButton radFisica;
         private System.Windows.Forms.GroupBox grpFornecedor;
-        private System.Windows.Forms.RadioButton radUFAm;
-        private System.Windows.Forms.RadioButton radOutrasUF;
-        private System.Windows.Forms.RadioButton radContribuinte;
-        private System.Windows.Forms.RadioButton radNaoContribuinte;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtCodPreco;
-        private System.Windows.Forms.TextBox txtNomePreco;
         private System.Windows.Forms.TreeView trePrincipal;
         private System.Windows.Forms.Panel pnlEndereco;
         private System.Windows.Forms.Panel pnlAdicionais;
-        private System.Windows.Forms.TextBox txtCodOp;
-        private System.Windows.Forms.TextBox txtNomeOp;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radConfigNaoContribuinte;
-        private System.Windows.Forms.RadioButton radConfigContribuinte;
-        private System.Windows.Forms.RadioButton radConfigIsentoIE;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblMsgPessoaJuridica;
-        private System.Windows.Forms.Label lblMsgEstrangeiro;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.CheckBox chkConfigPrestadorServico;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox chkEntidadeDaAdmFederal;
         private System.Windows.Forms.Panel pnlCadastros;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel pnlCaracteristicas;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtCodCaracteristica;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtNomeCaracteristica;
-        private System.Windows.Forms.CheckBox chkPrestadorServico;
         private System.Windows.Forms.Button btnAvaliar;
+        protected System.Windows.Forms.RadioButton radOrgaoPubFed;
+        protected System.Windows.Forms.RadioButton radEstrangeiro;
+        protected System.Windows.Forms.RadioButton radJuridica;
+        protected System.Windows.Forms.RadioButton radUFAm;
+        protected System.Windows.Forms.RadioButton radOutrasUF;
+        protected System.Windows.Forms.RadioButton radContribuinte;
+        protected System.Windows.Forms.RadioButton radNaoContribuinte;
+        protected System.Windows.Forms.CheckBox chkPrestadorServico;
+        protected System.Windows.Forms.TextBox txtCodPreco;
+        protected System.Windows.Forms.TextBox txtNomePreco;
+        protected System.Windows.Forms.TextBox txtCodOp;
+        protected System.Windows.Forms.TextBox txtNomeOp;
+        protected System.Windows.Forms.RadioButton radConfigNaoContribuinte;
+        protected System.Windows.Forms.RadioButton radConfigContribuinte;
+        protected System.Windows.Forms.RadioButton radConfigIsentoIE;
+        protected System.Windows.Forms.Label lblMsgEstrangeiro;
+        protected System.Windows.Forms.TextBox textBox3;
+        protected System.Windows.Forms.CheckBox chkConfigPrestadorServico;
+        protected System.Windows.Forms.CheckBox checkBox2;
+        protected System.Windows.Forms.CheckBox checkBox1;
+        protected System.Windows.Forms.CheckBox chkEntidadeDaAdmFederal;
+        protected System.Windows.Forms.TextBox txtCodCaracteristica;
+        protected System.Windows.Forms.TextBox txtNomeCaracteristica;
+        protected System.Windows.Forms.Label lblMsgPessoaJuridica;
     }
 }

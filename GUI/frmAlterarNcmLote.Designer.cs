@@ -325,6 +325,7 @@
             this.mtxtNcm.Name = "mtxtNcm";
             this.mtxtNcm.Size = new System.Drawing.Size(100, 26);
             this.mtxtNcm.TabIndex = 0;
+            this.mtxtNcm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtNcm_KeyPress);
             // 
             // frmAlterarNcmLote
             // 

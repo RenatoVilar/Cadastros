@@ -36,6 +36,7 @@
             this.txtPesquisar.Location = new System.Drawing.Point(142, 32);
             this.txtPesquisar.Size = new System.Drawing.Size(430, 26);
             this.txtPesquisar.TabIndex = 1;
+            this.txtPesquisar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisar_KeyPress);
             // 
             // btnLocalizar
             // 
@@ -44,6 +45,8 @@
             // 
             // cboLocalizarNCM
             // 
+            this.cboLocalizarNCM.BackColor = System.Drawing.Color.White;
+            this.cboLocalizarNCM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLocalizarNCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLocalizarNCM.FormattingEnabled = true;
             this.cboLocalizarNCM.Location = new System.Drawing.Point(12, 32);

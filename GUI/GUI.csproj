@@ -120,12 +120,6 @@
     <Compile Include="frmSobre.Designer.cs">
       <DependentUpon>frmSobre.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProcessFrmCadastroClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProcessFrmCadProdutos.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
