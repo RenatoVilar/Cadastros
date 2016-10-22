@@ -342,7 +342,6 @@
             this.txtCodNCM.Size = new System.Drawing.Size(100, 26);
             this.txtCodNCM.TabIndex = 6;
             this.txtCodNCM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodNCM_KeyPress);
-            this.txtCodNCM.Validating += new System.ComponentModel.CancelEventHandler(this.txtCodNCM_Validating);
             // 
             // radForBrasileiro
             // 
@@ -2342,7 +2341,7 @@
             this.txtCaracNome4.Location = new System.Drawing.Point(86, 166);
             this.txtCaracNome4.Name = "txtCaracNome4";
             this.txtCaracNome4.ReadOnly = true;
-            this.txtCaracNome4.Size = new System.Drawing.Size(285, 22);
+            this.txtCaracNome4.Size = new System.Drawing.Size(384, 22);
             this.txtCaracNome4.TabIndex = 9;
             // 
             // txtCaracCod4
@@ -2360,7 +2359,7 @@
             this.txtCaracNome3.Location = new System.Drawing.Point(86, 124);
             this.txtCaracNome3.Name = "txtCaracNome3";
             this.txtCaracNome3.ReadOnly = true;
-            this.txtCaracNome3.Size = new System.Drawing.Size(285, 22);
+            this.txtCaracNome3.Size = new System.Drawing.Size(384, 22);
             this.txtCaracNome3.TabIndex = 7;
             // 
             // txtCaracCod3
@@ -2378,7 +2377,7 @@
             this.txtCaracNome2.Location = new System.Drawing.Point(86, 82);
             this.txtCaracNome2.Name = "txtCaracNome2";
             this.txtCaracNome2.ReadOnly = true;
-            this.txtCaracNome2.Size = new System.Drawing.Size(285, 22);
+            this.txtCaracNome2.Size = new System.Drawing.Size(384, 22);
             this.txtCaracNome2.TabIndex = 5;
             // 
             // txtCaracCod2
@@ -2396,7 +2395,7 @@
             this.txtCaracNome1.Location = new System.Drawing.Point(86, 40);
             this.txtCaracNome1.Name = "txtCaracNome1";
             this.txtCaracNome1.ReadOnly = true;
-            this.txtCaracNome1.Size = new System.Drawing.Size(285, 22);
+            this.txtCaracNome1.Size = new System.Drawing.Size(384, 22);
             this.txtCaracNome1.TabIndex = 3;
             // 
             // txtCaracCod1
