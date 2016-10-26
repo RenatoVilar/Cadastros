@@ -50,7 +50,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(170, 45);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Versão 1.00.00\r\n®2016 Renato Vilar\r\nTodos os Direitos Reservados\r\n";
+            this.label2.Text = "Versão 1.01.00\r\n®2016 Renato Vilar\r\nTodos os Direitos Reservados\r\n";
             // 
             // frmSobre
             // 

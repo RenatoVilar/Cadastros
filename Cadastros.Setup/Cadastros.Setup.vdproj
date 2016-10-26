@@ -27,26 +27,26 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9DFBB4E8D3044247A1F9CC64644E460C"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_75055D03659AAC1F1654AE1EE3CF54C9"
+        "OwnerKey" = "8:_B592D39FC31C70A7F6E23AF5F6F202D4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_9F45C44B234A83CEB27276C1EE4C9E45"
-        "OwnerKey" = "8:_E02B4B4811170805C2A38B5110CB16AB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_9F45C44B234A83CEB27276C1EE4C9E45"
+        "MsmKey" = "8:_75055D03659AAC1F1654AE1EE3CF54C9"
         "OwnerKey" = "8:_004C2D338F9549A5ACF00917150020F2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_9F45C44B234A83CEB27276C1EE4C9E45"
-        "OwnerKey" = "8:_B82CB114C894A1152DD809ED623E2546"
+        "MsmKey" = "8:_75055D03659AAC1F1654AE1EE3CF54C9"
+        "OwnerKey" = "8:_B51A719D3D4610A3C2C1DDC1C845B7E7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9DFBB4E8D3044247A1F9CC64644E460C"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -57,32 +57,32 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B82CB114C894A1152DD809ED623E2546"
+        "MsmKey" = "8:_B51A719D3D4610A3C2C1DDC1C845B7E7"
         "OwnerKey" = "8:_004C2D338F9549A5ACF00917150020F2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E02B4B4811170805C2A38B5110CB16AB"
-        "OwnerKey" = "8:_B82CB114C894A1152DD809ED623E2546"
+        "MsmKey" = "8:_B592D39FC31C70A7F6E23AF5F6F202D4"
+        "OwnerKey" = "8:_B51A719D3D4610A3C2C1DDC1C845B7E7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E02B4B4811170805C2A38B5110CB16AB"
-        "OwnerKey" = "8:_004C2D338F9549A5ACF00917150020F2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F22D7F2054FB2C1592E6B533A3692CB1"
+        "MsmKey" = "8:_B592D39FC31C70A7F6E23AF5F6F202D4"
         "OwnerKey" = "8:_004C2D338F9549A5ACF00917150020F2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_F22D7F2054FB2C1592E6B533A3692CB1"
-        "OwnerKey" = "8:_E02B4B4811170805C2A38B5110CB16AB"
+        "OwnerKey" = "8:_004C2D338F9549A5ACF00917150020F2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F22D7F2054FB2C1592E6B533A3692CB1"
+        "OwnerKey" = "8:_B592D39FC31C70A7F6E23AF5F6F202D4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -94,19 +94,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B82CB114C894A1152DD809ED623E2546"
+        "OwnerKey" = "8:_B51A719D3D4610A3C2C1DDC1C845B7E7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E02B4B4811170805C2A38B5110CB16AB"
+        "OwnerKey" = "8:_B592D39FC31C70A7F6E23AF5F6F202D4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9F45C44B234A83CEB27276C1EE4C9E45"
+        "OwnerKey" = "8:_75055D03659AAC1F1654AE1EE3CF54C9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -247,34 +247,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9DFBB4E8D3044247A1F9CC64644E460C"
-            {
-            "SourcePath" = "8:..\\DAL\\CadastrosDB.sdf"
-            "TargetName" = "8:CadastrosDB.sdf"
-            "Tag" = "8:"
-            "Folder" = "8:_3717190A02234A01867D198AFC51B7CA"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:TRUE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9F45C44B234A83CEB27276C1EE4C9E45"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_75055D03659AAC1F1654AE1EE3CF54C9"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Modelo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_9F45C44B234A83CEB27276C1EE4C9E45"
+                    "_75055D03659AAC1F1654AE1EE3CF54C9"
                     {
                     "Name" = "8:Modelo.dll"
                     "Attributes" = "3:512"
@@ -298,6 +278,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9DFBB4E8D3044247A1F9CC64644E460C"
+            {
+            "SourcePath" = "8:..\\DAL\\CadastrosDB.sdf"
+            "TargetName" = "8:CadastrosDB.sdf"
+            "Tag" = "8:"
+            "Folder" = "8:_3717190A02234A01867D198AFC51B7CA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:TRUE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A33107091A1444F88565B186A777B886"
             {
             "SourcePath" = "8:..\\Cadastros.ico"
@@ -318,14 +318,14 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B82CB114C894A1152DD809ED623E2546"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B51A719D3D4610A3C2C1DDC1C845B7E7"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_B82CB114C894A1152DD809ED623E2546"
+                    "_B51A719D3D4610A3C2C1DDC1C845B7E7"
                     {
                     "Name" = "8:BLL.dll"
                     "Attributes" = "3:512"
@@ -349,14 +349,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E02B4B4811170805C2A38B5110CB16AB"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B592D39FC31C70A7F6E23AF5F6F202D4"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_E02B4B4811170805C2A38B5110CB16AB"
+                    "_B592D39FC31C70A7F6E23AF5F6F202D4"
                     {
                     "Name" = "8:DAL.dll"
                     "Attributes" = "3:512"
@@ -489,16 +489,16 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Cadastros"
-        "ProductCode" = "8:{38A7B6EA-591D-426B-A0EF-D26FD8B2B261}"
-        "PackageCode" = "8:{1F3DBE45-B4B4-4689-8A04-B45731B7BA8B}"
+        "ProductCode" = "8:{3FE4D6F2-9E2D-4AF2-AE5A-37FE45FE6806}"
+        "PackageCode" = "8:{732443E0-7F65-4E50-B470-AEAC58CFF8FD}"
         "UpgradeCode" = "8:{50B5ED13-1277-42FD-A132-D48C8A590E24}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Alegra Nautica"
+        "ProductVersion" = "8:1.01.00"
+        "Manufacturer" = "8:AlegraNautica"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Cadastros"
@@ -1039,7 +1039,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_004C2D338F9549A5ACF00917150020F2"
             {
-            "SourcePath" = "8:..\\GUI\\obj\\Debug\\GUI.exe"
+            "SourcePath" = "8:..\\GUI\\obj\\Release\\GUI.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3717190A02234A01867D198AFC51B7CA"

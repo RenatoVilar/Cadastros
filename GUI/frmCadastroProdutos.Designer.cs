@@ -257,6 +257,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label47 = new System.Windows.Forms.Label();
             this.mtxtCest = new System.Windows.Forms.MaskedTextBox();
+            this.chkProdutoPPB = new System.Windows.Forms.CheckBox();
             this.tabPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl4.SuspendLayout();
@@ -379,6 +380,7 @@
             this.radOrigemImp.TabIndex = 1;
             this.radOrigemImp.Text = "Importado";
             this.radOrigemImp.UseVisualStyleBackColor = true;
+            this.radOrigemImp.Click += new System.EventHandler(this.radOrigemImp_Click);
             // 
             // radOrigemNac
             // 
@@ -2457,6 +2459,7 @@
             // 
             this.grpTipo.Controls.Add(this.chkPecasMot);
             this.grpTipo.Controls.Add(this.chkMotores);
+            this.grpTipo.Controls.Add(this.chkProdutoPPB);
             this.grpTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpTipo.Location = new System.Drawing.Point(542, 113);
             this.grpTipo.Name = "grpTipo";
@@ -2606,6 +2609,7 @@
             this.radInsumos.TabIndex = 2;
             this.radInsumos.Text = "Insumos";
             this.radInsumos.UseVisualStyleBackColor = true;
+            this.radInsumos.Click += new System.EventHandler(this.radInsumos_Click);
             // 
             // radMatPrima
             // 
@@ -2617,6 +2621,7 @@
             this.radMatPrima.TabIndex = 1;
             this.radMatPrima.Text = "Mat. Prima";
             this.radMatPrima.UseVisualStyleBackColor = true;
+            this.radMatPrima.Click += new System.EventHandler(this.radMatPrima_Click);
             // 
             // radRevenda
             // 
@@ -2630,6 +2635,7 @@
             this.radRevenda.TabStop = true;
             this.radRevenda.Text = "Revenda";
             this.radRevenda.UseVisualStyleBackColor = true;
+            this.radRevenda.Click += new System.EventHandler(this.radRevenda_Click);
             // 
             // panel2
             // 
@@ -2717,6 +2723,18 @@
             this.mtxtCest.Size = new System.Drawing.Size(100, 26);
             this.mtxtCest.TabIndex = 27;
             this.mtxtCest.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // chkProdutoPPB
+            // 
+            this.chkProdutoPPB.AutoSize = true;
+            this.chkProdutoPPB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkProdutoPPB.Location = new System.Drawing.Point(22, 20);
+            this.chkProdutoPPB.Name = "chkProdutoPPB";
+            this.chkProdutoPPB.Size = new System.Drawing.Size(153, 24);
+            this.chkProdutoPPB.TabIndex = 2;
+            this.chkProdutoPPB.Text = "Produto com PPB";
+            this.chkProdutoPPB.UseVisualStyleBackColor = true;
+            this.chkProdutoPPB.Click += new System.EventHandler(this.chkProdutoPPB_Click);
             // 
             // frmCadastroProdutos
             // 
@@ -3036,5 +3054,6 @@
         protected System.Windows.Forms.CheckBox chkCalcPIS;
         protected System.Windows.Forms.TextBox txtNomeCodProd1;
         protected System.Windows.Forms.TextBox txtCodProd1;
+        private System.Windows.Forms.CheckBox chkProdutoPPB;
     }
 }

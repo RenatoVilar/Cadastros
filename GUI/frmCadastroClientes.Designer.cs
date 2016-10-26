@@ -120,26 +120,28 @@
             this.radOrgaoPubFed.TabIndex = 3;
             this.radOrgaoPubFed.Text = "Orgão Público Federal";
             this.radOrgaoPubFed.UseVisualStyleBackColor = true;
+            this.radOrgaoPubFed.Click += new System.EventHandler(this.radOrgaoPubFed_Click);
             // 
             // radEstrangeiro
             // 
             this.radEstrangeiro.AutoSize = true;
             this.radEstrangeiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radEstrangeiro.Location = new System.Drawing.Point(193, 23);
+            this.radEstrangeiro.Location = new System.Drawing.Point(194, 23);
             this.radEstrangeiro.Name = "radEstrangeiro";
             this.radEstrangeiro.Size = new System.Drawing.Size(109, 24);
             this.radEstrangeiro.TabIndex = 2;
             this.radEstrangeiro.Text = "Estrangeiro";
             this.radEstrangeiro.UseVisualStyleBackColor = true;
+            this.radEstrangeiro.Click += new System.EventHandler(this.radEstrangeiro_Click);
             // 
             // radJuridica
             // 
             this.radJuridica.AutoSize = true;
             this.radJuridica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radJuridica.Location = new System.Drawing.Point(96, 23);
+            this.radJuridica.Location = new System.Drawing.Point(97, 23);
             this.radJuridica.Name = "radJuridica";
             this.radJuridica.Size = new System.Drawing.Size(81, 24);
-            this.radJuridica.TabIndex = 1;
+            this.radJuridica.TabIndex = 0;
             this.radJuridica.Text = "Jurídica";
             this.radJuridica.UseVisualStyleBackColor = true;
             this.radJuridica.Click += new System.EventHandler(this.radJuridica_Click);
@@ -149,10 +151,10 @@
             this.radFisica.AutoSize = true;
             this.radFisica.Checked = true;
             this.radFisica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radFisica.Location = new System.Drawing.Point(14, 23);
+            this.radFisica.Location = new System.Drawing.Point(13, 23);
             this.radFisica.Name = "radFisica";
             this.radFisica.Size = new System.Drawing.Size(68, 24);
-            this.radFisica.TabIndex = 0;
+            this.radFisica.TabIndex = 1;
             this.radFisica.TabStop = true;
             this.radFisica.Text = "Física";
             this.radFisica.UseVisualStyleBackColor = true;
@@ -311,7 +313,6 @@
             // radConfigNaoContribuinte
             // 
             this.radConfigNaoContribuinte.AutoCheck = false;
-            this.radConfigNaoContribuinte.AutoEllipsis = true;
             this.radConfigNaoContribuinte.AutoSize = true;
             this.radConfigNaoContribuinte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radConfigNaoContribuinte.Location = new System.Drawing.Point(334, 18);

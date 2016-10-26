@@ -38,43 +38,6 @@ namespace GUI
             mtxtCest.Mask = "00,000,00";
         }
 
-        private int GetTipo()
-        {
-            Finalidade fin = Finalidade.None;
-
-            if (radRevenda.Checked) { fin = Finalidade.Revenda; }
-            if (radMatPrima.Checked) { fin = Finalidade.MatPrima; }
-            if (radInsumos.Checked) { fin = Finalidade.Insumos; }
-
-            return Convert.ToInt32(fin);
-        }
-
-        private DataTable GetGrupo()
-        {
-
-            DALConexao dalConexao = new DALConexao(DadosDeConexao.strConexao);
-            DataTable getGrupo = new DataTable("Grupo");
-            SqlCeCommand sqlCmd = new SqlCeCommand();
-            sqlCmd.Connection = dalConexao.SqlConexao;
-            sqlCmd.CommandText = "SELECT NomeGrupo, GrupoID FROM Grupos WHERE TipoID = @codigo";
-            sqlCmd.Parameters.AddWithValue("@codigo", GetTipo());
-            dalConexao.Conectar();
-            getGrupo.Load(sqlCmd.ExecuteReader());
-            dalConexao.Desconectar();
-            return getGrupo;
-        }
-
-        private void FillCbo()
-        {
-            
-            cboGrupo.ValueMember = "GrupoID";
-            cboGrupo.DisplayMember = "NomeGrupo";
-            cboGrupo.DataSource = GetGrupo();
-            cboGrupo.Update();
-            cboGrupo.SelectedIndex = -1;
-
-        }
-
         private void btnLocalizar_Click(object sender, EventArgs e)
         {
             frmLocalizarNCM frm = new frmLocalizarNCM();
@@ -91,14 +54,71 @@ namespace GUI
                 picSemSimilarOK.Visible = Convert.ToBoolean(modelo.SitSemSimilar);
                 mtxtCest.Text = modelo.Cest;
             }
+
             frm.Dispose();
         }
- 
-        private void ApagaPics()
+
+        private void radRevenda_Click(object sender, EventArgs e)
         {
-            picSubTribOK.Visible = false;
-            picAutopecasOK.Visible = false;
-            picSemSimilarOK.Visible = false;
+            chkPecasMot.Visible = true;
+            chkMotores.Visible = true;
+            chkProdutoPPB.Visible = false;
+        }
+
+        private void radMatPrima_Click(object sender, EventArgs e)
+        {
+            chkPecasMot.Visible = false;
+            chkMotores.Visible = false;
+            chkProdutoPPB.Visible = true;
+            chkProdutoPPB.Enabled = false;
+        }
+
+        private void radInsumos_Click(object sender, EventArgs e)
+        {
+            chkPecasMot.Visible = false;
+            chkMotores.Visible = false;
+            chkProdutoPPB.Visible = true;
+            chkProdutoPPB.Enabled = false;
+        }
+
+        private void radForEstrangeiro_Click(object sender, EventArgs e)
+        {
+            radOrigemNac.Checked = false;
+            radOrigemNac.Enabled = false;
+            radOrigemImp.Checked = true;
+            chkProdutoPPB.Enabled = false;
+        }
+
+        private void radForBrasileiro_Click(object sender, EventArgs e)
+        {
+            radOrigemNac.Enabled = true;
+            chkProdutoPPB.Enabled = false;
+        }
+
+        private void radForZFM_Click(object sender, EventArgs e)
+        {
+            radOrigemNac.Enabled = true;
+            chkProdutoPPB.Enabled = true;
+
+        }
+
+        private void radOrigemImp_Click(object sender, EventArgs e)
+        {
+            chkProdutoPPB.Checked = false;
+        }
+
+        private void chkProdutoPPB_Click(object sender, EventArgs e)
+        {
+            radOrigemImp.Checked = false;
+            radOrigemNac.Checked = true;
+        }
+
+        private void txtCodNCM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Keys)e.KeyChar == Keys.Enter)
+            {
+                btnLocalizar_Click(sender, e);
+            }
         }
 
         private void btnAvaliar_Click(object sender, EventArgs e)
@@ -136,30 +156,48 @@ namespace GUI
       
         }
 
-        private void radForEstrangeiro_Click(object sender, EventArgs e)
+        private void ApagaPics()
         {
-            radOrigemNac.Checked = false;
-            radOrigemNac.Enabled = false;
-            radOrigemImp.Checked = true;
+            picSubTribOK.Visible = false;
+            picAutopecasOK.Visible = false;
+            picSemSimilarOK.Visible = false;
         }
 
-        private void radForBrasileiro_Click(object sender, EventArgs e)
+        private int GetTipo()
         {
-            radOrigemNac.Enabled = true;
+            Finalidade fin = Finalidade.None;
+
+            if (radRevenda.Checked) { fin = Finalidade.Revenda; }
+            if (radMatPrima.Checked) { fin = Finalidade.MatPrima; }
+            if (radInsumos.Checked) { fin = Finalidade.Insumos; }
+
+            return Convert.ToInt32(fin);
         }
 
-        private void radForZFM_Click(object sender, EventArgs e)
+        private DataTable GetGrupo()
         {
-            radOrigemNac.Enabled = true;
+
+            DALConexao dalConexao = new DALConexao(DadosDeConexao.strConexao);
+            DataTable getGrupo = new DataTable("Grupo");
+            SqlCeCommand sqlCmd = new SqlCeCommand();
+            sqlCmd.Connection = dalConexao.SqlConexao;
+            sqlCmd.CommandText = "SELECT NomeGrupo, GrupoID FROM Grupos WHERE TipoID = @codigo";
+            sqlCmd.Parameters.AddWithValue("@codigo", GetTipo());
+            dalConexao.Conectar();
+            getGrupo.Load(sqlCmd.ExecuteReader());
+            dalConexao.Desconectar();
+            return getGrupo;
         }
 
-        private void txtCodNCM_KeyPress(object sender, KeyPressEventArgs e)
+        private void FillCbo()
         {
-            if ((Keys)e.KeyChar == Keys.Enter)
-            {
-                btnLocalizar_Click(sender, e);
-               
-            }
+
+            cboGrupo.ValueMember = "GrupoID";
+            cboGrupo.DisplayMember = "NomeGrupo";
+            cboGrupo.DataSource = GetGrupo();
+            cboGrupo.Update();
+            cboGrupo.SelectedIndex = -1;
+
         }
 
         private void AvaliarDadosProdutos()
@@ -186,6 +224,9 @@ namespace GUI
             #region Revenda
             if (radRevenda.Checked)
             {
+                chkPecasMot.Enabled = true;
+                chkMotores.Enabled = true;
+
                 txtCodProd1.Text = "000001"; txtNomeCodProd1.Text = "LOJA"; txtFormatoCod1.Text = formatoCodigo;
                 txtCodProd2.Text = "000005"; txtNomeCodProd2.Text = "FORNECEDOR"; txtFormatoCod2.Text = formatoCodigo;
 
@@ -246,6 +287,7 @@ namespace GUI
                             txtIndCfop2.Text = "1.101"; txtIndTpMov2.Text = "Compra"; txtIndCfopEqui2.Text = "1.401";
                             txtIndCfop3.Text = "2.101"; txtIndTpMov3.Text = "Compra"; txtIndCfopEqui3.Text = "2.401";
                         }
+
                         if (picAutopecasOK.Visible)
                         {
                             txtAliquotaPisPerc.Text = "0,00"; txtPisCstSaida.Text = "04";
@@ -253,6 +295,7 @@ namespace GUI
 
                             txtCaracCod2.Text = "009"; txtCaracNome2.Text = "AUTOPEÇAS";
                         }
+
                         if (picSemSimilarOK.Visible)
                         {
                             txtCaracCod3.Text = "016"; txtCaracNome3.Text = "PROD CONSTA LISTA CAMEX SEM SIMILAR NAC";
@@ -678,44 +721,88 @@ namespace GUI
             #endregion
 
 
-            #region Materia Prima
-            else if (radMatPrima.Checked)
+            #region Materia Prima e Imsumos
+            else if (radMatPrima.Checked || radInsumos.Checked)
             {
+
+                txtCodProd1.Text = "000005"; txtNomeCodProd1.Text = "FORNECEDOR"; txtFormatoCod1.Text = formatoCodigo;
+
+                chkRepasse.Checked = false;
+                radFaturamento.Checked = false;
+
+                chkCompoBCdaCsll.Checked = true;
+                chkCalcCOFINS.Checked = true;
+                chkCalcPIS.Checked = true;
+
+                txtPisCstEntrada.Text = "70";
+                txtCofinsCstEntrada.Text = "70";
+
+                txtAliquotaPisPerc.Text = "0,65"; txtPisCstSaida.Text = "01";
+                txtAliquotaCofinsPerc.Text = "3,00"; txtCofinsCstSaida.Text = "01";
+
+                txtIndCodEmpresa.Text = "00002"; txtIndNomeEmpresa.Text = "ALEGRA IND E COM LTDA (IND)";
+                txtIndVenda.Text = "N";
+                txtIndCompra.Text = "S";
+
+                txtCodCalcICMS.Text = codInsumos; txtNomeCalcICMS.Text = calcInsumos;
+
+                if (picSubTribOK.Visible)
+                {
+                    chkTribEspecifica.Checked = true;
+
+                    txtIndCfop1.Text = "1.151"; txtIndTpMov1.Text = "Entrada"; txtIndCfopEqui1.Text = "1.408";
+                    txtIndCfop2.Text = "1.101"; txtIndTpMov2.Text = "Compra"; txtIndCfopEqui2.Text = "1.401";
+                    txtIndCfop3.Text = "2.101"; txtIndTpMov3.Text = "Compra"; txtIndCfopEqui3.Text = "2.401";
+                }
+
+                if (picAutopecasOK.Visible)
+                {
+
+                }
+
+                if (picSemSimilarOK.Visible)
+                {
+                    
+                }
+
                 if (radForBrasileiro.Checked)
                 {
+                    if (radOrigemNac.Checked)
+                    {
+                            radOrigem0.Checked = true;
+                    }
+                    else if(radOrigemImp.Checked)
+                    {
+                            radOrigem2.Checked = true;
+                    }
 
                 }
                 else if (radForEstrangeiro.Checked)
                 {
+                    radOrigem1.Checked = true;
+                    radOrigem0.Checked = false;
+                    radOrigem2.Checked = false;
+                    radOrigem4.Checked = false;
 
                 }
-                else if (radForZFM.Checked)
+                else if(radForZFM.Checked)
                 {
-
+                    if (radOrigemNac.Checked)
+                    {
+                        if (chkProdutoPPB.Checked)
+                        {
+                            radOrigem4.Checked = true;
+                        }
+                        else
+                            radOrigem0.Checked = true;
+                    }
+                    else if (radOrigemImp.Checked)
+                    {
+                        radOrigem2.Checked = true;
+                    }
                 }
-
-                
             }
 
-            #endregion
-
-            #region Insumos
-            else if (radInsumos.Checked)
-            {
-                if (radForBrasileiro.Checked)
-                {
-
-                }
-                else if (radForEstrangeiro.Checked)
-                {
-
-                }
-                else if (radForZFM.Checked)
-                {
-
-                }
-
-            }
             #endregion
         }
     }

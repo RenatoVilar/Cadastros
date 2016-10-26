@@ -8,24 +8,24 @@ namespace GUI
         public frmCadastroClientes()
         {
             InitializeComponent();
-            chkPrestadorServico.Visible = false;
 
-            for (int i = 0; i < grpTipo.Controls.Count; i++)
-            {
-                RadioButton rdb = (RadioButton)grpTipo.Controls[i];
-                rdb.CheckedChanged += new EventHandler(Rdb_CheckedChanged);
-            }
+            radFisica.CheckedChanged += new EventHandler(Rdb_CheckedChanged);
+            radJuridica.CheckedChanged += new EventHandler(Rdb_CheckedChanged);
+            radEstrangeiro.CheckedChanged += new EventHandler(Rdb_CheckedChanged);
+            radOrgaoPubFed.CheckedChanged += new EventHandler(Rdb_CheckedChanged);
         }
 
         private void Rdb_CheckedChanged(object sender, EventArgs e)
         {
             foreach (RadioButton rdb in grpTipo.Controls)
             {
-                if (rdb.Name == "radJuridica")
+                if (radJuridica.Checked)
                 {
-                    chkPrestadorServico.Visible = true;
+                    chkPrestadorServico.Enabled = true;
                 }
-                else chkPrestadorServico.Visible = false;
+                else 
+                    chkPrestadorServico.Enabled = false;
+
             }
         }
 
@@ -37,6 +37,10 @@ namespace GUI
             TreeNode mnuCaracteristicas = trePrincipal.Nodes.Add("Características...");
 
             pnlEndereco.Visible = true;
+
+            radContribuinte.Enabled = false;
+
+            chkPrestadorServico.Enabled = false;
         }
 
         private void trePrincipal_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -84,25 +88,47 @@ namespace GUI
             AvaliarDadosCliente();
         }
 
-        private void radJuridica_Click(object sender, EventArgs e)
-        {
-            chkPrestadorServico.Visible = true;
-        }
-
         private void radFisica_CheckedChanged(object sender, EventArgs e)
         {
-            chkPrestadorServico.Visible = false;
+            //chkPrestadorServico.Enabled = false;
+            radNaoContribuinte.Checked = true;
+            radContribuinte.Enabled = false;
+            radUFAm.Enabled = true;
+            radOutrasUF.Enabled = true;
+        }
+
+        private void radJuridica_Click(object sender, EventArgs e)
+        {
+            //chkPrestadorServico.Enabled = true;
+            radContribuinte.Enabled = true;
+            radUFAm.Enabled = true;
+            radOutrasUF.Enabled = true;
+        }
+
+        private void radEstrangeiro_Click(object sender, EventArgs e)
+        {
+            //chkPrestadorServico.Enabled = false;
+            radContribuinte.Enabled = false;
+            radUFAm.Enabled = false;
+            radOutrasUF.Enabled = false;
+        }
+
+        private void radOrgaoPubFed_Click(object sender, EventArgs e)
+        {
+            //chkPrestadorServico.Enabled = false;
+            radContribuinte.Enabled = false;
+            radUFAm.Enabled = true;
+            radOutrasUF.Enabled = true;
         }
 
         private void AvaliarDadosCliente()
         {
             if (radFisica.Checked)
             {
-                radNaoContribuinte.Checked = true;
                 radConfigNaoContribuinte.Checked = true;
                 lblMsgEstrangeiro.Visible = false;
                 lblMsgPessoaJuridica.Visible = false;
-                chkPrestadorServico.Visible = false;
+                chkConfigPrestadorServico.Checked = false;
 
                 if (radUFAm.Checked)
                 {
@@ -121,35 +147,44 @@ namespace GUI
             }
             else if (radJuridica.Checked)
             {
-                chkPrestadorServico.Visible = true;
-
                 if (radContribuinte.Checked)
                 {
                     radConfigContribuinte.Checked = true;
+
                     lblMsgEstrangeiro.Visible = false;
                     lblMsgPessoaJuridica.Visible = false;
 
-                }
-                else
-                {
-                    radConfigNaoContribuinte.Checked = true;
-                    lblMsgEstrangeiro.Visible = false;
-                    lblMsgPessoaJuridica.Visible = true;
-                }
-
-                if (radUFAm.Checked)
-                {
-                    txtCodOp.Text = "000013";
-                    txtNomeOp.Text = "COM - VENDA PARA CONTRIBUINTE";
-                    txtCodPreco.Text = "0001";
-                    txtNomePreco.Text = "PREÇO VAREJO ZFM";
-                }
-                else if (radOutrasUF.Checked)
-                {
-                    txtCodOp.Text = "000013";
+                    txtCodOp.Text = "000002";
                     txtNomeOp.Text = "COM - VENDA PARA CONTRIBUINTE";
                     txtCodPreco.Text = "0001";
                     txtNomePreco.Text = "PREÇO VAREJO FORA ZFM";
+                }
+                else if (radNaoContribuinte.Checked)
+                {
+                    radConfigNaoContribuinte.Checked = true;
+
+                    lblMsgEstrangeiro.Visible = false;
+                    lblMsgPessoaJuridica.Visible = true;
+
+                    if (radUFAm.Checked)
+                    {
+                        txtCodOp.Text = "000001";
+                        txtNomeOp.Text = "COM - VENDA PARA NÃO CONTRIBUINTE NO AM";
+                        txtCodPreco.Text = "0001";
+                        txtNomePreco.Text = "PREÇO VAREJO ZFM";
+                    }
+                    else if (radOutrasUF.Checked)
+                    {
+                        txtCodOp.Text = "000094";
+                        txtNomeOp.Text = "COM - VENDA PARA NÃO CONTRIBUINTE FORA AM";
+                        txtCodPreco.Text = "0001";
+                        txtNomePreco.Text = "PREÇO VAREJO ZFM";
+                    }
+                }
+
+                if (chkPrestadorServico.Checked)
+                {
+                    chkConfigPrestadorServico.Checked = true;
                 }
             }
             else if (radEstrangeiro.Checked)
@@ -157,7 +192,6 @@ namespace GUI
                 radConfigNaoContribuinte.Checked = true;
                 lblMsgEstrangeiro.Visible = true;
                 lblMsgPessoaJuridica.Visible = false;
-                chkPrestadorServico.Visible = false;
                 txtCodOp.Text = "000098";
                 txtNomeOp.Text = "COM - VENDA PARA ESTRANGEIROS NO BRASIL";
                 txtCodPreco.Text = "0001";
@@ -166,10 +200,9 @@ namespace GUI
             }
             else if (radOrgaoPubFed.Checked)
             {
-                radNaoContribuinte.Checked = true;
                 radConfigNaoContribuinte.Checked = true;
                 chkEntidadeDaAdmFederal.Checked = true;
-                chkPrestadorServico.Visible = false;
+                chkConfigPrestadorServico.Checked = false;
                 lblMsgEstrangeiro.Visible = false;
                 lblMsgPessoaJuridica.Visible = false;
                 txtCodCaracteristica.Text = "00001";
@@ -179,12 +212,6 @@ namespace GUI
                 txtCodPreco.Text = "0001";
                 txtNomePreco.Text = "PREÇO VAREJO ZFM";
             }
-
-            if (chkPrestadorServico.Checked)
-            {
-                chkConfigPrestadorServico.Checked = true;
-            }
-
         }
     }
 }
