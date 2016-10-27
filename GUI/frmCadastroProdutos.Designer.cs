@@ -236,6 +236,7 @@
             this.grpTipo = new System.Windows.Forms.GroupBox();
             this.chkPecasMot = new System.Windows.Forms.CheckBox();
             this.chkMotores = new System.Windows.Forms.CheckBox();
+            this.chkProdutoPPB = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -257,7 +258,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label47 = new System.Windows.Forms.Label();
             this.mtxtCest = new System.Windows.Forms.MaskedTextBox();
-            this.chkProdutoPPB = new System.Windows.Forms.CheckBox();
             this.tabPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl4.SuspendLayout();
@@ -394,6 +394,7 @@
             this.radOrigemNac.TabStop = true;
             this.radOrigemNac.Text = "Nacional";
             this.radOrigemNac.UseVisualStyleBackColor = true;
+            this.radOrigemNac.Click += new System.EventHandler(this.radOrigemNac_Click);
             // 
             // tabPrincipal
             // 
@@ -1275,55 +1276,55 @@
             // txtComCodSetor4
             // 
             this.txtComCodSetor4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComCodSetor4.Location = new System.Drawing.Point(520, 152);
+            this.txtComCodSetor4.Location = new System.Drawing.Point(488, 152);
             this.txtComCodSetor4.Name = "txtComCodSetor4";
             this.txtComCodSetor4.ReadOnly = true;
-            this.txtComCodSetor4.Size = new System.Drawing.Size(50, 22);
+            this.txtComCodSetor4.Size = new System.Drawing.Size(80, 22);
             this.txtComCodSetor4.TabIndex = 105;
             // 
             // txtComCodSetor6
             // 
             this.txtComCodSetor6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComCodSetor6.Location = new System.Drawing.Point(520, 202);
+            this.txtComCodSetor6.Location = new System.Drawing.Point(488, 202);
             this.txtComCodSetor6.Name = "txtComCodSetor6";
             this.txtComCodSetor6.ReadOnly = true;
-            this.txtComCodSetor6.Size = new System.Drawing.Size(50, 22);
+            this.txtComCodSetor6.Size = new System.Drawing.Size(80, 22);
             this.txtComCodSetor6.TabIndex = 103;
             // 
             // txtComCodSetor3
             // 
             this.txtComCodSetor3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComCodSetor3.Location = new System.Drawing.Point(520, 127);
+            this.txtComCodSetor3.Location = new System.Drawing.Point(488, 127);
             this.txtComCodSetor3.Name = "txtComCodSetor3";
             this.txtComCodSetor3.ReadOnly = true;
-            this.txtComCodSetor3.Size = new System.Drawing.Size(50, 22);
+            this.txtComCodSetor3.Size = new System.Drawing.Size(80, 22);
             this.txtComCodSetor3.TabIndex = 104;
             // 
             // txtComCodSetor5
             // 
             this.txtComCodSetor5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComCodSetor5.Location = new System.Drawing.Point(520, 177);
+            this.txtComCodSetor5.Location = new System.Drawing.Point(488, 177);
             this.txtComCodSetor5.Name = "txtComCodSetor5";
             this.txtComCodSetor5.ReadOnly = true;
-            this.txtComCodSetor5.Size = new System.Drawing.Size(50, 22);
+            this.txtComCodSetor5.Size = new System.Drawing.Size(80, 22);
             this.txtComCodSetor5.TabIndex = 99;
             // 
             // txtComCodSetor2
             // 
             this.txtComCodSetor2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComCodSetor2.Location = new System.Drawing.Point(520, 103);
+            this.txtComCodSetor2.Location = new System.Drawing.Point(488, 103);
             this.txtComCodSetor2.Name = "txtComCodSetor2";
             this.txtComCodSetor2.ReadOnly = true;
-            this.txtComCodSetor2.Size = new System.Drawing.Size(50, 22);
+            this.txtComCodSetor2.Size = new System.Drawing.Size(80, 22);
             this.txtComCodSetor2.TabIndex = 101;
             // 
             // txtComCodSetor1
             // 
             this.txtComCodSetor1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComCodSetor1.Location = new System.Drawing.Point(520, 79);
+            this.txtComCodSetor1.Location = new System.Drawing.Point(488, 79);
             this.txtComCodSetor1.Name = "txtComCodSetor1";
             this.txtComCodSetor1.ReadOnly = true;
-            this.txtComCodSetor1.Size = new System.Drawing.Size(50, 22);
+            this.txtComCodSetor1.Size = new System.Drawing.Size(80, 22);
             this.txtComCodSetor1.TabIndex = 100;
             // 
             // label48
@@ -1342,7 +1343,7 @@
             this.txtComSetor4.Location = new System.Drawing.Point(574, 152);
             this.txtComSetor4.Name = "txtComSetor4";
             this.txtComSetor4.ReadOnly = true;
-            this.txtComSetor4.Size = new System.Drawing.Size(94, 22);
+            this.txtComSetor4.Size = new System.Drawing.Size(157, 22);
             this.txtComSetor4.TabIndex = 98;
             // 
             // txtComSetor6
@@ -1351,7 +1352,7 @@
             this.txtComSetor6.Location = new System.Drawing.Point(574, 202);
             this.txtComSetor6.Name = "txtComSetor6";
             this.txtComSetor6.ReadOnly = true;
-            this.txtComSetor6.Size = new System.Drawing.Size(94, 22);
+            this.txtComSetor6.Size = new System.Drawing.Size(157, 22);
             this.txtComSetor6.TabIndex = 96;
             // 
             // txtComSetor3
@@ -1360,7 +1361,7 @@
             this.txtComSetor3.Location = new System.Drawing.Point(574, 127);
             this.txtComSetor3.Name = "txtComSetor3";
             this.txtComSetor3.ReadOnly = true;
-            this.txtComSetor3.Size = new System.Drawing.Size(94, 22);
+            this.txtComSetor3.Size = new System.Drawing.Size(157, 22);
             this.txtComSetor3.TabIndex = 97;
             // 
             // txtComSetor5
@@ -1369,7 +1370,7 @@
             this.txtComSetor5.Location = new System.Drawing.Point(574, 177);
             this.txtComSetor5.Name = "txtComSetor5";
             this.txtComSetor5.ReadOnly = true;
-            this.txtComSetor5.Size = new System.Drawing.Size(94, 22);
+            this.txtComSetor5.Size = new System.Drawing.Size(157, 22);
             this.txtComSetor5.TabIndex = 92;
             // 
             // txtComSetor2
@@ -1378,7 +1379,7 @@
             this.txtComSetor2.Location = new System.Drawing.Point(574, 103);
             this.txtComSetor2.Name = "txtComSetor2";
             this.txtComSetor2.ReadOnly = true;
-            this.txtComSetor2.Size = new System.Drawing.Size(94, 22);
+            this.txtComSetor2.Size = new System.Drawing.Size(157, 22);
             this.txtComSetor2.TabIndex = 94;
             // 
             // txtComSetor1
@@ -1387,7 +1388,7 @@
             this.txtComSetor1.Location = new System.Drawing.Point(574, 79);
             this.txtComSetor1.Name = "txtComSetor1";
             this.txtComSetor1.ReadOnly = true;
-            this.txtComSetor1.Size = new System.Drawing.Size(94, 22);
+            this.txtComSetor1.Size = new System.Drawing.Size(157, 22);
             this.txtComSetor1.TabIndex = 93;
             // 
             // label49
@@ -1795,55 +1796,55 @@
             // txtIndCodSetor4
             // 
             this.txtIndCodSetor4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIndCodSetor4.Location = new System.Drawing.Point(520, 152);
+            this.txtIndCodSetor4.Location = new System.Drawing.Point(486, 152);
             this.txtIndCodSetor4.Name = "txtIndCodSetor4";
             this.txtIndCodSetor4.ReadOnly = true;
-            this.txtIndCodSetor4.Size = new System.Drawing.Size(50, 22);
+            this.txtIndCodSetor4.Size = new System.Drawing.Size(80, 22);
             this.txtIndCodSetor4.TabIndex = 119;
             // 
             // txtIndCodSetor6
             // 
             this.txtIndCodSetor6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIndCodSetor6.Location = new System.Drawing.Point(520, 202);
+            this.txtIndCodSetor6.Location = new System.Drawing.Point(486, 202);
             this.txtIndCodSetor6.Name = "txtIndCodSetor6";
             this.txtIndCodSetor6.ReadOnly = true;
-            this.txtIndCodSetor6.Size = new System.Drawing.Size(50, 22);
+            this.txtIndCodSetor6.Size = new System.Drawing.Size(80, 22);
             this.txtIndCodSetor6.TabIndex = 117;
             // 
             // txtIndCodSetor3
             // 
             this.txtIndCodSetor3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIndCodSetor3.Location = new System.Drawing.Point(520, 127);
+            this.txtIndCodSetor3.Location = new System.Drawing.Point(486, 127);
             this.txtIndCodSetor3.Name = "txtIndCodSetor3";
             this.txtIndCodSetor3.ReadOnly = true;
-            this.txtIndCodSetor3.Size = new System.Drawing.Size(50, 22);
+            this.txtIndCodSetor3.Size = new System.Drawing.Size(80, 22);
             this.txtIndCodSetor3.TabIndex = 118;
             // 
             // txtIndCodSetor5
             // 
             this.txtIndCodSetor5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIndCodSetor5.Location = new System.Drawing.Point(520, 177);
+            this.txtIndCodSetor5.Location = new System.Drawing.Point(486, 177);
             this.txtIndCodSetor5.Name = "txtIndCodSetor5";
             this.txtIndCodSetor5.ReadOnly = true;
-            this.txtIndCodSetor5.Size = new System.Drawing.Size(50, 22);
+            this.txtIndCodSetor5.Size = new System.Drawing.Size(80, 22);
             this.txtIndCodSetor5.TabIndex = 113;
             // 
             // txtIndCodSetor2
             // 
             this.txtIndCodSetor2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIndCodSetor2.Location = new System.Drawing.Point(520, 103);
+            this.txtIndCodSetor2.Location = new System.Drawing.Point(486, 103);
             this.txtIndCodSetor2.Name = "txtIndCodSetor2";
             this.txtIndCodSetor2.ReadOnly = true;
-            this.txtIndCodSetor2.Size = new System.Drawing.Size(50, 22);
+            this.txtIndCodSetor2.Size = new System.Drawing.Size(80, 22);
             this.txtIndCodSetor2.TabIndex = 115;
             // 
             // txtIndCodSetor1
             // 
             this.txtIndCodSetor1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIndCodSetor1.Location = new System.Drawing.Point(520, 79);
+            this.txtIndCodSetor1.Location = new System.Drawing.Point(486, 79);
             this.txtIndCodSetor1.Name = "txtIndCodSetor1";
             this.txtIndCodSetor1.ReadOnly = true;
-            this.txtIndCodSetor1.Size = new System.Drawing.Size(50, 22);
+            this.txtIndCodSetor1.Size = new System.Drawing.Size(80, 22);
             this.txtIndCodSetor1.TabIndex = 114;
             // 
             // label50
@@ -1862,7 +1863,7 @@
             this.txtIndSetor4.Location = new System.Drawing.Point(574, 152);
             this.txtIndSetor4.Name = "txtIndSetor4";
             this.txtIndSetor4.ReadOnly = true;
-            this.txtIndSetor4.Size = new System.Drawing.Size(94, 22);
+            this.txtIndSetor4.Size = new System.Drawing.Size(157, 22);
             this.txtIndSetor4.TabIndex = 112;
             // 
             // txtIndSetor6
@@ -1871,7 +1872,7 @@
             this.txtIndSetor6.Location = new System.Drawing.Point(574, 202);
             this.txtIndSetor6.Name = "txtIndSetor6";
             this.txtIndSetor6.ReadOnly = true;
-            this.txtIndSetor6.Size = new System.Drawing.Size(94, 22);
+            this.txtIndSetor6.Size = new System.Drawing.Size(157, 22);
             this.txtIndSetor6.TabIndex = 110;
             // 
             // txtIndSetor3
@@ -1880,7 +1881,7 @@
             this.txtIndSetor3.Location = new System.Drawing.Point(574, 127);
             this.txtIndSetor3.Name = "txtIndSetor3";
             this.txtIndSetor3.ReadOnly = true;
-            this.txtIndSetor3.Size = new System.Drawing.Size(94, 22);
+            this.txtIndSetor3.Size = new System.Drawing.Size(157, 22);
             this.txtIndSetor3.TabIndex = 111;
             // 
             // txtIndSetor5
@@ -1889,7 +1890,7 @@
             this.txtIndSetor5.Location = new System.Drawing.Point(574, 177);
             this.txtIndSetor5.Name = "txtIndSetor5";
             this.txtIndSetor5.ReadOnly = true;
-            this.txtIndSetor5.Size = new System.Drawing.Size(94, 22);
+            this.txtIndSetor5.Size = new System.Drawing.Size(157, 22);
             this.txtIndSetor5.TabIndex = 106;
             // 
             // txtIndSetor2
@@ -1898,7 +1899,7 @@
             this.txtIndSetor2.Location = new System.Drawing.Point(574, 103);
             this.txtIndSetor2.Name = "txtIndSetor2";
             this.txtIndSetor2.ReadOnly = true;
-            this.txtIndSetor2.Size = new System.Drawing.Size(94, 22);
+            this.txtIndSetor2.Size = new System.Drawing.Size(157, 22);
             this.txtIndSetor2.TabIndex = 108;
             // 
             // txtIndSetor1
@@ -1907,7 +1908,7 @@
             this.txtIndSetor1.Location = new System.Drawing.Point(574, 79);
             this.txtIndSetor1.Name = "txtIndSetor1";
             this.txtIndSetor1.ReadOnly = true;
-            this.txtIndSetor1.Size = new System.Drawing.Size(94, 22);
+            this.txtIndSetor1.Size = new System.Drawing.Size(157, 22);
             this.txtIndSetor1.TabIndex = 107;
             // 
             // label51
@@ -2490,6 +2491,18 @@
             this.chkMotores.Text = "Motores";
             this.chkMotores.UseVisualStyleBackColor = true;
             // 
+            // chkProdutoPPB
+            // 
+            this.chkProdutoPPB.AutoSize = true;
+            this.chkProdutoPPB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkProdutoPPB.Location = new System.Drawing.Point(22, 20);
+            this.chkProdutoPPB.Name = "chkProdutoPPB";
+            this.chkProdutoPPB.Size = new System.Drawing.Size(153, 24);
+            this.chkProdutoPPB.TabIndex = 2;
+            this.chkProdutoPPB.Text = "Produto com PPB";
+            this.chkProdutoPPB.UseVisualStyleBackColor = true;
+            this.chkProdutoPPB.Click += new System.EventHandler(this.chkProdutoPPB_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -2723,18 +2736,6 @@
             this.mtxtCest.Size = new System.Drawing.Size(100, 26);
             this.mtxtCest.TabIndex = 27;
             this.mtxtCest.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // chkProdutoPPB
-            // 
-            this.chkProdutoPPB.AutoSize = true;
-            this.chkProdutoPPB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkProdutoPPB.Location = new System.Drawing.Point(22, 20);
-            this.chkProdutoPPB.Name = "chkProdutoPPB";
-            this.chkProdutoPPB.Size = new System.Drawing.Size(153, 24);
-            this.chkProdutoPPB.TabIndex = 2;
-            this.chkProdutoPPB.Text = "Produto com PPB";
-            this.chkProdutoPPB.UseVisualStyleBackColor = true;
-            this.chkProdutoPPB.Click += new System.EventHandler(this.chkProdutoPPB_Click);
             // 
             // frmCadastroProdutos
             // 

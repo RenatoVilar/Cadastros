@@ -63,6 +63,7 @@ namespace GUI
             chkPecasMot.Visible = true;
             chkMotores.Visible = true;
             chkProdutoPPB.Visible = false;
+            chkProdutoPPB.Checked = false;
         }
 
         private void radMatPrima_Click(object sender, EventArgs e)
@@ -70,7 +71,8 @@ namespace GUI
             chkPecasMot.Visible = false;
             chkMotores.Visible = false;
             chkProdutoPPB.Visible = true;
-            chkProdutoPPB.Enabled = false;
+            chkProdutoPPB.Enabled = true;
+            chkProdutoPPB.Checked = false;
         }
 
         private void radInsumos_Click(object sender, EventArgs e)
@@ -78,7 +80,8 @@ namespace GUI
             chkPecasMot.Visible = false;
             chkMotores.Visible = false;
             chkProdutoPPB.Visible = true;
-            chkProdutoPPB.Enabled = false;
+            chkProdutoPPB.Enabled = true;
+            chkProdutoPPB.Checked = false;
         }
 
         private void radForEstrangeiro_Click(object sender, EventArgs e)
@@ -93,17 +96,26 @@ namespace GUI
         {
             radOrigemNac.Enabled = true;
             chkProdutoPPB.Enabled = false;
+            chkProdutoPPB.Checked = false;
         }
 
         private void radForZFM_Click(object sender, EventArgs e)
         {
             radOrigemNac.Enabled = true;
             chkProdutoPPB.Enabled = true;
+            chkProdutoPPB.Checked = false;
 
+        }
+
+        private void radOrigemNac_Click(object sender, EventArgs e)
+        {
+            chkProdutoPPB.Enabled = true;
+            chkProdutoPPB.Checked = false;
         }
 
         private void radOrigemImp_Click(object sender, EventArgs e)
         {
+            chkProdutoPPB.Enabled = false;
             chkProdutoPPB.Checked = false;
         }
 
@@ -111,6 +123,9 @@ namespace GUI
         {
             radOrigemImp.Checked = false;
             radOrigemNac.Checked = true;
+            radForBrasileiro.Checked = false;
+            radForEstrangeiro.Checked = false;
+            radForZFM.Checked = true;
         }
 
         private void txtCodNCM_KeyPress(object sender, KeyPressEventArgs e)
@@ -743,6 +758,8 @@ namespace GUI
                 txtIndCodEmpresa.Text = "00002"; txtIndNomeEmpresa.Text = "ALEGRA IND E COM LTDA (IND)";
                 txtIndVenda.Text = "N";
                 txtIndCompra.Text = "S";
+
+                txtIndCodSetor1.Text = "000006";  txtIndSetor1.Text = "INDUSTRIAL"; 
 
                 txtCodCalcICMS.Text = codInsumos; txtNomeCalcICMS.Text = calcInsumos;
 
