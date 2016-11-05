@@ -33,6 +33,7 @@
             // txtPesquisar
             // 
             this.txtPesquisar.TabIndex = 0;
+            this.txtPesquisar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisar_KeyPress);
             // 
             // btnLocalizar
             // 

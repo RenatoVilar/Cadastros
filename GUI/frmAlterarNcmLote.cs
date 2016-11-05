@@ -137,6 +137,14 @@ namespace GUI
         {
             mtxtCest.Enabled = true;
         }
+
+        private void mtxtNcm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Keys)e.KeyChar == Keys.Enter)
+            {
+                btnLocalizar_Click(sender, e);
+            }
+        }
     }
 }
     

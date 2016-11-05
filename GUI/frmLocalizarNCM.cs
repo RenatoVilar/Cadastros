@@ -48,5 +48,12 @@ namespace GUI
             }
         }
 
+        private void txtPesquisar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Keys)e.KeyChar == Keys.Enter)
+            {
+                btnLocalizar_Click(sender, e);
+            }
+        }
     }
 }

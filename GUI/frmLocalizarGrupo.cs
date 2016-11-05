@@ -1,6 +1,7 @@
 ﻿using System;
 using DAL;
 using BLL;
+using System.Windows.Forms;
 
 namespace GUI
 {
@@ -23,6 +24,14 @@ namespace GUI
             dgvDados.Columns[0].Width = 80;
             dgvDados.Columns[1].Width = 507;
            ;
+        }
+
+        private void txtPesquisar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Keys)e.KeyChar == Keys.Enter)
+            {
+                btnLocalizar_Click(sender, e);
+            }
         }
     }
 }
